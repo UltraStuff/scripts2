@@ -2023,9 +2023,9 @@ function library:AddWindow(title, options)
 end
 
 do -- Example UI
-	local Window = library:AddWindow("Furk - Reaper 2", {
+	local Window = library:AddWindow("Furk - Sonic Speed Simulator", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(250, 190),
+		min_size = Vector2.new(280, 190),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
