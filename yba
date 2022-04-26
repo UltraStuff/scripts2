@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Your Bizarre Adventure", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(300, 270),
+		min_size = Vector2.new(300, 290),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
@@ -2053,6 +2053,10 @@ do -- Example UI
 		Tab:AddButton("Kolgie Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kolgie/YBA-GUI/main/yba-gui-obfuscated.lua"))()
 		end)
+				Tab:AddButton("Zeus Exclusive Hub", function()
+			loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/6a26aa1e3aac8c5cc5425b222534b68d/raw/daff4541c9dd8fde421d925dc5fcc91f65d89db6/gistfile1.txt"))()
+		end)
+
 
 	end
 
