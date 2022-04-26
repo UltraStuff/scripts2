@@ -1,0 +1,95 @@
+--BROUGHT TO YOU BY RSCRIPTS.NET--
+
+_G.Enabled = true --// set to "false" to disable the script
+
+local useGolden = true --// Set to "false" if you don't want to open golden eggs
+
+
+--// DON'T EDIT BELOW IF YOU DONT KNOW WHAT YOU'RE DOING
+
+local event = workspace.__THINGS.__REMOTES:FindFirstChild("buy egg")
+
+local rprint
+
+local Normal_Eggs = {}
+local Golden_Eggs = {}
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Eggs = ReplicatedStorage:WaitForChild("Game").Eggs
+
+if rconsolewarn then
+rconsoleclear()
+rprint = rconsolewarn
+else
+rprint = print
+end
+
+function Time(Tick) -- Not By me
+if typeof(Tick) ~= "number" then
+return warn('Integer expected, got', typeof(Tick))
+end
+local Tick = tick() - Tick
+local Weeks = math.floor(math.floor(math.floor(math.floor(Tick / 60) / 60) / 24) / 7)
+local Days =  math.floor(math.floor(math.floor(Tick / 60) / 60) / 24)
+local Hours = math.floor(math.floor(Tick / 60) / 60)
+local Minutes = math.floor(Tick / 60)
+local Seconds = math.floor(Tick)
+local MilliSeconds = (Tick * 1000)
+local Format = ""
+if Weeks > 0 then
+Format = Format .. string.format("%d Week/s, ", Weeks)
+end
+if Days > 0 then
+Format = Format .. string.format("%d Day/s, ", Days % 7)
+end
+if Hours > 0 then
+Format = Format .. string.format("%d Hour/s, ", Hours % 24)
+end
+if Minutes > 0 then
+Format = Format .. string.format("%d Minute/s, ", Minutes % 60)
+end
+if Seconds > 0 then
+Format = Format .. string.format("%d Second/s, ", Seconds % 60)
+end
+if MilliSeconds > 0 then
+Format = Format .. string.format("%d Ms", MilliSeconds % 1000)
+end
+return Format
+end
+
+local startTick = tick()
+
+for _,eggFolder in pairs(Eggs:GetChildren()) do
+for _,eggName in pairs(eggFolder:GetChildren()) do
+if string.find(eggName.Name, "Golden") then
+table.insert(Golden_Eggs, eggName.Name)
+else
+table.insert(Normal_Eggs, eggName.Name)
+end
+end
+task.wait()
+end
+
+rprint("Added all eggs to database. Took "..tostring(Time(startTick)))
+
+
+while _G.Enabled == true and wait(0.05) do
+local args = {}
+local normalegg = Normal_Eggs[math.random(1, #Normal_Eggs)]
+local goldenegg = Golden_Eggs[math.random(1, #Golden_Eggs)]
+if useGolden == true then
+if math.random(1,2) == 1 then
+args = {normalegg, false}
+rprint("[Mastery Farm] Buying: "..normalegg)
+else
+args = {goldenegg, false}
+rprint("[Mastery Farm] Buying: "..goldenegg)
+end
+else
+args = {normalegg, false}
+rprint("[Mastery Farm] Buying: "..normalegg)
+end
+local e = event:InvokeServer(args)
+repeat wait() until e ~= nil
+rprint("Running Time: "..tostring(Time(startTick)))
+end
