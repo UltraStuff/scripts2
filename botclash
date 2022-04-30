@@ -2037,11 +2037,11 @@ do -- Example UI
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-		Tab:AddButton("Hub (#1)", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Krackenz/RobloxScripts/main/Protected%20(6).lua",true))()
-		end)
-		Tab:AddButton("Bot Hub", function()
+		Tab:AddButton("Bot Hub #1", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/BadScripter/Scripts/master/BotClashHub.lua",true))()
+		end)
+		Tab:AddButton("GUI 2", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Krackenz/RobloxScripts/main/Protected%20(6).lua",true))()
 		end)
 		Tab:AddButton("Gamepasses", function()
 			game.Players.LocalPlayer.UserId = 164279327
