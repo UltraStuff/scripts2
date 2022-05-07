@@ -2023,37 +2023,61 @@ function library:AddWindow(title, options)
 end
 
 do -- Example UI
-	local Window = library:AddWindow("Furk - Sonic Speed Simulator", {
+	local Window = library:AddWindow("Furk - Shindo Life", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(280, 250),
+		min_size = Vector2.new(420, 340),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
 	local Tab = Window:AddTab("Main")
-
+	local TabP = Window:AddTab("Infinite Spins")
 	do -- Elements
-		Tab:AddLabel("Thanks For Using Furk Ultra!")
-		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+		Tab:AddLabel("Thanks For Using Furk Ultra")
+		Tab:AddButton("Snxw Hub (#1)", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Web/main/scripts/SnxwHub.txt"))()
+		end)
+ 		Tab:AddButton("NEW Infinite Spins (Working!)", function()
+		loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/be69b5c061c72abf3dfdd9a71c0b987d/raw/b5f8aff881a53dc953feedf611d9f9f88f537842/gistfile1.txt"))()
+		end)
+		 Tab:AddButton("VG Hub (#2)", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+		end)
+		Tab:AddButton("NEW Meow Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ZOT/Project-PJM/main/shinido"))()
 
-		Tab:AddButton("#1 GUI", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Sonic%20Speed%20Simulator/main.lua", true))()
 		end)
-		Tab:AddButton("Creep Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/VandalRevenge02/SonicSpeedSimulatorCH/main/Discord.gg/CreepHub", true))()
+ 		Tab:AddButton("Solaris Hub (needs Key)", function()
+			loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
 		end)
-		Tab:AddButton("Vellerius GUI -  Requires Key!", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Loader.lua"))()
+		Tab:AddButton("SpyHub GUI", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/6Wumpus6/SpyHub/main/ShindoLife", true))()
 		end)
-		Tab:AddButton("Get 15k Coins Every 6 Hours", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/kkeyy-hash/roblox/main/SonicSpeedSimulator2.lua'))()
+		Tab:AddButton("Wumpus GUI", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/dontsteal/donttouch/main/wump"))() 
 		end)
-		Tab:AddButton("Get XP And Steps By Doing Nothing", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/kkeyy-hash/roblox/main/SonicSpeedSimulator.lua'))()
+		Tab:AddButton("Genkai/Element Changer", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/xzqecc/Script/main/xzqec_changer"))()
+		end)
+		Tab:AddLabel("Note that the Genkai/Element Changer ONLY works")
+		Tab:AddLabel("with previous Genkais/Elements you owned!")
+
+		TabP:AddLabel("Thanks For Using Furk Ultra")
+		TabP:AddButton("Solaris Hub - INFINITE SPINS (#1) (Requires Key)", function()
+			loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
+		end)
+		TabP:AddButton("SNXW Hub - INFINITE SPINS (#1)", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Web/main/scripts/SnxwHub.txt"))() 
+		end)
+		TabP:AddButton("NEW - INFINITE SPINS (AUTO RESET)", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/dontsteal/ok/main/onme"))();
 		end)
 
-		
-
-	end
+		TabP:AddLabel("Press Unsave Data once you reach 0 spins")
+		TabP:AddLabel("Then rejoin your game, you'll have your spins back")
+		TabP:AddButton("Unsave Data", function()
+			game:GetService("Players").LocalPlayer.startevent:FireServer("band", "\128")
+		end)
+end
 
 	Tab:Show()
 	library:FormatWindows()
