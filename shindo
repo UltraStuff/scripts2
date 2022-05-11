@@ -2038,7 +2038,7 @@ do -- Example UI
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Web/main/scripts/SnxwHub.txt"))()
 		end)
  		TabP:AddButton("NEW Infinite Spins (Working!)", function()
-		loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/be69b5c061c72abf3dfdd9a71c0b987d/raw/b5f8aff881a53dc953feedf611d9f9f88f537842/gistfile1.txt"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/spins"))()
 		end)
 		 Tab:AddButton("VG Hub (#2)", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
