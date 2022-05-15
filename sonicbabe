@@ -2025,30 +2025,26 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Sonic Speed Simulator", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(280, 250),
+		min_size = Vector2.new(300, 195),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
 	local Tab = Window:AddTab("Main")
 
 	do -- Elements
-		Tab:AddLabel("Thanks For Using Furk Ultra!")
-		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
-
-		Tab:AddButton("#1 GUI", function()
+		Tab:AddLabel("Thanks For Using Furk Ultra")
+		Tab:AddButton("Hamsta Hub (#1)", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Sonic%20Speed%20Simulator/main.lua", true))()
 		end)
-		Tab:AddButton("Creep Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/VandalRevenge02/SonicSpeedSimulatorCH/main/Discord.gg/CreepHub", true))()
+		
+		Tab:AddButton("CheaterSoul Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Luciquad/credit/main/sonicspeedsimulator.lua"))()
 		end)
-		Tab:AddButton("Vellerius GUI -  Requires Key!", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Loader.lua"))()
+		Tab:AddButton("V.G Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 		end)
-		Tab:AddButton("Get 15k Coins Every 6 Hours", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/kkeyy-hash/roblox/main/SonicSpeedSimulator2.lua'))()
-		end)
-		Tab:AddButton("Get XP And Steps By Doing Nothing", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/kkeyy-hash/roblox/main/SonicSpeedSimulator.lua'))()
+		Tab:AddButton("Hades Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/HadesRblx/src/master/HadesHub.lua", true))()
 		end)
 
 		
