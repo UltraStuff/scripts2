@@ -2034,7 +2034,7 @@ do -- Example UI
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra")
 		Tab:AddButton("#1 GUI", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Sonic%20Speed%20Simulator/main.lua", true))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/Scripts/main/GoalKickSimulator"))()
 		end)
 		Tab:AddButton("Pufferfish Hub Script", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Cospog/pufferfish/main/goalKick.lua"))()
