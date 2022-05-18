@@ -5,33 +5,33 @@
 --]]
 
 local ui_options = {
-	main_color = Color3.fromRGB(41, 74, 122),
+	main_color = Color3.fromRGB(50, 20, 10),
 	min_size = Vector2.new(400, 300),
 	toggle_key = Enum.KeyCode.RightShift,
 	can_resize = true,
 }
 
 do
-	local WhatYouMean = game:GetService("CoreGui"):FindFirstChild("WhatYouMean")
-	if WhatYouMean then WhatYouMean:Destroy() end
+	local imgui = game:GetService("CoreGui"):FindFirstChild("imgui")
+	if imgui then imgui:Destroy() end
 end
 
-local WhatYouMean = Instance.new("ScreenGui")
+local imgui = Instance.new("ScreenGui")
 local Prefabs = Instance.new("Frame")
 local Label = Instance.new("TextLabel")
-local FakeFriends = Instance.new("ImageLabel")
+local Window = Instance.new("ImageLabel")
 local Resizer = Instance.new("Frame")
 local Bar = Instance.new("Frame")
 local Toggle = Instance.new("ImageButton")
 local Base = Instance.new("ImageLabel")
 local Top = Instance.new("ImageLabel")
-local Apens = Instance.new("Frame")
+local Tabs = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
-local ApenSelection = Instance.new("ImageLabel")
-local ApenButtons = Instance.new("Frame")
+local TabSelection = Instance.new("ImageLabel")
+local TabButtons = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
 local Frame = Instance.new("Frame")
-local Apen = Instance.new("Frame")
+local Tab = Instance.new("Frame")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local TextBox = Instance.new("TextBox")
 local TextBox_Roundify_4px = Instance.new("ImageLabel")
@@ -49,7 +49,7 @@ local Box = Instance.new("ImageButton")
 local Objects = Instance.new("ScrollingFrame")
 local UIListLayout_4 = Instance.new("UIListLayout")
 local TextButton_Roundify_4px = Instance.new("ImageLabel")
-local ApenButton = Instance.new("TextButton")
+local TabButton = Instance.new("TextButton")
 local TextButton_Roundify_4px_2 = Instance.new("ImageLabel")
 local Folder = Instance.new("ImageLabel")
 local Button = Instance.new("TextButton")
@@ -87,13 +87,13 @@ local Keybind = Instance.new("ImageLabel")
 local Title_4 = Instance.new("TextLabel")
 local Input = Instance.new("TextButton")
 local Input_Roundify_4px = Instance.new("ImageLabel")
-local FakeFriendss = Instance.new("Frame")
+local Windows = Instance.new("Frame")
 
-WhatYouMean.Name = "WhatYouMean"
-WhatYouMean.Parent = game:GetService("CoreGui")
+imgui.Name = "imgui"
+imgui.Parent = game:GetService("CoreGui")
 
 Prefabs.Name = "Prefabs"
-Prefabs.Parent = WhatYouMean
+Prefabs.Parent = imgui
 Prefabs.BackgroundColor3 = Color3.new(1, 1, 1)
 Prefabs.Size = UDim2.new(0, 100, 0, 100)
 Prefabs.Visible = false
@@ -109,22 +109,22 @@ Label.TextColor3 = Color3.new(1, 1, 1)
 Label.TextSize = 14
 Label.TextXAlignment = Enum.TextXAlignment.Left
 
-FakeFriends.Name = "FakeFriends"
-FakeFriends.Parent = Prefabs
-FakeFriends.Active = true
-FakeFriends.BackgroundColor3 = Color3.new(1, 1, 1)
-FakeFriends.BackgroundTransparency = 1
-FakeFriends.ClipsDescendants = true
-FakeFriends.Position = UDim2.new(0, 20, 0, 20)
-FakeFriends.Selectable = true
-FakeFriends.Size = UDim2.new(0, 200, 0, 200)
-FakeFriends.Image = "rbxassetid://2851926732"
-FakeFriends.ImageColor3 = Color3.new(0.0823529, 0.0862745, 0.0901961)
-FakeFriends.ScaleType = Enum.ScaleType.Slice
-FakeFriends.SliceCenter = Rect.new(12, 12, 12, 12)
+Window.Name = "Window"
+Window.Parent = Prefabs
+Window.Active = true
+Window.BackgroundColor3 = Color3.new(1, 1, 1)
+Window.BackgroundTransparency = 1
+Window.ClipsDescendants = true
+Window.Position = UDim2.new(0, 20, 0, 20)
+Window.Selectable = true
+Window.Size = UDim2.new(0, 200, 0, 200)
+Window.Image = "rbxassetid://2851926732"
+Window.ImageColor3 = Color3.new(0.0823529, 0.0862745, 0.0901961)
+Window.ScaleType = Enum.ScaleType.Slice
+Window.SliceCenter = Rect.new(12, 12, 12, 12)
 
 Resizer.Name = "Resizer"
-Resizer.Parent = FakeFriends
+Resizer.Parent = Window
 Resizer.Active = true
 Resizer.BackgroundColor3 = Color3.new(1, 1, 1)
 Resizer.BackgroundTransparency = 1
@@ -133,7 +133,7 @@ Resizer.Position = UDim2.new(1, -20, 1, -20)
 Resizer.Size = UDim2.new(0, 20, 0, 20)
 
 Bar.Name = "Bar"
-Bar.Parent = FakeFriends
+Bar.Parent = Window
 Bar.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
 Bar.BorderSizePixel = 0
 Bar.Position = UDim2.new(0, 0, 0, 5)
@@ -171,15 +171,15 @@ Top.ImageColor3 = Color3.new(0.160784, 0.290196, 0.478431)
 Top.ScaleType = Enum.ScaleType.Slice
 Top.SliceCenter = Rect.new(12, 12, 12, 12)
 
-Apens.Name = "Apens"
-Apens.Parent = FakeFriends
-Apens.BackgroundColor3 = Color3.new(1, 1, 1)
-Apens.BackgroundTransparency = 1
-Apens.Position = UDim2.new(0, 15, 0, 60)
-Apens.Size = UDim2.new(1, -30, 1, -60)
+Tabs.Name = "Tabs"
+Tabs.Parent = Window
+Tabs.BackgroundColor3 = Color3.new(1, 1, 1)
+Tabs.BackgroundTransparency = 1
+Tabs.Position = UDim2.new(0, 15, 0, 60)
+Tabs.Size = UDim2.new(1, -30, 1, -60)
 
 Title.Name = "Title"
-Title.Parent = FakeFriends
+Title.Parent = Window
 Title.BackgroundColor3 = Color3.new(1, 1, 1)
 Title.BackgroundTransparency = 1
 Title.Position = UDim2.new(0, 30, 0, 3)
@@ -190,44 +190,44 @@ Title.TextColor3 = Color3.new(1, 1, 1)
 Title.TextSize = 14
 Title.TextXAlignment = Enum.TextXAlignment.Left
 
-ApenSelection.Name = "ApenSelection"
-ApenSelection.Parent = FakeFriends
-ApenSelection.BackgroundColor3 = Color3.new(1, 1, 1)
-ApenSelection.BackgroundTransparency = 1
-ApenSelection.Position = UDim2.new(0, 15, 0, 30)
-ApenSelection.Size = UDim2.new(1, -30, 0, 25)
-ApenSelection.Visible = false
-ApenSelection.Image = "rbxassetid://2851929490"
-ApenSelection.ImageColor3 = Color3.new(0.145098, 0.14902, 0.156863)
-ApenSelection.ScaleType = Enum.ScaleType.Slice
-ApenSelection.SliceCenter = Rect.new(4, 4, 4, 4)
+TabSelection.Name = "TabSelection"
+TabSelection.Parent = Window
+TabSelection.BackgroundColor3 = Color3.new(1, 1, 1)
+TabSelection.BackgroundTransparency = 1
+TabSelection.Position = UDim2.new(0, 15, 0, 30)
+TabSelection.Size = UDim2.new(1, -30, 0, 25)
+TabSelection.Visible = false
+TabSelection.Image = "rbxassetid://2851929490"
+TabSelection.ImageColor3 = Color3.new(0.145098, 0.14902, 0.156863)
+TabSelection.ScaleType = Enum.ScaleType.Slice
+TabSelection.SliceCenter = Rect.new(4, 4, 4, 4)
 
-ApenButtons.Name = "ApenButtons"
-ApenButtons.Parent = ApenSelection
-ApenButtons.BackgroundColor3 = Color3.new(1, 1, 1)
-ApenButtons.BackgroundTransparency = 1
-ApenButtons.Size = UDim2.new(1, 0, 1, 0)
+TabButtons.Name = "TabButtons"
+TabButtons.Parent = TabSelection
+TabButtons.BackgroundColor3 = Color3.new(1, 1, 1)
+TabButtons.BackgroundTransparency = 1
+TabButtons.Size = UDim2.new(1, 0, 1, 0)
 
-UIListLayout.Parent = ApenButtons
+UIListLayout.Parent = TabButtons
 UIListLayout.FillDirection = Enum.FillDirection.Horizontal
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 2)
 
-Frame.Parent = ApenSelection
+Frame.Parent = TabSelection
 Frame.BackgroundColor3 = Color3.new(0.12549, 0.227451, 0.372549)
 Frame.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0, 0, 1, 0)
 Frame.Size = UDim2.new(1, 0, 0, 2)
 
-Apen.Name = "Apen"
-Apen.Parent = Prefabs
-Apen.BackgroundColor3 = Color3.new(1, 1, 1)
-Apen.BackgroundTransparency = 1
-Apen.Size = UDim2.new(1, 0, 1, 0)
-Apen.Visible = false
+Tab.Name = "Tab"
+Tab.Parent = Prefabs
+Tab.BackgroundColor3 = Color3.new(1, 1, 1)
+Tab.BackgroundTransparency = 1
+Tab.Size = UDim2.new(1, 0, 1, 0)
+Tab.Visible = false
 
-UIListLayout_2.Parent = Apen
+UIListLayout_2.Parent = Tab
 UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout_2.Padding = UDim.new(0, 5)
 
@@ -389,21 +389,21 @@ TextButton_Roundify_4px.ImageColor3 = Color3.new(0.203922, 0.207843, 0.219608)
 TextButton_Roundify_4px.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_4px.SliceCenter = Rect.new(4, 4, 4, 4)
 
-ApenButton.Name = "ApenButton"
-ApenButton.Parent = Prefabs
-ApenButton.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
-ApenButton.BackgroundTransparency = 1
-ApenButton.BorderSizePixel = 0
-ApenButton.Position = UDim2.new(0.185185179, 0, 0, 0)
-ApenButton.Size = UDim2.new(0, 71, 0, 20)
-ApenButton.ZIndex = 2
-ApenButton.Font = Enum.Font.GothamSemibold
-ApenButton.Text = "Test tab"
-ApenButton.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
-ApenButton.TextSize = 14
+TabButton.Name = "TabButton"
+TabButton.Parent = Prefabs
+TabButton.BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431)
+TabButton.BackgroundTransparency = 1
+TabButton.BorderSizePixel = 0
+TabButton.Position = UDim2.new(0.185185179, 0, 0, 0)
+TabButton.Size = UDim2.new(0, 71, 0, 20)
+TabButton.ZIndex = 2
+TabButton.Font = Enum.Font.GothamSemibold
+TabButton.Text = "Test tab"
+TabButton.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+TabButton.TextSize = 14
 
 TextButton_Roundify_4px_2.Name = "TextButton_Roundify_4px"
-TextButton_Roundify_4px_2.Parent = ApenButton
+TextButton_Roundify_4px_2.Parent = TabButton
 TextButton_Roundify_4px_2.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton_Roundify_4px_2.BackgroundTransparency = 1
 TextButton_Roundify_4px_2.Size = UDim2.new(1, 0, 1, 0)
@@ -801,15 +801,15 @@ Input_Roundify_4px.ImageColor3 = Color3.new(0.290196, 0.294118, 0.313726)
 Input_Roundify_4px.ScaleType = Enum.ScaleType.Slice
 Input_Roundify_4px.SliceCenter = Rect.new(4, 4, 4, 4)
 
-FakeFriendss.Name = "FakeFriendss"
-FakeFriendss.Parent = WhatYouMean
-FakeFriendss.BackgroundColor3 = Color3.new(1, 1, 1)
-FakeFriendss.BackgroundTransparency = 1
-FakeFriendss.Position = UDim2.new(0, 20, 0, 20)
-FakeFriendss.Size = UDim2.new(1, 20, 1, -20)
+Windows.Name = "Windows"
+Windows.Parent = imgui
+Windows.BackgroundColor3 = Color3.new(1, 1, 1)
+Windows.BackgroundTransparency = 1
+Windows.Position = UDim2.new(0, 20, 0, 20)
+Windows.Size = UDim2.new(1, 20, 1, -20)
 
 --[[ Script ]]--
-script.Parent = WhatYouMean
+script.Parent = imgui
 
 local UIS = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -820,7 +820,7 @@ local p = ps.LocalPlayer
 local mouse = p:GetMouse()
 
 local Prefabs = script.Parent:WaitForChild("Prefabs")
-local FakeFriendss = script.Parent:FindFirstChild("FakeFriendss")
+local Windows = script.Parent:FindFirstChild("Windows")
 
 local checks = {
 	["binding"] = false,
@@ -927,10 +927,10 @@ local library = {}
 
 local function format_windows()
 	local ull = Prefabs:FindFirstChild("UIListLayout"):Clone()
-	ull.Parent = FakeFriendss
+	ull.Parent = Windows
 	local data = {}
 
-	for i,v in next, FakeFriendss:GetChildren() do
+	for i,v in next, Windows:GetChildren() do
 		if not (v:IsA("UIListLayout")) then
 			data[v] = v.AbsolutePosition
 		end
@@ -943,29 +943,29 @@ local function format_windows()
 	end
 end
 
-function library:FormatFakeFriendss()
+function library:FormatWindows()
 	format_windows()
 end
 
-function library:AddFakeFriends(title, options)
+function library:AddWindow(title, options)
 	windows = windows + 1
 	local dropdown_open = false
-	title = tostring(title or "New FakeFriends")
+	title = tostring(title or "New Window")
 	options = (typeof(options) == "table") and options or ui_options
 	options.tween_time = 0.1
 
-	local FakeFriends = Prefabs:FindFirstChild("FakeFriends"):Clone()
-	FakeFriends.Parent = FakeFriendss
-	FakeFriends:FindFirstChild("Title").Text = title
-	FakeFriends.Size = UDim2.new(0, options.min_size.X, 0, options.min_size.Y)
-	FakeFriends.ZIndex = FakeFriends.ZIndex + (windows * 10)
+	local Window = Prefabs:FindFirstChild("Window"):Clone()
+	Window.Parent = Windows
+	Window:FindFirstChild("Title").Text = title
+	Window.Size = UDim2.new(0, options.min_size.X, 0, options.min_size.Y)
+	Window.ZIndex = Window.ZIndex + (windows * 10)
 
-	do -- Altering FakeFriends Color
-		local Title = FakeFriends:FindFirstChild("Title")
-		local Bar = FakeFriends:FindFirstChild("Bar")
+	do -- Altering Window Color
+		local Title = Window:FindFirstChild("Title")
+		local Bar = Window:FindFirstChild("Bar")
 		local Base = Bar:FindFirstChild("Base")
 		local Top = Bar:FindFirstChild("Top")
-		local SplitFrame = FakeFriends:FindFirstChild("ApenSelection"):FindFirstChild("Frame")
+		local SplitFrame = Window:FindFirstChild("TabSelection"):FindFirstChild("Frame")
 		local Toggle = Bar:FindFirstChild("Toggle")
 
 		spawn(function()
@@ -982,16 +982,16 @@ function library:AddFakeFriends(title, options)
 
 	end
 
-	local Resizer = FakeFriends:WaitForChild("Resizer")
+	local Resizer = Window:WaitForChild("Resizer")
 
 	local window_data = {}
-	FakeFriends.Draggable = true
+	Window.Draggable = true
 
-	do -- Resize FakeFriends
+	do -- Resize Window
 		local oldIcon = mouse.Icon
 		local Entered = false
 		Resizer.MouseEnter:Connect(function()
-			FakeFriends.Draggable = false
+			Window.Draggable = false
 			if options.can_resize then
 				oldIcon = mouse.Icon
 				-- mouse.Icon = "http://www.roblox.com/asset?id=4745131330"
@@ -1004,7 +1004,7 @@ function library:AddFakeFriends(title, options)
 			if options.can_resize then
 				mouse.Icon = oldIcon
 			end
-			FakeFriends.Draggable = true
+			Window.Draggable = true
 		end)
 
 		local Held = false
@@ -1017,18 +1017,18 @@ function library:AddFakeFriends(title, options)
 						while Held and Resizer.Active do
 
 							local mouse_location = gMouse()
-							local x = mouse_location.X - FakeFriends.AbsolutePosition.X
-							local y = mouse_location.Y - FakeFriends.AbsolutePosition.Y
+							local x = mouse_location.X - Window.AbsolutePosition.X
+							local y = mouse_location.Y - Window.AbsolutePosition.Y
 
 							--
 							if x >= options.min_size.X and y >= options.min_size.Y then
-								Resize(FakeFriends, {Size = UDim2.new(0, x, 0, y)}, options.tween_time)
+								Resize(Window, {Size = UDim2.new(0, x, 0, y)}, options.tween_time)
 							elseif x >= options.min_size.X then
-								Resize(FakeFriends, {Size = UDim2.new(0, x, 0, options.min_size.Y)}, options.tween_time)
+								Resize(Window, {Size = UDim2.new(0, x, 0, options.min_size.Y)}, options.tween_time)
 							elseif y >= options.min_size.Y then
-								Resize(FakeFriends, {Size = UDim2.new(0, options.min_size.X, 0, y)}, options.tween_time)
+								Resize(Window, {Size = UDim2.new(0, options.min_size.X, 0, y)}, options.tween_time)
 							else
-								Resize(FakeFriends, {Size = UDim2.new(0, options.min_size.X, 0, options.min_size.Y)}, options.tween_time)
+								Resize(Window, {Size = UDim2.new(0, options.min_size.X, 0, options.min_size.Y)}, options.tween_time)
 							end
 
 							RS.Heartbeat:Wait()
@@ -1044,13 +1044,13 @@ function library:AddFakeFriends(title, options)
 		end)
 	end
 
-	do -- [Open / Close] FakeFriends
-		local open_close = FakeFriends:FindFirstChild("Bar"):FindFirstChild("Toggle")
+	do -- [Open / Close] Window
+		local open_close = Window:FindFirstChild("Bar"):FindFirstChild("Toggle")
 		local open = true
 		local canopen = true
 
 		local oldwindowdata = {}
-		local oldy = FakeFriends.AbsoluteSize.Y
+		local oldy = Window.AbsoluteSize.Y
 		open_close.MouseButton1Click:Connect(function()
 			if canopen then
 				canopen = false
@@ -1059,16 +1059,16 @@ function library:AddFakeFriends(title, options)
 					-- Close
 
 					oldwindowdata = {}
-					for i,v in next, FakeFriends:FindFirstChild("Apens"):GetChildren() do
+					for i,v in next, Window:FindFirstChild("Tabs"):GetChildren() do
 						oldwindowdata[v] = v.Visible
 						v.Visible = false
 					end
 
 					Resizer.Active = false
 
-					oldy = FakeFriends.AbsoluteSize.Y
+					oldy = Window.AbsoluteSize.Y
 					Resize(open_close, {Rotation = 0}, options.tween_time)
-					Resize(FakeFriends, {Size = UDim2.new(0, FakeFriends.AbsoluteSize.X, 0, 26)}, options.tween_time)
+					Resize(Window, {Size = UDim2.new(0, Window.AbsoluteSize.X, 0, 26)}, options.tween_time)
 					open_close.Parent:FindFirstChild("Base").Transparency = 1
 
 				else
@@ -1081,7 +1081,7 @@ function library:AddFakeFriends(title, options)
 					Resizer.Active = true
 
 					Resize(open_close, {Rotation = 90}, options.tween_time)
-					Resize(FakeFriends, {Size = UDim2.new(0, FakeFriends.AbsoluteSize.X, 0, oldy)}, options.tween_time)
+					Resize(Window, {Size = UDim2.new(0, Window.AbsoluteSize.X, 0, oldy)}, options.tween_time)
 					open_close.Parent:FindFirstChild("Base").Transparency = 0
 
 				end
@@ -1095,24 +1095,24 @@ function library:AddFakeFriends(title, options)
 	end
 
 	do -- UI Elements
-		local tabs = FakeFriends:FindFirstChild("Apens")
-		local tab_selection = FakeFriends:FindFirstChild("ApenSelection")
-		local tab_buttons = tab_selection:FindFirstChild("ApenButtons")
+		local tabs = Window:FindFirstChild("Tabs")
+		local tab_selection = Window:FindFirstChild("TabSelection")
+		local tab_buttons = tab_selection:FindFirstChild("TabButtons")
 
-		do -- Add Apen
-			function window_data:AddApen(tab_name)
+		do -- Add Tab
+			function window_data:AddTab(tab_name)
 				local tab_data = {}
-				tab_name = tostring(tab_name or "New Apen")
+				tab_name = tostring(tab_name or "New Tab")
 				tab_selection.Visible = true
 
-				local new_button = Prefabs:FindFirstChild("ApenButton"):Clone()
+				local new_button = Prefabs:FindFirstChild("TabButton"):Clone()
 				new_button.Parent = tab_buttons
 				new_button.Text = tab_name
 				new_button.Size = UDim2.new(0, gNameLen(new_button), 0, 20)
 				new_button.ZIndex = new_button.ZIndex + (windows * 10)
 				new_button:GetChildren()[1].ZIndex = new_button:GetChildren()[1].ZIndex + (windows * 10)
 
-				local new_tab = Prefabs:FindFirstChild("Apen"):Clone()
+				local new_tab = Prefabs:FindFirstChild("Tab"):Clone()
 				new_tab.Parent = tabs
 				new_tab.ZIndex = new_tab.ZIndex + (windows * 10)
 
@@ -1141,7 +1141,7 @@ function library:AddFakeFriends(title, options)
 					show()
 				end
 
-				do -- Apen Elements
+				do -- Tab Elements
 
 					function tab_data:AddLabel(label_text) -- [Label]
 						label_text = tostring(label_text or "New Label")
@@ -1284,11 +1284,11 @@ function library:AddFakeFriends(title, options)
 							local Entered = false
 							slider.MouseEnter:Connect(function()
 								Entered = true
-								FakeFriends.Draggable = false
+								Window.Draggable = false
 							end)
 							slider.MouseLeave:Connect(function()
 								Entered = false
-								FakeFriends.Draggable = true
+								Window.Draggable = true
 							end)
 
 							local Held = false
@@ -1551,19 +1551,19 @@ function library:AddFakeFriends(title, options)
 
 							local Entered1, Entered2 = false, false
 							palette.MouseEnter:Connect(function()
-								FakeFriends.Draggable = false
+								Window.Draggable = false
 								Entered1 = true
 							end)
 							palette.MouseLeave:Connect(function()
-								FakeFriends.Draggable = true
+								Window.Draggable = true
 								Entered1 = false
 							end)
 							saturation.MouseEnter:Connect(function()
-								FakeFriends.Draggable = false
+								Window.Draggable = false
 								Entered2 = true
 							end)
 							saturation.MouseLeave:Connect(function()
-								FakeFriends.Draggable = true
+								Window.Draggable = true
 								Entered2 = false
 							end)
 
@@ -2012,45 +2012,45 @@ function library:AddFakeFriends(title, options)
 	end
 
 	do
-		for i, v in next, FakeFriends:GetDescendants() do
+		for i, v in next, Window:GetDescendants() do
 			if hasprop(v, "ZIndex") then
 				v.ZIndex = v.ZIndex + (windows * 10)
 			end
 		end
 	end
 
-	return window_data, FakeFriends
+	return window_data, Window
 end
 
 do -- Example UI
-	local FakeFriends = library:AddFakeFriends("Furk Ultra", {
+	local Window = library:AddWindow("Furk - Goal Kick Simulator", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(300, 170),
+		min_size = Vector2.new(300, 195),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
-	local Apen = FakeFriends:AddApen("Grand Piece Online")
+	local Tab = Window:AddTab("Main")
 
 	do -- Elements
-		Apen:AddLabel("Thanks For Using Furk Ultra")
+		Tab:AddLabel("Thanks For Using Furk Ultra")
+		Tab:AddButton("#1 GUI", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/Scripts/main/GoalKickSimulator"))()
+		end)
+		Tab:AddButton("Pufferfish Hub Script", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Cospog/pufferfish/main/goalKick.lua"))()
+		end)
+		Tab:AddButton("Soggy Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/SunkenMuch/Soggyware/main/Main',true))()
+		end)
+		Tab:AddButton("Shiny Tool GUI", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/XLinestX/ShinyTool_Key/main/Loader.lua"))()
+--Key: ShinyTool_NoKey
+		end)
 
-		Apen:AddButton("Yellow Hub (#1)", function()
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jakekill871/public-scripts/master/GrandPieceOnlineGUI'),true))()
-		end)
-		
-		Apen:AddButton("Devil Fruit Finder Hub", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/ArponAG/Scripts/main/gpo.lua', true))()
-
-		end)
-		
-		Apen:AddButton("CFA Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/CFA-HUB/CFA-HUB/main/cfahubfree.lua"))()
-		end)
-		
 		
 
 	end
 
-	Apen:Show()
-	library:FormatFakeFriendss()
+	Tab:Show()
+	library:FormatWindows()
 end
