@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Sonic Speed Simulator", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(300, 195),
+		min_size = Vector2.new(300, 220),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
@@ -2046,6 +2046,10 @@ do -- Example UI
 		Tab:AddButton("Hades Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/HadesRblx/src/master/HadesHub.lua", true))()
 		end)
+		Tab:AddButton("Auto Collect GUI", function()
+			loadstring(game:HttpGet("https://pastebin.com/raw/uKhVA8PN"))();
+		end)
+
 
 		
 
