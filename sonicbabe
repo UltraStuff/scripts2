@@ -2033,10 +2033,6 @@ do -- Example UI
 
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra")
-		Tab:AddButton("Hamsta Hub (#1)", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Sonic%20Speed%20Simulator/main.lua", true))()
-		end)
-		
 		Tab:AddButton("CheaterSoul Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Luciquad/credit/main/sonicspeedsimulator.lua"))()
 		end)
@@ -2045,6 +2041,9 @@ do -- Example UI
 		end)
 		Tab:AddButton("Hades Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/HadesRblx/src/master/HadesHub.lua", true))()
+		end)
+		Tab:AddButton("Hamsta Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Sonic%20Speed%20Simulator/main.lua", true))()
 		end)
 		Tab:AddButton("Auto Collect GUI", function()
 			loadstring(game:HttpGet("https://pastebin.com/raw/uKhVA8PN"))();
