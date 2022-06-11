@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Mining Simulator 2", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(270, 180),
+		min_size = Vector2.new(300, 180),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
@@ -2033,8 +2033,10 @@ do -- Example UI
 
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
-		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 
+		Tab:AddButton("JXNT Hub", function()
+			loadstring(game:HttpGet("https://system-exodus.com/scripts/MiningSimulator/MiningSimulator2.lua", true))()
+		end)
 		
 		Tab:AddButton("SyntaHub", function()
 			local supported_games = {
