@@ -2025,37 +2025,55 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Your Bizarre Adventure", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(300, 290),
+		min_size = Vector2.new(300, 250),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
-	local Tab = Window:AddTab("Main")
+	local Tab = Window:AddTab("List 2")
 
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-		Tab:AddLabel("PS. They all take a bit to open")
-		Tab:AddButton("Xenos Hub (#1)", function()
-			loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/8625abd48b29c047d4673b8d82d0cab9/raw/09d8b61d0f1c2614801dd299088ba35b0a945adf/gistfile1.txt"))()
-		end)
-		
 		Tab:AddButton("Blue Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/hackscript123/main/gui"))()
-		end)
-		Tab:AddButton("NEW VG Hub (good mob farm)", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 		end)
 		Tab:AddButton("Black Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/YBA-GUI-Rewrite.lua"))()
 		end)
-		Tab:AddButton("Kolgie Hub", function()
+		Tab:AddButton("Item Specialty ESP & More", function()
+		loadstring(game:HttpGet("https://pastebin.com/wR56unnV"))()
+		end)
+		Tab:AddButton("Inori Hub", function()
+			loadstring(game:HttpGet("https://pastebin.com/SY1u7fJL"))()
+		end)
+		Tab:AddButton("Historia Hub", function()
+			loadstring(game:HttpGet("https://pastebin.com/rApuP22s"))()
+		end)
+
+
+	end
+	local Tab = Window:AddTab("List 1")
+
+	do -- Elements
+		Tab:AddLabel("Thanks For Using Furk Ultra!")
+		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+		
+				Tab:AddButton("#1 - Xenon Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/rawyba"))()
+		end)
+						Tab:AddButton("OP - YBA GUI", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/XUSatpwK"))()
+		end)
+				Tab:AddButton("Kolgie Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kolgie/YBA-GUI/main/yba-gui-obfuscated.lua"))()
 		end)
-				Tab:AddButton("Zeus Exclusive Hub", function()
-			loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/6a26aa1e3aac8c5cc5425b222534b68d/raw/daff4541c9dd8fde421d925dc5fcc91f65d89db6/gistfile1.txt"))()
+				Tab:AddButton("VG Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 		end)
+
+
 
 
 	end
