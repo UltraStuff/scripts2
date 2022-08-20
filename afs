@@ -2023,56 +2023,52 @@ function library:AddWindow(title, options)
 end
 
 do -- Example UI
-	local Window = library:AddWindow("Furk - Anime Fighting Simulator", {
+	local Window = library:AddWindow("Furk - Anime Fighters Simulator", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(380, 300),
+		min_size = Vector2.new(270, 270),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
-	local Tab = Window:AddTab("Main")
+	local Tab = Window:AddTab("Side GUIs")
 
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+	
+		Tab:AddButton("GUI 1", function()
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/obeseinsect/roblox/main/Games/Anime%20Fighters%20Sim/AFS.lua"))()
+		end)
+		Tab:AddButton("GUI 2", function()
+  		loadstring(game:HttpGet("https://raw.githubusercontent.com/JRL-lav/Scripts/main/anime%20fighter"))() 
+		end)
 		
+		local Tab = Window:AddTab("Main GUIs")
 
-		Tab:AddLabel("PS. They all take a bit to open")
-Tab:AddButton("Fludex Hub (#1 Use key below)", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Woutt/FludexHub/main/login.lua"))()
+	do -- Elements
+		Tab:AddLabel("Thanks For Using Furk Ultra!")
+		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+	
+	
+		
+    Tab:AddButton("#1 GUI - Zer0 Hub (Requires key)", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/GameScripts/6299805723.lua"))()
 		end)
-		Tab:AddLabel("Key: 19qgaifh8pnj")
-		Tab:AddButton("Levia Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/AFS%20Remastered"))()
+		Tab:AddButton("Hoho Hub", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+		end)
+		Tab:AddButton("Deadtired Script", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/pspboy08/dollhouse/main/AFSGUI.lua')))()
+		end)
+		Tab:AddButton("Shrawu GUI", function()
+		loadstring(game:HttpGet("https://paste.ee/r/W7jY4/0", true))()
+		end)
+		Tab:AddButton("Unlock Gamepasses", function()
+			loadstring(game:HttpGet('https://pastebin.com/raw/pDZ72MPw'))()
 		end)
 
-		Tab:AddButton("Zeus Exclusive Hub", function()
-			loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/310d3aa2f95c13eda1c870c33edc2f76/raw/2222bd93dbf81e5f8790c29042a12794d89faf9f/gistfile1.txt"))()
-		end)
-
-		Tab:AddButton("Septex Hub", function()
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/AnimeFightingSim'),true))()
-		end)
-		Tab:AddButton("Fast Chakra (Will freeze game, just wait and train)", function()
-			local replicated = game:GetService('ReplicatedStorage')
-
-coroutine.wrap(function()
-  for i = 1,2000 do -- do howerver much you want
-    task.spawn(function()
-        replicated.RSPackage.Events.StatFunction:InvokeServer('Stat', 'Chakra')
-    end)
-  end
-end)()
- 
--- Customize how bad you want it to lag here
-for i = 1,1000 do
-    for i = 1,1000 do
-        for i = 1,10000 do
-        end
-    end
-end
-		end)
 	end
 
 	Tab:Show()
 	library:FormatWindows()
+end
 end
