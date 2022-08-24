@@ -2025,10 +2025,41 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Blox Fruits", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(300, 340),
+		min_size = Vector2.new(350, 350),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
+	local Tab = Window:AddTab("NEW LIST")
+
+	do -- Elements
+	
+	Tab:AddLabel("Thanks For Using Furk Ultra!")
+	Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+
+		Tab:AddButton("Tuper Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/TUPERX/TUPERX/Main/MenuBF/README.md'))()
+		end)
+		Tab:AddButton("Blaze X Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/WindowsXp12/BlxzeRBLX/main/BLxzeHub.lua"))()
+		end)
+		Tab:AddButton("Sxnumbz Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/sxnumz/Script/main/SxnumzHubFree.txt'))();
+		end)
+		Tab:AddButton("MrMaxNaja Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/MrMaxNaJaEz/New-MrMaxNaJa-NaJa/main/README.md"))()
+		end)
+		Tab:AddButton("East Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Brineeee/EastHub/main/lua"))()
+		end)
+		Tab:AddButton("Chiba Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt'))()
+		end)
+		Tab:AddButton("One X Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/One-x-HUB/main/README.md"))()
+		end)
+	
+
+end
 	local Tab = Window:AddTab("List 4")
 
 	do -- Elements
@@ -2048,9 +2079,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow-Trash/Loader/m
 				Tab:AddButton("Foxy Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/x2foxy/FoxyHubFreescript/main/Freescript"))()
 		end)
-				Tab:AddButton("Hxllow Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/hxllow"))()
-		end)
 				Tab:AddButton("Mark Hub", function()
 			loadstring(game:HttpGet('https://pastebin.com/raw/dhsHESsm'))()
 		end)
@@ -2063,6 +2091,9 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Toonza555/BonkHub/mai
 		end)
 				Tab:AddButton("Meta Ware", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/x2FIWz/SCRIPT/main/MOBILE/METAWARE.lua'))()
+		end)
+				Tab:AddButton("Project Meow - Requires key!", function()
+			loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
 		end)
 		
 
@@ -2147,13 +2178,16 @@ local Tab = Window:AddTab("Main GUIs")
 		
 
 	Tab:AddButton("#1 - Zen Hub", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/MASTER8245/ZenHub/main/LoaderV3", true))() ", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MASTER8245/ZenHub/main/LoaderV3", true))()
 		end)
 		Tab:AddButton("OP - Ripper Hub", function()
 			_G.Color = Color3.fromRGB(52, 190, 255)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/NEWBF.lua"))()
 		end)
-				Tab:AddButton("NEW - String Hub ", function()
+				Tab:AddButton("NEW - Hxllow Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/hxllow"))()
+		end)
+		Tab:AddButton("NEW - String Hub ", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/StringV2/StringHub/main/BF.txt", true))()
 		end)
 		Tab:AddButton("Hoho Hub", function()
@@ -2170,9 +2204,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/m
 		end)
 		Tab:AddButton("Fusion Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/fusion1'))()
-		end)
-				Tab:AddButton("Project Meow - Requires key!", function()
-			loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
 		end)
 
 
