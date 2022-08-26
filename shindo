@@ -2025,59 +2025,53 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Shindo Life", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(420, 340),
+		min_size = Vector2.new(270, 250),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
-	local Tab = Window:AddTab("Main")
-	local TabP = Window:AddTab("Infinite Spins")
+	local Tab = Window:AddTab("Side GUIs")
+
 	do -- Elements
-		Tab:AddLabel("Thanks For Using Furk Ultra")
-		TabP:AddLabel("Thanks For Using Furk Ultra")
-		Tab:AddButton("Snxw Hub (#1)", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Web/main/scripts/SnxwHub.txt"))()
+		Tab:AddLabel("Thanks For Using Furk Ultra!")
+		
+		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+    Tab:AddButton("Meow Hub", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ZOT/Project-PJM/main/shinido"))()
 		end)
- 		TabP:AddButton("NEW Infinite Spins (Working!)", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/spins"))()
-		end)
-		 Tab:AddButton("VG Hub (#2)", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-		end)
-		Tab:AddButton("NEW Meow Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ZOT/Project-PJM/main/shinido"))()
-
-		end)
- 		Tab:AddButton("Project Vellerius(needs Key)", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Loader.lua"))()
-		end)
-		 Tab:AddButton("Premier Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/PremierHub/Data/main/code.lua"))()
-		end)
-		Tab:AddButton("SpyHub GUI", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/6Wumpus6/SpyHub/main/ShindoLife", true))()
-		end)
-		Tab:AddButton("Wumpus GUI", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/dontsteal/donttouch/main/wump"))() 
-		end)
-		Tab:AddButton("Genkai/Element Changer", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/xzqecc/Script/main/xzqec_changer"))()
-		end)
-		Tab:AddLabel("Note that the Genkai/Element Changer ONLY works")
-		Tab:AddLabel("with previous Genkais/Elements you owned!")
-
-		TabP:AddButton("SNXW Hub - INFINITE SPINS", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Web/main/scripts/SnxwHub.txt"))() 
-		end)
-		TabP:AddButton("INFINITE SPINS (AUTO RESET)", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/dontsteal/ok/main/onme"))();
+    Tab:AddButton("SpyHub", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/6Wumpus6/SpyHub/main/ShindoLife", true))()
 		end)
 
-		TabP:AddLabel("Press Unsave Data once you reach 0 spins")
-		TabP:AddLabel("Then rejoin your game, you'll have your spins back")
-		TabP:AddButton("Unsave Data", function()
-			game:GetService("Players").LocalPlayer.startevent:FireServer("band", "\128")
-		end)
 end
+	local Tab = Window:AddTab("Main")
+
+	do -- Elements
+		Tab:AddLabel("Thanks For Using Furk Ultra!")
+		
+		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+		
+
+	Tab:AddButton("VG Hub (#1)", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	end)
+    Tab:AddButton("Kesh Hub", function()
+    loadstring(game:HttpGet("https://bend-over.space/.lua", true))()
+		end)
+    Tab:AddButton("Auto Infinite Spins", function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/fv2yPYw6'))()
+		end)
+    Tab:AddButton("Bloodline Changer/Bag", function()
+       loadstring(game:HttpGet("https://gist.githubusercontent.com/Error-IDK/dc3e3f068fc9fb1936e9914a276f685d/raw/3832f2dd5eae811abe39156c1db76add0e5c6860/gistfile1.txt"))()
+		end)
+    Tab:AddButton("Project Vellerius", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Loader.lua"))()
+		end)
+		
+		
+
+		
+
+	end
 
 	Tab:Show()
 	library:FormatWindows()
