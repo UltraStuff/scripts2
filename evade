@@ -2044,7 +2044,7 @@ do -- Example UI
 	Tab:AddButton("Hydra Hub", function()
        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Robobo2022/script/main/Main.lua"), true))()
 		end)
-	Tab:AddButton("Flara Hub", function()
+	Tab:AddButton("Flare Hub", function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/nocturno"))()
 		end)
 
