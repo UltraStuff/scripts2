@@ -2023,7 +2023,7 @@ function library:AddWindow(title, options)
 end
 
 do -- Example UI
-	local Window = library:AddWindow("Furk - Shindo Life", {
+	local Window = library:AddWindow("Furk - Evade", {
 		main_color = Color3.fromRGB(0, 0, 0),
 		min_size = Vector2.new(270, 250),
 		toggle_key = Enum.KeyCode.RightShift,
@@ -2038,7 +2038,7 @@ do -- Example UI
 		    Tab:AddButton("#1 GUI (Requires Key)", function()
        loadstring(game:HttpGet('https://raw.githubusercontent.com/zReal-King/Evade/main/Main.lua'))()
 		end)
-	Tab:AddButton("HamstGang GUI - OP", function()
+	Tab:AddButton("HamstaGang GUI - OP", function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Evade/main.lua"))()
 		end)
 	Tab:AddButton("Hydra Hub", function()
