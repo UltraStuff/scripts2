@@ -2025,17 +2025,31 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Anime Adventures", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(240, 180),
+		min_size = Vector2.new(240, 200),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
-	local Tab = Window:AddTab("Main")
+	local Tab = Window:AddTab("Auto Erwin")
+		do -- Elements
+				Tab:AddButton("Auto Erwin", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/Sir-Kirito/MyScripts/main/AnimeAdventuresAutoErwin.lua'))()
+		end)
+		Tab:AddLabel("1. Have minimum 2 Erwin placed")
+		Tab:AddLabel("2. Have it upgraded 3 times")
+		Tab:AddLabel("3. Click button above")
+		
+end
+		local Tab = Window:AddTab("Main")
 
 	do -- Elements
+	
 		Tab:AddLabel("Thanks For Using Furk Ultra")
 
 		
-		Tab:AddButton("#1 - Arpon AG Hub", function()
+				Tab:AddButton("NEW - Trap Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/TrapHub.lua"))()
+		end)
+		Tab:AddButton("OP - Arpon AG Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua"))()
 		end)
 		Tab:AddButton("Keybruw Hub", function()
