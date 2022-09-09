@@ -2064,14 +2064,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-
 	
 		Tab:AddLabel("Thanks For Using Furk Ultra")
 
-				Tab:AddButton("Yellow Hub (#1)", function()
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jakekill871/public-scripts/master/GrandPieceOnlineGUI'),true))()
+				Tab:AddButton("#1 - CFA Hub", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/CFA-HUB/CFA-HUB/main/cfahubfree.lua"))()
 		end)	
 		Tab:AddButton("Devil Fruit Finder Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/ArponAG/Scripts/main/gpo.lua', true))()
 		end)
-		Tab:AddButton("CFA Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/CFA-HUB/CFA-HUB/main/cfahubfree.lua"))()
+		Tab:AddButton("Yellow GUI", function()
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jakekill871/public-scripts/master/GrandPieceOnlineGUI'),true))()
 		end)
 		
 						Tab:AddButton("Become Fully Invisible", function()
