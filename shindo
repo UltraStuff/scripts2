@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Shindo Life", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(270, 250),
+		min_size = Vector2.new(250, 230),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
@@ -2051,20 +2051,17 @@ end
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-	Tab:AddButton("VG Hub (#1)", function()
+    Tab:AddButton("NEW #1 - Vellerius (INF SPINS)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/Revamps/main/SpyHub.lua"))()
+		end)
+					Tab:AddButton("VG Hub (OP)", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	end)
-    Tab:AddButton("Kesh Hub", function()
-    loadstring(game:HttpGet("https://bend-over.space/.lua", true))()
-		end)
-    Tab:AddButton("Auto Infinite Spins", function()
-	loadstring(game:HttpGet('https://pastebin.com/raw/fv2yPYw6'))()
+		    Tab:AddButton("NEW - SNXW Hub Lite", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Premier/main/Free-Premier.lua", true))()
 		end)
     Tab:AddButton("Bloodline Changer/Bag", function()
        loadstring(game:HttpGet("https://gist.githubusercontent.com/Error-IDK/dc3e3f068fc9fb1936e9914a276f685d/raw/3832f2dd5eae811abe39156c1db76add0e5c6860/gistfile1.txt"))()
-		end)
-    Tab:AddButton("Project Vellerius", function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Loader.lua"))()
 		end)
 		
 		
