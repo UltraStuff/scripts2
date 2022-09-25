@@ -14,6 +14,13 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+	                                        		{
+            "Name": "NEW - BedWars",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bedwars",
+            "Description": "#1 GUI - Kill Aura, Fly, Auto Upgrade & More!",
+            "ThumbNail": "https://i.imgur.com/xlkGT0E.png",
+            "ID" : "154"
+        },
 	        		                        {
             "Name": "UPDATED - Shindo Life",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
@@ -132,13 +139,6 @@
             "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
             "ThumbNail": "https://i.imgur.com/Hklu0PN.png",
             "ID": "171"
-        },
-                                        		{
-            "Name": "BedWars",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bedwars",
-            "Description": "#1 Exclusive GUI - Kill Aura, Fly, Auto Upgrade & More!",
-            "ThumbNail": "https://i.imgur.com/XNB9Ph6.png",
-            "ID" : "154"
         },
         {
             "Name": "All Star Tower Defense",
