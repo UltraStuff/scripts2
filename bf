@@ -2146,9 +2146,6 @@ end
 		Tab:AddButton("Power X Hub", function()
 			loadstring(game:HttpGet(("https://raw.githubusercontent.com/natoppo044/modzcaster/main/POWERX.lua"),true))()
 		end)
-		Tab:AddButton("Netna Hub", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/NinoGod/NetnaYay/8d21ce23346c500c93bb8b4a71f7791e4058a70b/startload.lua'))()
-		end)
 		Tab:AddButton("Strike Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
 		end)
@@ -2167,6 +2164,9 @@ end
 		Tab:AddButton("MrMaxNaja Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/MrMaxNaJaEz/New-MrMaxNaJa-NaJa/main/README.md"))()
 		end)
+				Tab:AddButton("Fusion Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/fusion1'))()
+		end)
 
 	end
 
@@ -2177,13 +2177,16 @@ local Tab = Window:AddTab("Main GUIs")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-					Tab:AddButton("NEW #1 - Ripper Hub V2", function()
+					Tab:AddButton("#1 - Ripper Hub V2", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/RIPPERHUBV2.lua"))()
+		end)
+				Tab:AddButton("NEW - Netna Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/katrina367/ScriptBlox-Projects/main/OblivionAutoEXEV1'))()
 		end)
 				Tab:AddButton("NEW - Mukuro Hub", function()
 			loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
 		end)
-	Tab:AddButton("OP - Zen Hub", function()
+	Tab:AddButton("Zen Hub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/MASTER8245/ZenHub/main/LoaderV3", true))()
 		end)
 		Tab:AddButton("NEW - Playback X Hub", function()
@@ -2201,9 +2204,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/m
 		end)
 		Tab:AddButton("SMZ Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv2BETA"))()
-		end)
-		Tab:AddButton("Fusion Hub", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/fusion1'))()
 		end)
 
 
