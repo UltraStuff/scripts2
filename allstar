@@ -2037,13 +2037,13 @@ do -- Example UI
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-		Tab:AddButton("River Hub (#1)", function()
+    Tab:AddButton("#1 - Panda Hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/KarmaPanda/Roblox/main/astd-aio.lua'))()
+		end)
+		Tab:AddButton("River Hub", function()
     pcall(function()
    loadstring(game:HttpGet("http://riverhub.xyz/" .. tostring(game.PlaceId) .. ".lua"))()
 end)
-		end)
-    Tab:AddButton("Panda Hub", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/KarmaPanda/Roblox/main/astd-aio.lua'))()
 		end)
     Tab:AddButton("Mini-GUI", function()
        loadstring(game:HttpGetAsync("https://pastebin.com/raw/Cp8xbrrj"))()
