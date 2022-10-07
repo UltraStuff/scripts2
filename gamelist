@@ -14,33 +14,33 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
-	                                        		{
-            "Name": "NEW - BedWars",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bedwars",
-            "Description": "#1 GUI - Kill Aura, Fly, Auto Upgrade & More!",
-            "ThumbNail": "https://i.imgur.com/xlkGT0E.png",
-            "ID" : "154"
+	        {
+            "Name": "NEW - All Star Tower Defense",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/allstar",
+            "Description": "#1 GUI - Auto Farm, Auto Upgrade Unit & More!",
+            "ThumbNail": "https://i.imgur.com/LxJxqNL.png",
+            "ID" : "160"
         },
-	        		                        {
-            "Name": "UPDATED - Shindo Life",
+                                                                                {
+            "Name": "Blox Fruits",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
+            "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
+            "ThumbNail": "https://i.imgur.com/NNqnYPN.png",
+            "ID": "13"
+        },
+		        		                        {
+            "Name": "Shindo Life",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
             "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
             "ThumbNail": "https://i.imgur.com/SZ1LEN4.png",
             "ID": "12"
         },
                         				                                        		{
-            "Name": "NEW - Anime Adventures",
+            "Name": "Anime Adventures",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/animeadventures",
             "Description": "#1 Exclusive GUI - Auto Upgrade, Auto Abilities & More!",
             "ThumbNail": "https://i.imgur.com/eHAEpEs.png",
             "ID" : "208"
-        },
-                                                                                {
-            "Name": "UPDATE - Blox Fruits",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
-            "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
-            "ThumbNail": "https://i.imgur.com/NNqnYPN.png",
-            "ID": "13"
         },
                                                 		{
             "Name": "Your Bizarre Adventure",
@@ -62,6 +62,13 @@
             "Description": "#1 Exclusive GUI - WalkSpeed, Fly, Remove Doors & More!",
             "ThumbNail": "https://i.imgur.com/EMTFajE.png",
             "ID": "213"
+        },
+		                                        		{
+            "Name": "BedWars",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bedwars",
+            "Description": "#1 GUI - Kill Aura, Fly, Auto Upgrade & More!",
+            "ThumbNail": "https://i.imgur.com/xlkGT0E.png",
+            "ID" : "154"
         },
                                {
             "Name": "A Universal Time",
@@ -139,13 +146,6 @@
             "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
             "ThumbNail": "https://i.imgur.com/Hklu0PN.png",
             "ID": "171"
-        },
-        {
-            "Name": "All Star Tower Defense",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/allstar",
-            "Description": "#1 GUI - Auto Farm, Auto Upgrade Unit & More!",
-            "ThumbNail": "https://i.imgur.com/LxJxqNL.png",
-            "ID" : "160"
         },
                                                 	{
             "Name": "Clicker Simulator",
