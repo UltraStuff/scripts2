@@ -2040,7 +2040,7 @@ do -- Example UI
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/doors/main.lua"))()
 		end)
 		Tab:AddButton("OP D4rk GUI (Requires Key)", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/D4rk9690/My-scripts/main/Doors%20gui", true))() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/D4rk9690/My-scripts/main/d4rkfcker", true))()
 		end)
 		Tab:AddButton("Orion GUI", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/ddddors"))()
