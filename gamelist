@@ -14,6 +14,13 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+	                                                		{
+            "Name": "UPDATE - Your Bizarre Adventure",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/yba",
+            "Description": "#1 Exclusive GUI - Auto Farm, Item Search, Mods & More!",
+            "ThumbNail": "https://i.imgur.com/Mo8eDvn.png",
+            "ID" : "29"
+        },
 	        	{
             "Name": "NEW - Combat Warriors",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/combatwar",
@@ -41,13 +48,6 @@
             "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
             "ThumbNail": "https://i.imgur.com/SZ1LEN4.png",
             "ID": "12"
-        },
-                                                		{
-            "Name": "Your Bizarre Adventure",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/yba",
-            "Description": "#1 Exclusive GUI - Auto Farm, Item Search, Mods & More!",
-            "ThumbNail": "https://i.imgur.com/LxRyoFF.png",
-            "ID" : "29"
         },
                 		                        {
             "Name": "Evade",
