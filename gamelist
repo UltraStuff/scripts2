@@ -14,14 +14,14 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
-	                        		{
-            "Name": "NEW - Murder Mystery 2",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/mm2",
-            "Description": "#1 Exclusive GUI - Auto Farm, ESP, Walkspeed & More!",
-            "ThumbNail": "https://i.imgur.com/3fnhz3i.png",
-            "ID": "55"
+	                {
+            "Name": "UPDATE - Pet Simulator X",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
+            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
+            "ThumbNail": "https://i.imgur.com/Hklu0PN.png",
+            "ID": "171"
         },
-	                                                		{
+	{
             "Name": "UPDATE - Your Bizarre Adventure",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/yba",
             "Description": "#1 Exclusive GUI - Auto Farm, Item Search, Mods & More!",
@@ -29,11 +29,18 @@
             "ID" : "29"
         },
                                                                                 {
-            "Name": "NEW - Blox Fruits",
+            "Name": "Blox Fruits",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
             "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
             "ThumbNail": "https://i.imgur.com/NNqnYPN.png",
             "ID": "13"
+        },
+		                        		{
+            "Name": "Murder Mystery 2",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/mm2",
+            "Description": "#1 Exclusive GUI - Auto Farm, ESP, Walkspeed & More!",
+            "ThumbNail": "https://i.imgur.com/3fnhz3i.png",
+            "ID": "55"
         },
 	                        				                                        		{
             "Name": "Anime Adventures",
@@ -146,13 +153,6 @@
             "Description": "#1 Exclusive GUI - Auto Farm, Auto Steps, Coin Hack & More!",
             "ThumbNail": "https://i.imgur.com/MnYsqdn.png",
             "ID" : "196"
-        },
-                {
-            "Name": "Pet Simulator X",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
-            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
-            "ThumbNail": "https://i.imgur.com/Hklu0PN.png",
-            "ID": "171"
         },
                                                 	{
             "Name": "Clicker Simulator",
