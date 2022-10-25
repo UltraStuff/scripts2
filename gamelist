@@ -14,6 +14,13 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+			        		                        {
+            "Name": "NEW - Shindo Life",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
+            "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
+            "ThumbNail": "https://i.imgur.com/JJp2sYX.png",
+            "ID": "12"
+        },
 	                {
             "Name": "UPDATE - Pet Simulator X",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
@@ -48,13 +55,6 @@
             "Description": "#1 Exclusive GUI - Auto Upgrade, Auto Abilities & More!",
             "ThumbNail": "https://i.imgur.com/eHAEpEs.png",
             "ID" : "208"
-        },
-		        		                        {
-            "Name": "Shindo Life",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
-            "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
-            "ThumbNail": "https://i.imgur.com/SZ1LEN4.png",
-            "ID": "12"
         },
                 		                        {
             "Name": "Evade",
