@@ -2043,6 +2043,20 @@ do -- Example UI
 		end)
 
 end
+local Tab = Window:AddTab("RC Hack")
+
+	do -- Elements
+		Tab:AddLabel("How to use :")
+		Tab:AddLabel("1. Click on '+500k RC'")
+		Tab:AddLabel("2. Spend it on whatever you want")
+		Tab:AddLabel("3. Once you've spent it all, repeat")
+		
+		
+    Tab:AddButton("+500k RC", function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Solo_Hub/main/INFRELLCOINS"))()
+	end)
+
+end
 	local Tab = Window:AddTab("Main")
 
 	do -- Elements
@@ -2064,11 +2078,8 @@ end
        loadstring(game:HttpGet("https://gist.githubusercontent.com/Error-IDK/dc3e3f068fc9fb1936e9914a276f685d/raw/3832f2dd5eae811abe39156c1db76add0e5c6860/gistfile1.txt"))()
 		end)
 		
-		
-
-		
-
-	end
+		end
+	
 
 	Tab:Show()
 	library:FormatWindows()
