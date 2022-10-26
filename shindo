@@ -2051,10 +2051,10 @@ local Tab = Window:AddTab("Utility Hacks")
 		
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
-		    Tab:AddButton("Infinite Rell Coins + Spins GUI", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/4NiEPy2D"))()
+		    Tab:AddButton("Infinite Rell Coins", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Solo_Hub/main/INFRELLCOINS"))()
 	end)
-			    Tab:AddButton("Enable Max Rank", function()
+			    Tab:AddButton("Enable Max Rank + Inf Spins", function()
 getgenv().loopLevel = true; -- change to "false" for stop
 while getgenv().loopLevel do task.wait()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/KylnDantas/InfRellCoinsSL/main/file.lua"))()
@@ -2066,7 +2066,7 @@ while getgenv().loopLevel do task.wait()
    game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
 end;
 	end)
-			    Tab:AddButton("Disable Max Rank", function()
+			    Tab:AddButton("Disable Max Rank + Inf Spins", function()
 getgenv().loopLevel = false; -- change to "false" for stop
 while getgenv().loopLevel do task.wait()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/KylnDantas/InfRellCoinsSL/main/file.lua"))()
