@@ -2043,17 +2043,40 @@ do -- Example UI
 		end)
 
 end
-local Tab = Window:AddTab("RC Hack")
+local Tab = Window:AddTab("Utility Hacks")
 
 	do -- Elements
-		Tab:AddLabel("How to use :")
-		Tab:AddLabel("1. Click on '+500k RC'")
-		Tab:AddLabel("2. Spend it on whatever you want")
-		Tab:AddLabel("3. Once you've spent it all, repeat")
+	
+			Tab:AddLabel("Thanks For Using Furk Ultra!")
 		
+		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
-    Tab:AddButton("+500k RC", function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Solo_Hub/main/INFRELLCOINS"))()
+		    Tab:AddButton("Infinite Rell Coins + Spins GUI", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/4NiEPy2D"))()
+	end)
+			    Tab:AddButton("Enable Max Rank", function()
+getgenv().loopLevel = true; -- change to "false" for stop
+while getgenv().loopLevel do task.wait()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/KylnDantas/InfRellCoinsSL/main/file.lua"))()
+   task.wait(0.50)
+   local args = {
+       [1] = "maxlvlpres2"
+   }
+   
+   game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+end;
+	end)
+			    Tab:AddButton("Disable Max Rank", function()
+getgenv().loopLevel = false; -- change to "false" for stop
+while getgenv().loopLevel do task.wait()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/KylnDantas/InfRellCoinsSL/main/file.lua"))()
+   task.wait(0.50)
+   local args = {
+       [1] = "maxlvlpres2"
+   }
+   
+   game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+end;
 	end)
 
 end
