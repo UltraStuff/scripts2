@@ -2047,9 +2047,8 @@ local Tab = Window:AddTab("Utility Hacks")
 
 	do -- Elements
 	
-			Tab:AddLabel("Thanks For Using Furk Ultra!")
-		
-		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+			Tab:AddLabel("Status: PATCHED - DON'T USE")
+
 		
 		    Tab:AddButton("Infinite Rell Coins", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Solo_Hub/main/INFRELLCOINS"))()
