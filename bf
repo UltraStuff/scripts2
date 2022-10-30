@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Blox Fruits", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(350, 350),
+		min_size = Vector2.new(350, 370),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
@@ -2036,6 +2036,14 @@ do -- Example UI
 	Tab:AddLabel("Thanks For Using Furk Ultra!")
 	Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 
+		
+						Tab:AddButton("Whale Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/x2SPETER/x2SPETER/main/BloxFruits.lua"))()
+		end)
+				Tab:AddButton("Shadow Hub", function()
+			_G.Script_Modes = "Normal_Wcq"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow-Trash/Loader/main/Loader.lua"))();
+		end)
 		Tab:AddButton("Tuper Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/TUPERX/TUPERX/Main/MenuBF/README.md'))()
 		end)
@@ -2066,12 +2074,11 @@ end
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
-				Tab:AddButton("Whale Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/x2SPETER/x2SPETER/main/BloxFruits.lua"))()
+								Tab:AddButton("Putaya Hub", function()
+			loadstring(game:HttpGet(("https://raw.githubusercontent.com/Putaya/HITBOXKAK/main/PutayaFree"), true))();
 		end)
-				Tab:AddButton("Shadow Hub", function()
-			_G.Script_Modes = "Normal_Wcq"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow-Trash/Loader/main/Loader.lua"))();
+				Tab:AddButton("Master Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
 		end)
 				Tab:AddButton("Black Trap", function()
 			loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
@@ -2104,11 +2111,11 @@ end
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
-				Tab:AddButton("Putaya Hub", function()
-			loadstring(game:HttpGet(("https://raw.githubusercontent.com/Putaya/HITBOXKAK/main/PutayaFree"), true))();
+						Tab:AddButton("MrMaxNaja Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/MrMaxNaJaEz/New-MrMaxNaJa-NaJa/main/README.md"))()
 		end)
-				Tab:AddButton("Master Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
+				Tab:AddButton("Fusion Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/fusion1'))()
 		end)
 				Tab:AddButton("Owu Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/slightten/ouwHub/main/ouwHub'))()
@@ -2140,6 +2147,12 @@ end
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
+				Tab:AddButton("String Hub ", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/StringV2/StringHub/main/BF.txt", true))()
+		end)
+		Tab:AddButton("SMZ Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv2BETA"))()
+		end)
 		Tab:AddButton("Maru Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/joi-droid/MaruHubBF/main/GOHANSSJ3'))()
 		end)
@@ -2161,12 +2174,6 @@ end
 		Tab:AddButton("Arsenal Hub", function()
 			loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/4cb431a321a687abc247a6384f3a8ecc/raw/eba40876125868afbeb8f464cae08c6367b70e07/gistfile1.txt"))()
 		end)
-		Tab:AddButton("MrMaxNaja Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/MrMaxNaJaEz/New-MrMaxNaJa-NaJa/main/README.md"))()
-		end)
-				Tab:AddButton("Fusion Hub", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/fusion1'))()
-		end)
 
 	end
 
@@ -2177,19 +2184,28 @@ local Tab = Window:AddTab("Main GUIs")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-							Tab:AddButton("NEW #1 - Hoho Hub", function()
+														Tab:AddButton("NEW #1 - Neva Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+		end)
+									Tab:AddButton("NEW - Unique Hub", function()
+			loadstring(game:HttpGet("https://rawscripts.net/raw/UPDATE-16-Blox-Fruits-Unique-Hub-LEAK-6735"))()
+		end)
+									Tab:AddButton("OP - Hoho Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
 		end)
-			Tab:AddButton("NEW OP - Zama Hub", function()
+									Tab:AddButton("NEW - Hoho Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/kill55547/TAWAN_HUB/main/hub.lua.txt', true))()
+		end)
+			Tab:AddButton("Zama Hub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/RimuruScripter/Zama-Hub/main/LoadingScriptNew"))()
 		end)
-					Tab:AddButton("NEW OP - Ripper Hub V2", function()
+					Tab:AddButton("Ripper Hub V2", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/RIPPERHUBV2.lua"))()
 		end)
-				Tab:AddButton("NEW - Netna Hub", function()
+				Tab:AddButton("Netna Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/katrina367/ScriptBlox-Projects/main/OblivionAutoEXEV1'))()
 		end)
-				Tab:AddButton("NEW - Mukuro Hub", function()
+				Tab:AddButton("Mukuro Hub", function()
 			loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
 		end)
 		Tab:AddButton("Playback X Hub", function()
@@ -2198,12 +2214,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/m
 				Tab:AddButton("Tuper X", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/TUPERX/TUPERX/Main/MenuBF/README.md'))()
 
-		end)
-		Tab:AddButton("String Hub ", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/StringV2/StringHub/main/BF.txt", true))()
-		end)
-		Tab:AddButton("SMZ Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv2BETA"))()
 		end)
 
 
