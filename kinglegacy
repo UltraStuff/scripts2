@@ -2025,38 +2025,62 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - King Legacy", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(300, 270),
+		min_size = Vector2.new(250, 250),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
-	local Tab = Window:AddTab("Main")
+local Tab = Window:AddTab("List 2")
 
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 
 
-		Tab:AddButton("NEW Green Hub", function()
-			loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/KingLegacy.lua")()
+		
+		Tab:AddButton("Hyper Hub", function()
+		repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
 		end)
-		Tab:AddButton("NEW Black Hub (most functions)", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua"))()
+		Tab:AddButton("Project Meow", function()
+		loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
 		end)
-		Tab:AddButton("Strike Hub", function()
-			getgenv().Color = Color3.fromRGB(0, 128, 255)
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
+		Tab:AddButton("Thunder Z", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
 		end)
+		Tab:AddButton("Scarface's GUI", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/PainfulDestroyer/Roblox/main/King%20Legacy"))()
+		end)
+		Tab:AddButton("River Hub", function()
+		pcall(function()
+  loadstring(game:HttpGet("http://riverhub.xyz/" .. tostring(game.PlaceId) .. ".lua"))()
+end)
+		end)
+		
 
-		Tab:AddButton("Nexus Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
-		end)
+	end
 
-		Tab:AddButton("MheeHub GUI", function()
-			loadstring(game:HttpGet("https://pastebin.com/raw/KyP4n2rT"))()
+	local Tab = Window:AddTab("Main List")
+
+	do -- Elements
+		Tab:AddLabel("Thanks For Using Furk Ultra!")
+		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
+
+
+		
+		Tab:AddButton("#1 - Strike Hub V2", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Strikehubv2z/StormSKz/main/All_in_one"))()
 		end)
-		Tab:AddButton("NEW RedHyper Hub (requires key)", function()
-			repeat wait() until game:IsLoaded()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+		Tab:AddButton("NEW - Hoho Hub", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+		end)
+		Tab:AddButton("NEW - Mukuro Hub", function()
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+		end)
+		Tab:AddButton("NEW - Ripper Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/King%20Leagacy"))()
+		end)
+		Tab:AddButton("Black Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua"))()
 		end)
 		
 
