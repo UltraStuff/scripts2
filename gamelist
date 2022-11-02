@@ -14,6 +14,13 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+	        {
+            "Name": "NEW - King Legacy",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
+            "Description": "UPDATE 4 - Devil Fruit Farm, Auto Farm, Auto Stats & More!",
+            "ThumbNail": "https://i.imgur.com/FwkIXoA.png",
+            "ID": "23"
+        },
 	                                                                                {
             "Name": "NEW - Blox Fruits",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
@@ -510,13 +517,6 @@
             "Description": "#1 Exclusive GUI - Auto Farm, God Mode, Fly & More!",
             "ThumbNail": "https://i.imgur.com/6DqP4md.png",
             "ID" : "200"
-        },
-        {
-            "Name": "King Legacy",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
-            "Description": "UPDATE 3.5 - Raid Farm, Auto, Auto Stats & More!",
-            "ThumbNail": "https://i.imgur.com/l9Eqi0X.png",
-            "ID": "23"
         },
                         {
             "Name": "Demonfall",
