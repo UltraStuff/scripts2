@@ -2067,11 +2067,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-						Tab:AddButton("NEW #1 - Lunar Hub", function()
-						loadstring(game:HttpGet("https://raw.githubusercontent.com/0xRinFin/GPO/main/Lunar%20Hub%20GPO%20FREE.lua"))()
-		end)	
 		Tab:AddButton("#1 - CFA Hub", function()
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/CFA-HUB/CFA-HUB/main/cfahubfree.lua"))()
+		end)	
+								Tab:AddButton("NEW - Dolce Hub", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/tree"))()
 		end)	
 		Tab:AddButton("Devil Fruit Finder Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/ArponAG/Scripts/main/gpo.lua', true))()
