@@ -14,6 +14,13 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+	                                                                                                	{
+            "Name": "NEW - Grand Piece Online GPO",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/gpo",
+            "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
+            "ThumbNail": "https://i.imgur.com/g54V09M.png",
+            "ID": "43"
+        },
 	        {
             "Name": "NEW - King Legacy",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
@@ -104,13 +111,6 @@
             "Description": "#1 Exclusive GUI - Aimbot, ESP & More!",
             "ThumbNail": "https://i.imgur.com/PG0e8oY.png",
             "ID" : "216"
-        },
-                                                                                                	{
-            "Name": "Grand Piece Online",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/gpo",
-            "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
-            "ThumbNail": "https://i.imgur.com/NS077RV.png",
-            "ID": "43"
         },
                                                {
             "Name": "Slap Battles",
