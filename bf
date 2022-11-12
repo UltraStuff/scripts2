@@ -2187,13 +2187,14 @@ local Tab = Window:AddTab("Main GUIs")
 		
 		
 		Tab:AddButton("NEW - Ripper Hub V3", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/RIPPERHUBV2.lua"))()
+_G.Version = "V3" -- V2 or V3
+loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
 		end)
 				Tab:AddButton("NEW - Playback X Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/NeaPchX2/Playback-X-HUB/main/Protected.lua.txt"))()
 		end)
 				Tab:AddButton("NEW - Thunder Hub", function()
-			loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+			loadstring(game:HttpGet"https://raw.githubusercontent.com/RegularThunder/IsCute/main/ScriptLoader")()
 		end)
 		Tab:AddButton("NEW - Mukuro Hub", function()
 			loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
