@@ -2029,22 +2029,43 @@ do -- Example UI
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
-	local Tab = Window:AddTab("Main")
+		local Tab = Window:AddTab("List 2")
 
 	do -- Elements
-		Tab:AddLabel("Thanks For Using Furk Ultra")
+	Tab:AddLabel("Thanks For Using Furk Ultra")
 
-		Tab:AddButton("Sin Hub", function()
-			loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Blackout4781/Sin.xyzz/main/Project%20Slayers%20Test"))()
+
+		Tab:AddButton("LeadMarker Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"))()
 		end)
-		Tab:AddButton("VG Hub (Auto Farm)", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+		Tab:AddButton("Phantom  Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
 		end)
 		Tab:AddButton("Carley Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/lmmake/fun/main/projectslayer.lua"))() 
 		end)
 		Tab:AddButton("Lazy Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/RbScripts/main/lazyhub.lua"))()
+		end)
+
+	end
+	local Tab = Window:AddTab("Main")
+
+	do -- Elements
+		Tab:AddLabel("Thanks For Using Furk Ultra")
+
+				Tab:AddButton("#1 Auto Farm GUI", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Novaz5792/X/main/Q"))()
+		end)
+		Tab:AddButton("#1 Dungeon Farm", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Novaz5792/X/main/R"))()
+
+		end)
+		Tab:AddButton("Sin Hub", function()
+			loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Blackout4781/Sin.xyzz/main/Project%20Slayers%20Test"))()
+		end)
+		Tab:AddButton("VG Hub", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 		end)
 		Tab:AddButton("Auto Spin 0.1% Clan (NOT INF SPINS)", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/noRynx/miningsim/main/slayerspins"))()
