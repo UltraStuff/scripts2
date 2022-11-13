@@ -2054,6 +2054,12 @@ end
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 	
+		Tab:AddButton("Petsi X GUI", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/dqfmXAAn"))()
+		end)
+		Tab:AddButton("Dex Hub", function()
+		loadstring(game:HttpGet("https://dexhub.xyz/loader.lua"))()
+		end)
 		Tab:AddButton("Proxo GUI", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Pojken123/psxx/main/p"))()
 		end)
@@ -2076,30 +2082,24 @@ end
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 	
 	
-
-		Tab:AddButton("#1 - BK Hub", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/BLACKGAMER1221/Pet-Simulator-X/main/BK%20Pet.lua"))()
+				Tab:AddButton("#1 GUI - Pasta V2 Hub", function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/CATS-or-Pet-Simulator-X!-Pasta-v2-6841"))()
 		end)
-				Tab:AddButton("NEW - Thunder Z", function()
+						Tab:AddButton("NEW - Huge Games", function()
+		getgenv().AuthKey="HUGE_fsawrV6LdQm3GRxG"
+getgenv().LoadSettings={
+    DisableStartupPrompt=false
+}
+loadstring(game:HttpGet("https://HugeGames.io/script"))()
+		end)
+				Tab:AddButton("NEW - Project Luna", function()
+		loadstring(game:HttpGetAsync("https://lunahub.cf/Loader.lua", true))()
+		end)
+		Tab:AddButton("Thunder Z", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-HUB/HUB/main/Script"))()
-		end)
-				Tab:AddButton("NEW - Ghost Hub", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRUs/Ryans/main/GhostHub-PetSimX.lua"))()
-		end)
-		Tab:AddButton("NEW - Lunar Hub", function()
-		loadstring(game:HttpGet("https://github.com/HazeNx/shimbo/raw/main/euphoria.lua"))()
-		end)
-				Tab:AddButton("NEW - Ultra Hub", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Ultra-Hub/main/Main"))()
 		end)
 		Tab:AddButton("Phantom hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
-		end)
-		Tab:AddButton("Petsi X GUI", function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/dqfmXAAn"))()
-		end)
-		Tab:AddButton("Dex Hub", function()
-		loadstring(game:HttpGet("https://dexhub.xyz/loader.lua"))()
 		end)
 
 	end
