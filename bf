@@ -2186,6 +2186,40 @@ local Tab = Window:AddTab("Main GUIs")
 
 		
 		
+											Tab:AddButton("#1 Chest Farm", function()
+			local plr = game.Players.LocalPlayer
+local chr = plr.Character
+local t = game.TweenService
+
+local bv = Instance.new("BodyVelocity")
+bv.MaxForce = Vector3.new(1/0, 1/0, 1/0)
+bv.Velocity = Vector3.new()
+bv.Name = "bV"
+local bav = Instance.new("BodyAngularVelocity")
+bav.AngularVelocity = Vector3.new()
+bav.MaxTorque = Vector3.new(1/0, 1/0, 1/0)
+bav.Name = "bAV" 
+
+for _,v in next, workspace:GetDescendants() do
+    if v.Name:find("Chest") then
+        pcall(function()
+            repeat 
+                local anc1 = bv:Clone()
+                anc1.Parent = chr.HumanoidRootPart
+                local anc2 = bav:Clone()
+                anc2.Parent = chr.HumanoidRootPart
+                local p = t:Create(chr.HumanoidRootPart, TweenInfo.new((plr:DistanceFromCharacter(v.Position)-150)/320, Enum.EasingStyle.Linear), {CFrame=v.CFrame + Vector3.new(0, v.Size.Y, 0)})
+                p:Play()
+                p.Completed:Wait()
+                chr.HumanoidRootPart.CFrame = v.CFrame
+                anc1:Destroy()
+                anc2:Destroy()
+                wait(1)
+            until v.Parent ~= workspace
+        end)
+    end
+end
+		end)
 		Tab:AddButton("NEW - Ripper Hub V3", function()
 _G.Version = "V3" -- V2 or V3
 loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
@@ -2201,9 +2235,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/m
 		end)
 		Tab:AddButton("Neva Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
-		end)
-									Tab:AddButton("Unique Hub", function()
-			loadstring(game:HttpGet("https://rawscripts.net/raw/UPDATE-16-Blox-Fruits-Unique-Hub-LEAK-6735"))()
 		end)
 									Tab:AddButton("OP - Hoho Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
