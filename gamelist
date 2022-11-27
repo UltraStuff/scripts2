@@ -14,26 +14,12 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
-					                        {
-            "Name": "NEW - Project Slayers",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/projectsl",
-            "Description": "#1 GUI - Infinite Levels, Auto Quest & More!",
-            "ThumbNail": "https://i.imgur.com/txEnmyG.png",
-            "ID": "209"
-        },
-	                                                                                                	{
-            "Name": "NEW - Grand Piece Online GPO",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/gpo",
-            "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
-            "ThumbNail": "https://i.imgur.com/er645rL.png",
-            "ID": "43"
-        },
-	        {
-            "Name": "NEW - King Legacy",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
-            "Description": "UPDATE 4 - Devil Fruit Farm, Auto Farm, Auto Stats & More!",
-            "ThumbNail": "https://i.imgur.com/FwkIXoA.png",
-            "ID": "23"
+		                {
+            "Name": "UPDATE - Pet Simulator X",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
+            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
+            "ThumbNail": "https://i.imgur.com/hvTabpM.png",
+            "ID": "171"
         },
 	                                                                                {
             "Name": "NEW - Blox Fruits",
@@ -42,22 +28,22 @@
             "ThumbNail": "https://i.imgur.com/NNqnYPN.png",
             "ID": "13"
         },
+		        {
+            "Name": "King Legacy",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
+            "Description": "UPDATE 4 - Devil Fruit Farm, Auto Farm, Auto Stats & More!",
+            "ThumbNail": "https://i.imgur.com/FwkIXoA.png",
+            "ID": "23"
+        },
 			        		                        {
-            "Name": "NEW - Shindo Life",
+            "Name": "Shindo Life",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
             "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
             "ThumbNail": "https://i.imgur.com/JJp2sYX.png",
             "ID": "12"
         },
-	                {
-            "Name": "UPDATE - Pet Simulator X",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
-            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
-            "ThumbNail": "https://i.imgur.com/SXaclBI.png",
-            "ID": "171"
-        },
 	{
-            "Name": "UPDATE - Your Bizarre Adventure",
+            "Name": "Your Bizarre Adventure",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/yba",
             "Description": "#1 Exclusive GUI - Auto Farm, Item Search, Mods & More!",
             "ThumbNail": "https://i.imgur.com/Mo8eDvn.png",
@@ -90,6 +76,20 @@
             "Description": "#1 Exclusive GUI - WalkSpeed, Fly, Remove Doors & More!",
             "ThumbNail": "https://i.imgur.com/EMTFajE.png",
             "ID": "213"
+        },
+						                        {
+            "Name": "Project Slayers",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/projectsl",
+            "Description": "#1 GUI - Infinite Levels, Auto Quest & More!",
+            "ThumbNail": "https://i.imgur.com/txEnmyG.png",
+            "ID": "209"
+        },
+	                                                                                                	{
+            "Name": "Grand Piece Online GPO",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/gpo",
+            "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
+            "ThumbNail": "https://i.imgur.com/er645rL.png",
+            "ID": "43"
         },
 		                                        		{
             "Name": "BedWars",
