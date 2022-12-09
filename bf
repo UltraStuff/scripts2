@@ -2198,6 +2198,9 @@ local Tab = Window:AddTab("Main GUIs")
 				Tab:AddButton("NEW - Zen Hub", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader'))()
 		end)
+						Tab:AddButton("NEW - Ren Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Varomine/SOME-HUB-MY/main/Bloxfruits%20open%20src.txt", true))()
+		end)
 		Tab:AddButton("KEY - Ripper Hub V3", function()
 _G.Version = "V3" -- V2 or V3
 loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
