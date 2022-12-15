@@ -2114,14 +2114,14 @@ loadstring(game:HttpGet("https://HugeGames.io/script"))()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
 		end)
 		
-		Tab:AddButton("NEW - Project WD", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
-			game.StarterGui:SetCore('SendNotification', {Duration = 30; Title='Furk'; Text='Get key for GUI at https://discord.gg/u7JNWQcgsU.'; Icon='';})
-		end)
+		--Tab:AddButton("NEW - Project WD", function()
+		--	loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
+		--	game.StarterGui:SetCore('SendNotification', {Duration = 30; Title='Furk'; Text='Get key for GUI at https://discord.gg/u7JNWQcgsU.'; Icon='';})
+		--end)
 
-		Tab:AddButton("NEW - BEST HUB WITH NO KEYS", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Flxry/Main/MilkyHub/Pet%20Simulator%20X"))()
-		end)
+		--Tab:AddButton("NEW - BEST HUB WITH NO KEYS", function()
+		--	loadstring(game:HttpGet("https://raw.githubusercontent.com/Flxry/Main/MilkyHub/Pet%20Simulator%20X"))()
+		--end)
 	end
 
 	Tab:Show()
