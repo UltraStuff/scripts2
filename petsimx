@@ -2082,7 +2082,7 @@ end
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 	
 	
-				Tab:AddButton("NEW #1 GUI - Jmes Hub", function()
+				Tab:AddButton("#1 GUI - Jmes Hub", function()
 		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
 		end)
 								Tab:AddButton("NEW - Auto Collect Loot Bags", function()
@@ -2100,7 +2100,7 @@ while wait() and _G.start == true do
     end
 end
 		end)
-						Tab:AddButton("NEW - Huge Games", function()
+						Tab:AddButton("Huge Games", function()
 		getgenv().AuthKey="HUGE_fsawrV6LdQm3GRxG"
 getgenv().LoadSettings={
     DisableStartupPrompt=false
@@ -2113,7 +2113,15 @@ loadstring(game:HttpGet("https://HugeGames.io/script"))()
 		Tab:AddButton("Phantom hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
 		end)
+		
+		Tab:AddButton("NEW - Project WD", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
+			game.StarterGui:SetCore('SendNotification', {Duration = 30; Title='Furk'; Text='Get key for GUI at https://discord.gg/u7JNWQcgsU.'; Icon='';})
+		end)
 
+		Tab:AddButton("NEW - BEST HUB WITH NO KEYS", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Flxry/Main/MilkyHub/Pet%20Simulator%20X"))()
+		end)
 	end
 
 	Tab:Show()
