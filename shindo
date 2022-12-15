@@ -2087,18 +2087,22 @@ end
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-    Tab:AddButton("NEW #1 - Vellerius (INF SPINS)", function()
+    Tab:AddButton("#1 - Vellerius (INF SPINS)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/Revamps/main/SpyHub.lua"))()
 		end)
 					Tab:AddButton("VG Hub (OP)", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	end)
-		    Tab:AddButton("NEW - SNXW Hub Lite", function()
+		    Tab:AddButton("SNXW Hub Lite", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Premier/main/Free-Premier.lua", true))()
 		end)
     Tab:AddButton("Bloodline Changer/Bag", function()
        loadstring(game:HttpGet("https://gist.githubusercontent.com/Error-IDK/dc3e3f068fc9fb1936e9914a276f685d/raw/3832f2dd5eae811abe39156c1db76add0e5c6860/gistfile1.txt"))()
 		end)
+		
+		   Tab:AddButton("NEW - GUI by Xiovr#4297", function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Xiovr/Roblox/main/SL.lua"))()
+      end)
 		
 		end
 	
