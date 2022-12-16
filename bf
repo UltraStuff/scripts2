@@ -2257,6 +2257,10 @@ for _,v in next, workspace:GetDescendants() do
     end
 end
 		end)
+		
+		Tab:AddButton("NEW - Chest Hopper (INF MONEY)", function()
+			loadstring(game:HttpGet('https://pastebin.com/raw/MaasLerX', true))()
+		end)
 
 
 end
