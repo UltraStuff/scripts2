@@ -2081,31 +2081,27 @@ end
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 	
-	
-				Tab:AddButton("#1 GUI - Jmes Hub", function()
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
+				Tab:AddButton("NEW #1 - Milk Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Flxry/Main/MilkyHub/Pet%20Simulator%20X"))()
 		end)
-								Tab:AddButton("NEW - Auto Collect Loot Bags", function()
-local orbs = game:GetService("Workspace")["__THINGS"].Orbs
-local lootbags = game:GetService("Workspace")["__THINGS"].Lootbags
-_G.start = true;
-while wait() and _G.start == true do
-    for _,orb in pairs(orbs:GetChildren()) do
-        orb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame;
-        wait();
-    end    
-    for _,orb in pairs(lootbags:GetChildren()) do
-        orb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame;
-        wait();
-    end
-end
+						Tab:AddButton("NEW - Auto Merge GUI", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/bardium/random/main/mergepetsimulator.lua'))()
 		end)
-						Tab:AddButton("Huge Games", function()
+						Tab:AddButton("NEW - Catalyst Hub", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/destylol/catalyst/itachi/main.lua'))()
+		end)
+								Tab:AddButton("OP - Huge Games", function()
 		getgenv().AuthKey="HUGE_fsawrV6LdQm3GRxG"
 getgenv().LoadSettings={
     DisableStartupPrompt=false
 }
 loadstring(game:HttpGet("https://HugeGames.io/script"))()
+		end)
+								Tab:AddButton("KEY - ShinyTool", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/XLinestX/ShinyTool_Key/main/Loader.lua"))()
+		end)
+		Tab:AddButton("Jmes Hub", function()
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
 		end)
 		Tab:AddButton("Thunder Z", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-HUB/HUB/main/Script"))()
@@ -2114,14 +2110,6 @@ loadstring(game:HttpGet("https://HugeGames.io/script"))()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
 		end)
 		
-		--Tab:AddButton("NEW - Project WD", function()
-		--	loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
-		--	game.StarterGui:SetCore('SendNotification', {Duration = 30; Title='Furk'; Text='Get key for GUI at https://discord.gg/u7JNWQcgsU.'; Icon='';})
-		--end)
-
-		--Tab:AddButton("NEW - BEST HUB WITH NO KEYS", function()
-		--	loadstring(game:HttpGet("https://raw.githubusercontent.com/Flxry/Main/MilkyHub/Pet%20Simulator%20X"))()
-		--end)
 	end
 
 	Tab:Show()
