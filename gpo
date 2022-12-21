@@ -2069,6 +2069,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-
 
 		Tab:AddButton("#1 - CFA Hub", function()
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/CFA-HUB/CFA-HUB/main/cfahubfree.lua"))()
+		end)
+				Tab:AddButton("NEW - Pharaoh Hub", function()
+						loadstring(game:HttpGet("https:/pharaohscript.xyz/free.lua", true))()
 		end)	
 								Tab:AddButton("NEW - Dolce Hub", function()
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/tree"))()
