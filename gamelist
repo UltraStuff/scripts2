@@ -18,7 +18,7 @@
             "Name": "UPDATE - Pet Simulator X",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
             "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
-            "ThumbNail": "https://i.imgur.com/hvTabpM.png",
+            "ThumbNail": "https://i.imgur.com/9H9ujgn.png",
             "ID": "171"
         },
 	                                                                                {
@@ -27,6 +27,13 @@
             "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
             "ThumbNail": "https://i.imgur.com/NNqnYPN.png",
             "ID": "13"
+        },
+		                                                                                                	{
+            "Name": "NEW - Grand Piece Online GPO",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/gpo",
+            "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
+            "ThumbNail": "https://i.imgur.com/er645rL.png",
+            "ID": "43"
         },
 		        {
             "Name": "King Legacy",
@@ -83,13 +90,6 @@
             "Description": "#1 GUI - Infinite Levels, Auto Quest & More!",
             "ThumbNail": "https://i.imgur.com/txEnmyG.png",
             "ID": "209"
-        },
-	                                                                                                	{
-            "Name": "Grand Piece Online GPO",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/gpo",
-            "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
-            "ThumbNail": "https://i.imgur.com/er645rL.png",
-            "ID": "43"
         },
 		                                        		{
             "Name": "BedWars",
