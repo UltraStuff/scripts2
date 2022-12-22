@@ -14,22 +14,29 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
-		                {
-            "Name": "UPDATE - Pet Simulator X",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
-            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
-            "ThumbNail": "https://i.imgur.com/9H9ujgn.png",
-            "ID": "171"
+			                                                                                {
+            "Name": "NEW - Tower Defense Simulator",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/TDShabla",
+            "Description": "#1 Exclusive GUI - Auto Strats, CandyCane Farm, Always Win!",
+            "ThumbNail": "https://i.imgur.com/4f4T2iJ.png",
+            "ID": "220"
         },
-	                                                                                {
-            "Name": "NEW - Blox Fruits",
+		                                                                                {
+            "Name": "Blox Fruits",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
             "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
             "ThumbNail": "https://i.imgur.com/NNqnYPN.png",
             "ID": "13"
         },
+		                {
+            "Name": "Pet Simulator X",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
+            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
+            "ThumbNail": "https://i.imgur.com/9H9ujgn.png",
+            "ID": "171"
+        },
 		                                                                                                	{
-            "Name": "NEW - Grand Piece Online GPO",
+            "Name": "Grand Piece Online",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/gpo",
             "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
             "ThumbNail": "https://i.imgur.com/er645rL.png",
