@@ -1,0 +1,333 @@
+getgenv().GoldenPerks = {"Cowboy"}
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))() 
+TDS:Loadout("DJ Booth", "Commander", "Accelerator", "Ace Pilot", "Cowboy") 
+TDS:Map("Pizza Party", true, "Survival")
+TDS:Skip(1, 0, 40)
+TDS:Place('Cowboy', -4.564980506896973, 1.0368708372116089, 10.920539855957031, 1, 0, 4)--1
+TDS:Skip(2, 0, 40)
+TDS:Upgrade(1, 2, 0, 4)
+TDS:Skip(3, 0, 40)--Gradymeister#3270
+TDS:Upgrade(1, 3, 0, 4)
+TDS:Place('Cowboy', -1.3522335290908813, 1.0368708372116089, 11.021123886108398, 5, 0, 4)--2
+TDS:Upgrade(2, 5, 0, 3)
+TDS:Upgrade(2, 5, 0, 3)
+TDS:Skip(6, 0, 39)--Gradymeister#3270
+TDS:Skip(7, 0, 27)
+TDS:Place('Cowboy', 4.843208312988281, 1.0368708372116089, -14.955032348632812, 8, 0, 59)--3
+TDS:Upgrade(3, 8, 0, 58)
+TDS:Upgrade(3, 8, 0, 58)
+TDS:Place('Cowboy', 1.8209538459777832, 1.0368708372116089, -15.072904586791992, 8, 0, 39)--4
+TDS:Upgrade(4, 8, 0, 1)
+TDS:Upgrade(4, 8, 0, 1)
+TDS:Place('Cowboy', 4.174108982086182, 1.0368708372116089, -18.137622833251953, 9, 0, 35)--5
+TDS:Upgrade(5, 10, 0, 56)--Gradymeister#3270
+TDS:Upgrade(5, 10, 0, 55)
+TDS:Place('DJ Booth', -1.0075316429138184, 1.0368708372116089, -8.3742036819458, 10, 0, 38)--6
+TDS:Place('Cowboy', 1.1350481510162354, 1.0368708372116089, -18.09286117553711, 11, 1, 0)--7
+TDS:Upgrade(7, 11, 0, 59)
+TDS:Upgrade(7, 11, 0, 58)
+TDS:Place('Commander', -1.084259033203125, 1.0368708372116089, -11.473531723022461, 11, 0, 50)--8
+TDS:Upgrade(4, 12, 0, 48)--Gradymeister#3270
+TDS:Upgrade(6, 13, 0, 50)
+TDS:Place('Cowboy', -1.268448829650879, 1.0368708372116089, -14.776992797851562, 13, 0, 3)--9
+TDS:Upgrade(9, 13, 0, 1)
+TDS:Upgrade(9, 14, 1, 0)
+TDS:Skip(14, 0, 38)--Gradymeister#3270
+TDS:Upgrade(9, 14, 0, 4)
+TDS:Upgrade(3, 15, 0, 5)
+TDS:Upgrade(6, 16, 0, 1)
+TDS:Upgrade(6, 17, 0, 56)--Gradymeister#3270
+TDS:Upgrade(8, 17, 0, 52)
+TDS:Place('Cowboy', 2.1013550758361816, 1.0368708372116089, -11.932003021240234, 17, 0, 46)--10
+TDS:Upgrade(10, 17, 0, 45)
+TDS:Upgrade(10, 17, 0, 4)
+TDS:Upgrade(5, 18, 0, 48)--Gradymeister#3270
+TDS:Upgrade(7, 18, 0, 1)
+TDS:Place('Cowboy', -4.093461513519287, 1.0368708372116089, -11.560900688171387, 19, 0, 53)--11
+TDS:Upgrade(11, 19, 0, 50)
+TDS:Upgrade(11, 19, 0, 48)--Gradymeister#3270
+TDS:Upgrade(11, 19, 0, 1)
+TDS:Place('Cowboy', -1.9455320835113525, 1.0368708372116089, -17.82292938232422, 20, 0, 58)--12
+TDS:Upgrade(12, 20, 0, 57)
+TDS:Upgrade(12, 20, 0, 57)
+TDS:Place('Cowboy', -4.31672477722168, 1.0368708372116089, -14.727300643920898, 20, 0, 50)--13
+TDS:Upgrade(13, 20, 0, 49)--Gradymeister#3270
+TDS:Upgrade(13, 20, 0, 49)
+TDS:Place('Cowboy', 5.105441570281982, 1.0368708372116089, -11.91697883605957, 20, 0, 1)--14
+TDS:Upgrade(14, 21, 1, 0)
+TDS:Upgrade(14, 21, 0, 59)
+TDS:Upgrade(14, 21, 0, 56)
+TDS:Place('Cowboy', 2.0385642051696777, 1.0368708372116089, -8.874791145324707, 21, 0, 48)--15
+TDS:Upgrade(15, 21, 0, 47)
+TDS:Upgrade(15, 21, 0, 47)--Gradymeister#3270
+TDS:Place('Cowboy', -4.145995140075684, 1.0368708372116089, -8.465654373168945, 21, 0, 44)--16
+TDS:Upgrade(16, 21, 0, 43)
+TDS:Upgrade(16, 21, 0, 42)
+TDS:Place('Commander', -1.2901043891906738, 1.0368708372116089, -5.287824630737305, 21, 0, 31)--17
+TDS:Upgrade(17, 21, 0, 30)
+TDS:Place('Commander', -1.4519767761230469, 1.0368708372116089, -2.251321792602539, 22, 0, 59)--18
+TDS:Upgrade(18, 22, 0, 56)
+TDS:Upgrade(8, 22, 0, 55)
+TDS:Upgrade(17, 22, 0, 53)
+TDS:Upgrade(18, 22, 0, 46)
+TDS:AutoChain(8, 17, 18, 22, 0, 42)
+TDS:Place('Cowboy', 6.914556503295898, 1.0368708372116089, -21.198955535888672, 22, 0, 28)--19
+TDS:Upgrade(19, 22, 0, 27)
+TDS:Upgrade(19, 22, 0, 26)--Gradymeister#3270
+TDS:Place('Cowboy', 3.497983932495117, 1.0368708372116089, -21.224475860595703, 22, 0, 25)--20
+TDS:Upgrade(20, 22, 0, 24)
+TDS:Upgrade(20, 22, 0, 24)
+TDS:Place('Cowboy', 0.3550548553466797, 1.0368708372116089, -21.249351501464844, 22, 0, 22)--21
+TDS:Upgrade(21, 22, 0, 21)
+TDS:Upgrade(21, 22, 0, 21)
+TDS:Place('Cowboy', -5.073266983032227, 1.0368708372116089, -17.756206512451172, 22, 0, 10)--22
+TDS:Upgrade(22, 22, 0, 10)
+TDS:Upgrade(22, 22, 0, 9)--Gradymeister#3270
+TDS:Place('Ace Pilot', 7.4933366775512695, 1.0368708372116089, -18.015676498413086, 23, 0, 59)--23
+TDS:Upgrade(23, 23, 0, 57)
+TDS:Upgrade(23, 23, 0, 57)
+TDS:Upgrade(23, 23, 0, 57)
+TDS:Upgrade(23, 23, 0, 56)
+TDS:Upgrade(6, 23, 0, 39)
+TDS:Upgrade(6, 23, 0, 23)
+TDS:Upgrade(23, 23, 0, 3)
+TDS:Upgrade(21, 24, 0, 56)--Gradymeister#3270
+TDS:Upgrade(20, 24, 0, 51)
+TDS:Upgrade(12, 24, 0, 47)
+TDS:Upgrade(22, 24, 0, 3)
+TDS:Upgrade(13, 25, 0, 56)
+TDS:Upgrade(19, 25, 0, 54)
+TDS:Place('Ace Pilot', 7.893965244293213, 1.0368708372116089, -14.952994346618652, 25, 0, 47)--24
+TDS:Upgrade(24, 25, 0, 46)
+TDS:Upgrade(24, 25, 0, 45)--Gradymeister#3270
+TDS:Upgrade(24, 25, 0, 45)
+TDS:Upgrade(24, 25, 0, 42)
+TDS:Upgrade(24, 25, 0, 3)
+TDS:Place('Ace Pilot', 10.502480506896973, 1.0368708372116089, -18.124427795410156, 26, 0, 53)--25
+TDS:Upgrade(25, 26, 0, 5)
+TDS:Upgrade(25, 26, 0, 4)
+TDS:Upgrade(25, 26, 0, 3)--Gradymeister#3270
+TDS:Upgrade(25, 26, 0, 3)
+TDS:Upgrade(25, 27, 0, 50)
+TDS:Place('Accelerator', 5.886955261230469, 1.0368708372116089, -8.8551025390625, 27, 0, 38)--26
+TDS:Upgrade(26, 27, 0, 37)
+TDS:Upgrade(26, 27, 0, 5)
+TDS:Upgrade(26, 27, 0, 4)
+TDS:Upgrade(26, 28, 0, 41)--Gradymeister#3270
+TDS:Upgrade(26, 29, 0, 50)
+TDS:Upgrade(8, 29, 0, 43)
+TDS:Upgrade(8, 29, 0, 35)
+TDS:Place('Accelerator', -7.786864757537842, 1.0368708372116089, -11.39268684387207, 30, 1, 16)--27
+TDS:Upgrade(27, 30, 1, 14)
+TDS:Upgrade(27, 30, 1, 14)
+TDS:Upgrade(27, 30, 1, 12)--Gradymeister#3270
+TDS:Upgrade(27, 30, 1, 2)
+TDS:Upgrade(27, 31, 1, 7)
+TDS:Upgrade(15, 31, 1, 2)
+TDS:Upgrade(16, 31, 1, 1)
+TDS:Upgrade(10, 31, 1, 0)
+TDS:Place('Accelerator', -7.8132476806640625, 1.0368708372116089, -14.413603782653809, 31, 0, 52)--28
+TDS:Upgrade(28, 31, 0, 51)
+TDS:Upgrade(28, 31, 0, 50)
+TDS:Upgrade(28, 31, 0, 50)--Gradymeister#3270
+TDS:Upgrade(28, 31, 0, 48)
+TDS:Upgrade(28, 32, 1, 2)
+TDS:Place('Accelerator', 2.0341973304748535, 1.0368708372116089, -5.700636863708496, 32, 0, 2)--29
+TDS:Upgrade(29, 33, 1, 20)
+TDS:Upgrade(29, 33, 1, 20)
+TDS:Upgrade(29, 33, 1, 20)--Gradymeister#3270
+TDS:Upgrade(29, 33, 1, 19)
+TDS:Upgrade(29, 33, 1, 0)
+TDS:Place('Accelerator', 5.073701858520508, 1.0368708372116089, -5.1610026359558105, 33, 0, 55)--30
+TDS:Upgrade(30, 33, 0, 54)
+TDS:Upgrade(30, 33, 0, 53)
+TDS:Upgrade(30, 33, 0, 52)--Gradymeister#3270
+TDS:Upgrade(30, 33, 0, 47)
+TDS:Upgrade(30, 34, 1, 10)
+TDS:Place('Accelerator', 8.194109916687012, 1.0368708372116089, -5.647887706756592, 34, 1, 3)--31
+TDS:Upgrade(31, 34, 1, 2)
+TDS:Upgrade(31, 34, 1, 1)--Gradymeister#3270
+TDS:Upgrade(31, 34, 1, 1)
+TDS:Upgrade(31, 34, 1, 0)
+TDS:Upgrade(31, 34, 0, 48)
+TDS:Place('Accelerator', -8.130266189575195, 1.0368708372116089, -17.441123962402344, 34, 0, 41)--32
+TDS:Upgrade(32, 34, 0, 40)
+TDS:Upgrade(32, 34, 0, 39)--Gradymeister#3270
+TDS:Upgrade(32, 34, 0, 39)
+TDS:Upgrade(32, 34, 0, 34)
+TDS:Place('Cowboy', 4.235042572021484, 0.9999357461929321, -36.955543518066406, 35, 1, 18)--33
+TDS:Upgrade(32, 35, 0, 58)
+TDS:Place('Accelerator', -8.245887756347656, 1.0368708372116089, -20.447006225585938, 36, 1, 19)--34
+TDS:Upgrade(34, 36, 1, 18)
+TDS:Upgrade(34, 36, 1, 17)
+TDS:Upgrade(34, 36, 1, 17)
+TDS:Upgrade(34, 36, 1, 8)--Gradymeister#3270
+TDS:Upgrade(34, 36, 0, 57)
+TDS:Upgrade(17, 36, 0, 53)
+TDS:Upgrade(17, 36, 0, 52)
+TDS:Upgrade(18, 36, 0, 50)
+TDS:Upgrade(18, 36, 0, 46)
+TDS:Upgrade(15, 36, 0, 4)
+TDS:Upgrade(15, 36, 0, 3)--Gradymeister#3270
+TDS:Upgrade(10, 36, 0, 2)
+TDS:Upgrade(10, 37, 1, 13)
+TDS:Upgrade(9, 37, 1, 9)
+TDS:Upgrade(9, 37, 1, 1)
+TDS:Upgrade(13, 37, 0, 56)
+TDS:Upgrade(13, 37, 0, 54)
+TDS:Upgrade(12, 37, 0, 52)
+TDS:Upgrade(12, 37, 0, 46)
+TDS:Upgrade(22, 37, 0, 44)
+TDS:Upgrade(22, 37, 0, 41)
+TDS:Upgrade(21, 37, 0, 40)
+TDS:Upgrade(21, 37, 0, 39)
+TDS:Upgrade(20, 37, 0, 37)
+TDS:Upgrade(20, 37, 0, 5)
+TDS:Upgrade(19, 37, 0, 3)--Gradymeister#3270
+TDS:Upgrade(19, 38, 1, 5)
+TDS:Upgrade(5, 38, 1, 3)
+TDS:Upgrade(5, 38, 1, 0)
+TDS:Upgrade(7, 38, 0, 57)
+TDS:Upgrade(7, 38, 0, 54)
+TDS:Upgrade(4, 38, 0, 50)
+TDS:Upgrade(4, 38, 0, 49)
+TDS:Upgrade(14, 38, 0, 45)--Gradymeister#3270
+TDS:Upgrade(14, 38, 0, 44)
+TDS:Upgrade(3, 38, 0, 41)
+TDS:Upgrade(3, 38, 0, 30)
+TDS:Upgrade(11, 38, 0, 26)
+TDS:Upgrade(11, 38, 0, 25)
+TDS:Place('Cowboy', 7.503267288208008, 1.0368708372116089, -24.381893157958984, 38, 0, 5)--35
+TDS:Upgrade(35, 38, 0, 4)
+TDS:Upgrade(35, 38, 0, 4)--Gradymeister#3270
+TDS:Upgrade(35, 38, 0, 3)
+TDS:Upgrade(35, 39, 1, 59)
+TDS:Upgrade(35, 39, 1, 58)
+TDS:Place('Cowboy', 4.457431793212891, 1.0368708372116089, -24.487207412719727, 39, 1, 57)--36
+TDS:Upgrade(36, 39, 1, 56)
+TDS:Upgrade(36, 39, 1, 56)
+TDS:Upgrade(36, 39, 1, 55)--Gradymeister#3270
+TDS:Upgrade(36, 39, 1, 55)
+TDS:Upgrade(36, 39, 1, 54)
+TDS:Place('Cowboy', 4.795090675354004, 1.0368708372116089, 0.16437053680419922, 39, 1, 51)--37
+TDS:Upgrade(37, 39, 1, 50)
+TDS:Upgrade(37, 39, 1, 49)
+TDS:Upgrade(37, 39, 1, 49)
+TDS:Upgrade(37, 39, 1, 48)--Gradymeister#3270
+TDS:Upgrade(37, 39, 1, 48)
+TDS:Place('Cowboy', 7.998693943023682, 1.0368708372116089, -0.3649482727050781, 39, 1, 46)--38
+TDS:Upgrade(38, 39, 1, 44)
+TDS:Upgrade(38, 39, 1, 44)
+TDS:Upgrade(38, 39, 1, 43)--Gradymeister#3270
+TDS:Upgrade(38, 39, 1, 43)
+TDS:Upgrade(38, 39, 1, 41)
+TDS:Place('Cowboy', 11.119019508361816, 1.0368708372116089, -0.7068729400634766, 39, 1, 29)--39
+TDS:Upgrade(39, 39, 1, 28)
+TDS:Upgrade(39, 39, 1, 27)--Gradymeister#3270
+TDS:Upgrade(39, 39, 1, 27)
+TDS:Upgrade(39, 39, 1, 26)
+TDS:Upgrade(39, 39, 1, 26)
+TDS:Place('Ace Pilot', 10.96302604675293, 1.0368708372116089, -15.008661270141602, 39, 1, 23)--40
+TDS:Upgrade(40, 39, 1, 22)
+TDS:Upgrade(40, 39, 1, 22)
+TDS:Upgrade(40, 39, 1, 22)
+TDS:Upgrade(40, 39, 1, 21)--Gradymeister#3270
+TDS:Upgrade(40, 39, 1, 21)
+TDS:Sell(28, 40, 99, 17)
+TDS:Place('Accelerator', -7.710845947265625, 1.0368708372116089, -14.420251846313477, 40, 99, 16)
+TDS:Upgrade(41, 40, 99, 15)
+TDS:Upgrade(41, 40, 99, 15)
+TDS:Upgrade(41, 40, 99, 15)
+TDS:Upgrade(41, 40, 99, 14)--Gradymeister#3270
+TDS:Upgrade(41, 40, 99, 14)
+TDS:Sell(27, 40, 99, 8)
+TDS:Place('Accelerator', 14.376066207885742, 1.0368708372116089, -0.6134414672851562, 40, 99, 7)
+TDS:Upgrade(42, 40, 99, 6)
+TDS:Upgrade(42, 40, 99, 6)--Gradymeister#3270
+TDS:Upgrade(42, 40, 99, 6)
+TDS:Upgrade(42, 40, 99, 5)
+TDS:Upgrade(42, 40, 99, 5)
+TDS:Sell(29, 40, 98, 55)
+TDS:Place('Accelerator', 3.7094850540161133, 1.0368708372116089, 3.8599910736083984, 40, 98, 54)
+TDS:Upgrade(43, 40, 98, 53)
+TDS:Upgrade(43, 40, 98, 53)
+TDS:Upgrade(43, 40, 98, 53)--Gradymeister#3270
+TDS:Upgrade(43, 40, 98, 52)
+TDS:Upgrade(43, 40, 98, 52)
+TDS:Sell(32, 40, 98, 51)
+TDS:Place('Accelerator', 0.175742506980896, 1.0368708372116089, 5.25901985168457, 40, 98, 50)
+TDS:Upgrade(44, 40, 98, 49)
+TDS:Upgrade(44, 40, 98, 49)
+TDS:Upgrade(44, 40, 98, 49)--Gradymeister#3270
+TDS:Upgrade(44, 40, 98, 48)
+TDS:Upgrade(44, 40, 98, 48)
+TDS:Sell(34, 40, 98, 47)
+TDS:Place('Accelerator', -3.0099751949310303, 1.0368708372116089, 5.234260559082031, 40, 98, 46)
+TDS:Upgrade(45, 40, 98, 45)
+TDS:Upgrade(45, 40, 98, 45)
+TDS:Upgrade(45, 40, 98, 45)
+TDS:Upgrade(45, 40, 98, 44)--Gradymeister#3270
+TDS:Upgrade(45, 40, 98, 44)
+TDS:Sell(41, 40, 98, 39)
+TDS:Place('Accelerator', 3.5084033012390137, 1.0368708372116089, 7.12110710144043, 40, 98, 38)
+TDS:Upgrade(46, 40, 98, 37)
+TDS:Upgrade(46, 40, 98, 37)
+TDS:Upgrade(46, 40, 98, 37)--Gradymeister#3270
+TDS:Upgrade(46, 40, 98, 36)
+TDS:Upgrade(46, 40, 98, 36)
+TDS:Sell(30, 40, 98, 35)
+TDS:Place('Accelerator', 2.191669464111328, 1.0368708372116089, 10.411527633666992, 40, 98, 34)
+TDS:Upgrade(47, 40, 98, 33)--Gradymeister#3270
+TDS:Upgrade(47, 40, 98, 33)
+TDS:Upgrade(47, 40, 98, 33)
+TDS:Upgrade(47, 40, 98, 32)
+TDS:Upgrade(47, 40, 98, 32)
+TDS:Sell(31, 40, 98, 29)--Gradymeister#3270
+TDS:Place('Accelerator', -6.228306770324707, 1.0368708372116089, 4.932340621948242, 40, 98, 28)
+TDS:Upgrade(48, 40, 98, 27)
+TDS:Upgrade(48, 40, 98, 27)
+TDS:Upgrade(48, 40, 98, 27)
+TDS:Upgrade(48, 40, 98, 26)
+TDS:Upgrade(48, 40, 98, 26)--Gradymeister#3270
+TDS:Sell(26, 40, 98, 25)
+TDS:Place('Accelerator', -7.862454891204834, 1.0368708372116089, 8.053543090820312, 40, 98, 24)
+TDS:Upgrade(49, 40, 98, 23)
+TDS:Upgrade(49, 40, 98, 23)
+TDS:Upgrade(49, 40, 98, 23)--Gradymeister#3270
+TDS:Upgrade(49, 40, 98, 22)
+TDS:Upgrade(49, 40, 98, 22)
+TDS:Sell(42, 40, 98, 10)
+TDS:Place('Accelerator', -9.81955623626709, 1.0368708372116089, 4.271205902099609, 40, 98, 9)
+TDS:Upgrade(50, 40, 98, 8)
+TDS:Upgrade(50, 40, 98, 8)
+TDS:Upgrade(50, 40, 98, 8)--Gradymeister#3270
+TDS:Upgrade(50, 40, 98, 7)
+TDS:Upgrade(50, 40, 98, 7)
+TDS:Sell(43, 40, 97, 58)
+TDS:Place('Accelerator', -11.22293758392334, 1.0368708372116089, 7.993988037109375, 40, 97, 57)
+TDS:Upgrade(51, 40, 97, 56)
+TDS:Upgrade(51, 40, 97, 56)
+TDS:Upgrade(51, 40, 97, 56)--Gradymeister#3270
+TDS:Upgrade(51, 40, 97, 55)
+TDS:Upgrade(51, 40, 97, 55)
+TDS:Sell(44, 40, 97, 54)
+TDS:Place('Accelerator', -11.381067276000977, 1.0368708372116089, 11.11965560913086, 40, 97, 53)
+TDS:Upgrade(52, 40, 97, 52)
+TDS:Upgrade(52, 40, 97, 52)--Gradymeister#3270
+TDS:Upgrade(52, 40, 97, 52)
+TDS:Upgrade(52, 40, 97, 51)
+TDS:Upgrade(52, 40, 97, 51)
+TDS:Sell(47, 40, 97, 50)
+TDS:Place('Accelerator', -10.828778266906738, 0.9999678134918213, 14.486869812011719, 40, 97, 49)
+TDS:Upgrade(53, 40, 97, 48)
+TDS:Upgrade(53, 40, 97, 48)--Gradymeister#3270
+TDS:Upgrade(53, 40, 97, 48)
+TDS:Upgrade(53, 40, 97, 47)
+TDS:Upgrade(53, 40, 97, 47)
+TDS:Sell(46, 40, 97, 46)
+TDS:Place('Accelerator', -7.634621620178223, 0.9999973773956299, 15.446186065673828, 40, 97, 45)
+TDS:Upgrade(54, 40, 97, 44)
+TDS:Upgrade(54, 40, 97, 44)--Gradymeister#3270
+TDS:Upgrade(54, 40, 97, 44)--Gradymeister#3270
+TDS:Upgrade(54, 40, 97, 43)--Gradymeister#3270
+TDS:Upgrade(54, 40, 97, 43)--Gradymeister#3270
