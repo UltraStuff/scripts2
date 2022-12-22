@@ -2085,7 +2085,7 @@ end
 		loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1050730788326486068/1055522225316433981/message.txt"))()
 		end)
 		Tab:AddLabel("USE CANDY FARM W/ DEFAULT CAMERA")
-		Tab:AddButton("C​a​ndy​ C​a​n​e ​Aut​ofa​rm​", function()
+		Tab:AddButton("Candy Cane Auto Farm", function()
 		repeat wait() until game:IsLoaded()
 local CandyTable = {}
 for i,v in next,workspace:GetChildren() do
