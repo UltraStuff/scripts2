@@ -2066,6 +2066,9 @@ end
 				Tab:AddButton("KEY - Project Meow", function()
 			loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
 		end)
+						Tab:AddButton("Arsenal Hub", function()
+			loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/4cb431a321a687abc247a6384f3a8ecc/raw/eba40876125868afbeb8f464cae08c6367b70e07/gistfile1.txt"))()
+		end)
 		
 
 end
@@ -2075,7 +2078,10 @@ end
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
-						Tab:AddButton("MrMaxNaja Hub", function()
+				Tab:AddButton("Strike Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
+		end)
+		Tab:AddButton("MrMaxNaja Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/MrMaxNaJaEz/New-MrMaxNaJa-NaJa/main/README.md"))()
 		end)
 				Tab:AddButton("Fusion Hub", function()
@@ -2102,9 +2108,6 @@ end
 		Tab:AddButton("Putaya Hub", function()
 			loadstring(game:HttpGet(("https://raw.githubusercontent.com/Putaya/HITBOXKAK/main/PutayaFree"), true))();
 		end)
-				Tab:AddButton("Arsenal Hub", function()
-			loadstring(game:HttpGet("https://gist.githubusercontent.com/TonyX03/4cb431a321a687abc247a6384f3a8ecc/raw/eba40876125868afbeb8f464cae08c6367b70e07/gistfile1.txt"))()
-		end)
 		
 
 end
@@ -2114,6 +2117,9 @@ end
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
+		Tab:AddButton("NEW - Playback X Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/NeaPchX2/Playback-X-HUB/main/Protected.lua.txt"))()
+		end)
 				Tab:AddButton("NEW - CFrame Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/flares"))()
 		end)
@@ -2142,9 +2148,6 @@ loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Blo
 		Tab:AddButton("Maru Hub", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/joi-droid/MaruHubBF/main/GOHANSSJ3'))()
 		end)
-		Tab:AddButton("Strike Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
-		end)
 		
 
 	end
@@ -2157,6 +2160,9 @@ local Tab = Window:AddTab("Main GUIs")
 		
 		Tab:AddButton("#1 - Chiba Hub", function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chibacomebackbeta.txt'))()
+		end)
+		Tab:AddButton("NEW #1 - UNIQUE Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AkiraNus/UniquehubKak/main/FreeCr.Xenonhub"))() 
 		end)
 		Tab:AddButton("NEW - Zaque Hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Mei2232/ZaqueHub/main/Zaque%20Hub"))()
@@ -2181,9 +2187,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/m
 		end)
 						Tab:AddButton("Ren Hub", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Varomine/SOME-HUB-MY/main/Bloxfruits%20open%20src.txt", true))()
-		end)
-				Tab:AddButton("Playback X Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/NeaPchX2/Playback-X-HUB/main/Protected.lua.txt"))()
 		end)
 		Tab:AddButton("Mukuro Hub", function()
 			loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
