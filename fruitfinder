@@ -1,0 +1,46 @@
+getgenv().names = {
+    "Kilo Fruit",
+    "Spin Fruit",
+    "Chop Fruit",
+    "Spring Fruit",
+    "Bomb Fruit",
+    "Smoke Fruit",
+    "Spike Fruit",
+    "Flame Fruit",
+    "Falcon Fruit",
+    "Ice Fruit",
+    "Sand Fruit",
+    "Dark Fruit",
+    "Revive Fruit",
+    "Diamond Fruit",
+    "Light Fruit",
+    "Love Fruit",
+    "Rubber Fruit",
+    "Barrier Fruit",
+    "Magma Fruit",
+    "Door Fruit",
+    "Quake Fruit",
+    "Buddha Fruit",
+    "String Fruit",
+    "Phoenix Fruit",
+    "Rumble Fruit",
+    "Paw Fruit",
+    "Gravity Fruit",
+    "Dough Fruit",
+    "Shadow Fruit",
+    "Venom Fruit",
+    "Control Fruit",
+    "Soul Fruit",
+    "Dragon Fruit",
+    "Leopard Fruit",
+    "Portal Fruit",
+    "Blizzard Fruit"
+    --List of fruits, delete fruits that you don't want
+}
+getgenv().usewebhook = false
+getgenv().webhookurl = false 
+getgenv().grabspawnedfruits = false -- only use if you're using an alt
+getgenv().autostore = true
+getgenv().autoeat = false
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/3bo3c0ewnj9hks/rororo/main/8KS188AJ1F0LS1.lua", true))()
