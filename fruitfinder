@@ -1,3 +1,4 @@
+
 getgenv().names = {
     "Kilo Fruit",
     "Spin Fruit",
@@ -33,7 +34,7 @@ getgenv().names = {
     "Soul Fruit",
     "Dragon Fruit",
     "Leopard Fruit",
-    "Portal Fruit",
+    "Door Fruit",
     "Blizzard Fruit"
     --List of fruits, delete fruits that you don't want
 }
