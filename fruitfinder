@@ -1,47 +1,92 @@
+--BROUGHT TO YOU BY ROBLOXSCRIPTS.NET!--
 
-getgenv().names = {
-    "Kilo Fruit",
-    "Spin Fruit",
-    "Chop Fruit",
-    "Spring Fruit",
-    "Bomb Fruit",
-    "Smoke Fruit",
-    "Spike Fruit",
-    "Flame Fruit",
-    "Falcon Fruit",
-    "Ice Fruit",
-    "Sand Fruit",
-    "Dark Fruit",
-    "Revive Fruit",
-    "Diamond Fruit",
-    "Light Fruit",
-    "Love Fruit",
-    "Rubber Fruit",
-    "Barrier Fruit",
-    "Magma Fruit",
-    "Door Fruit",
-    "Quake Fruit",
-    "Buddha Fruit",
-    "String Fruit",
-    "Phoenix Fruit",
-    "Rumble Fruit",
-    "Paw Fruit",
-    "Gravity Fruit",
-    "Dough Fruit",
-    "Shadow Fruit",
-    "Venom Fruit",
-    "Control Fruit",
-    "Soul Fruit",
-    "Dragon Fruit",
-    "Leopard Fruit",
-    "Door Fruit",
-    "Blizzard Fruit"
-    --List of fruits, delete fruits that you don't want
-}
-getgenv().usewebhook = false
-getgenv().webhookurl = false 
-getgenv().grabspawnedfruits = false -- only use if you're using an alt
-getgenv().autostore = true
-getgenv().autoeat = false
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/3bo3c0ewnj9hks/rororo/main/8KS188AJ1F0LS1.lua", true))()
+repeat wait() until game:IsLoaded() wait()
+spawn(function()
+while wait () do
+pcall(function()
+for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
+v.Function()
+end end) end end)
+spawn(function()
+    while wait (0.01) do
+        pcall(function()
+ for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+                   if string.find(v.Name, "Fruit") then
+                       if v:IsA("Tool") then
+                           v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 50, 0)
+wait(.2)
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Handle,0)
+                       end
+                   end
+ end
+        end) end end)
+local PlaceID = game.PlaceId
+local AllIDs = {}
+local foundAnything = ""
+local actualHour = os.date("!*t").hour
+local Deleted = false
+local File = pcall(function()
+   AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
+end)
+if not File then
+   table.insert(AllIDs, actualHour)
+   writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+end
+function TPReturner()
+   local Site;
+   if foundAnything == "" then
+       Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+   else
+       Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+   end
+   local ID = ""
+   if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+       foundAnything = Site.nextPageCursor
+   end
+   local num = 0;
+   for i,v in pairs(Site.data) do
+       local Possible = true
+       ID = tostring(v.id)
+       if tonumber(v.maxPlayers) > tonumber(v.playing) then
+           for _,Existing in pairs(AllIDs) do
+               if num ~= 0 then
+                   if ID == tostring(Existing) then
+                       Possible = false
+                   end
+               else
+                   if tonumber(actualHour) ~= tonumber(Existing) then
+                       local delFile = pcall(function()
+                           delfile("NotSameServers.json")
+                           AllIDs = {}
+                           table.insert(AllIDs, actualHour)
+                       end)
+                   end
+               end
+               num = num + 1
+           end
+           if Possible == true then
+               table.insert(AllIDs, ID)
+               wait()
+               pcall(function()
+                   writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                   wait()
+                   game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+               end)
+               wait(4)
+           end
+       end
+   end
+end
+
+function Teleport()
+   while wait() do
+       pcall(function()
+           TPReturner()
+           if foundAnything ~= "" then
+           end
+       end)
+   end
+end
+wait(20)
+Teleport()
