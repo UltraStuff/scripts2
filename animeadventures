@@ -2045,12 +2045,14 @@ end
 	
 		Tab:AddLabel("Thanks For Using Furk Ultra")
 
-		
-				Tab:AddButton("NEW - Trap Hub", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/TrapHub.lua"))()
+		Tab:AddButton("NEW - Utility GUI by deity", function()
+			loadstring(game:HttpGet("https://pastebin.com/raw/pugQTSWc", true))()	
 		end)
-		Tab:AddButton("OP - Arpon AG Hub", function()
+		Tab:AddButton("#1 - Arpon AG Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua"))()
+		end)
+		Tab:AddButton("Trap Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/TrapHub.lua"))()
 		end)
 		Tab:AddButton("Keybruw Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/borntodiekuv/KeybrewHub/main/AA"))()
