@@ -6,7 +6,7 @@
 
 local ui_options = {
 	main_color = Color3.fromRGB(50, 20, 10),
-	min_size = Vector2.new(430, 300),
+	min_size = Vector2.new(500, 400),
 	toggle_key = Enum.KeyCode.RightShift,
 	can_resize = true,
 }
@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Shindo Life", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(250, 230),
+		min_size = Vector2.new(250, 270),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
