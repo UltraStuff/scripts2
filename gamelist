@@ -21,6 +21,13 @@
             "ThumbNail": "https://i.imgur.com/O3eKw02.png",
             "ID": "13"
         },
+			        {
+            "Name": "UPDATE - King Legacy",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
+            "Description": "UPDATE 4.5.3 - Devil Fruit Farm, Auto Farm, Auto Stats & More!",
+            "ThumbNail": "https://i.imgur.com/xm9BTeV.png",
+            "ID": "23"
+        },
 			                {
             "Name": "UPDATE - Pet Simulator X",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
@@ -48,13 +55,6 @@
             "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
             "ThumbNail": "https://i.imgur.com/er645rL.png",
             "ID": "43"
-        },
-		        {
-            "Name": "King Legacy",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
-            "Description": "UPDATE 4 - Devil Fruit Farm, Auto Farm, Auto Stats & More!",
-            "ThumbNail": "https://i.imgur.com/FwkIXoA.png",
-            "ID": "23"
         },
 			        		                        {
             "Name": "Shindo Life",
