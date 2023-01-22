@@ -21,19 +21,19 @@
             "ThumbNail": "https://i.imgur.com/O3eKw02.png",
             "ID": "13"
         },
+				                {
+            "Name": "UPDATE - Pet Simulator X",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
+            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
+            "ThumbNail": "https://i.imgur.com/AF9RIjW.png",
+            "ID": "171"
+        },
 			        {
             "Name": "UPDATE - King Legacy",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/kinglegacy",
             "Description": "UPDATE 4.5.3 - Devil Fruit Farm, Auto Farm, Auto Stats & More!",
             "ThumbNail": "https://i.imgur.com/xm9BTeV.png",
             "ID": "23"
-        },
-			                {
-            "Name": "UPDATE - Pet Simulator X",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
-            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
-            "ThumbNail": "https://i.imgur.com/EwaNlJC.png",
-            "ID": "171"
         },
 				                                                                                {
             "Name": "NEW - Project New World",
