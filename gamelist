@@ -14,6 +14,13 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+                                               {
+            "Name": "NEW - Doors",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors",
+            "Description": "#1 Exclusive GUI - WalkSpeed, Fly, Remove Doors & More!",
+            "ThumbNail": "https://i.imgur.com/XWgMS3D.png",
+            "ID": "213"
+        },
 				                                                                                {
             "Name": "NEW - Pixel Piece",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/pixelpiece",
@@ -97,13 +104,6 @@
             "Description": "#1 GUI - Auto Farm, God Mode, Fly & More!",
             "ThumbNail": "https://i.imgur.com/Yrbblo5.png",
             "ID": "217"
-        },
-                                               {
-            "Name": "Doors",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors",
-            "Description": "#1 Exclusive GUI - WalkSpeed, Fly, Remove Doors & More!",
-            "ThumbNail": "https://i.imgur.com/EMTFajE.png",
-            "ID": "213"
         },
 						                        {
             "Name": "Project Slayers",
