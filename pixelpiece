@@ -3,7 +3,7 @@ getgenv().SecureMode = true
 
 local Window = Rayfield:CreateWindow({
 	Name = "Pixel Piece - Furk Ultra",
-	LoadingTitle = "Pixel Piece - Furk Ultra",
+	LoadingTitle = "Pet Simulator X - Furk Ultra",
 	LoadingSubtitle = "Subscribe to Furky on YouTube!",
 })
 local Tab = Window:CreateTab("Main GUI's")
@@ -14,14 +14,42 @@ local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 
 
 local Button = Tab:CreateButton({
-	Name = "X Hub (#1)",
+	Name = "Hyper Hub (New)",
+	Callback = function()
+		pcall(function()
+    repeat wait() until game:IsLoaded()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+end)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Gray GUI",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/PixelPiece/main/Main'))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "X Hub",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/PixelPiece.lua"))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Koda Hub",
+	Name = "Muimiw Hub",
 	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/PixelPiece/main/Main'))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bunnynwy/games/main/pixelpiece"))()
 	end,
 })
+local Button = Tab:CreateButton({
+	Name = "Verny Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/666dasdlolok/Loader/main/Ten",true))();
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "JumbleScripts",
+	Callback = function()
+		loadstring(game:HttpGet("https://jumblescripts.com/PixelPiece.lua"))()
+	end,
+})
+
