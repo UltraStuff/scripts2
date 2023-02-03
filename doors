@@ -14,6 +14,13 @@ local SectionUtil = TabUtil:CreateSection("Doors Utility GUI's")
 local LabelUtil = TabUtil:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
+	Name = "OminousVibes hub (NEW BEST)",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/doors/loadstring.lua"))()
+
+	end,
+})
+local Button = Tab:CreateButton({
 	Name = "Vynixius Hub (#1)",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
