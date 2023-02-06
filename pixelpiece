@@ -3,7 +3,7 @@ getgenv().SecureMode = true
 
 local Window = Rayfield:CreateWindow({
 	Name = "Pixel Piece - Furk Ultra",
-	LoadingTitle = "Pet Simulator X - Furk Ultra",
+	LoadingTitle = "Pixel Piece - Furk Ultra",
 	LoadingSubtitle = "Subscribe to Furky on YouTube!",
 })
 local Tab = Window:CreateTab("Main GUI's")
