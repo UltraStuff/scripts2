@@ -14,8 +14,15 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+						                {
+            "Name": "UPDATED - Pet Simulator X",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
+            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
+            "ThumbNail": "https://i.imgur.com/0FufAsT.png",
+            "ID": "171"
+        },
 				                                                                                {
-            "Name": "UPDATE - Blox Fruits",
+            "Name": "UPDATED - Blox Fruits",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
             "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
             "ThumbNail": "https://i.imgur.com/O3eKw02.png",
@@ -28,36 +35,29 @@
             "ThumbNail": "https://i.imgur.com/XWgMS3D.png",
             "ID": "213"
         },
-					                {
-            "Name": "Pet Simulator X",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
-            "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
-            "ThumbNail": "https://i.imgur.com/AF9RIjW.png",
-            "ID": "171"
-        },
 				                                                                                {
-            "Name": "NEW - Pixel Piece",
+            "Name": "Pixel Piece",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/pixelpiece",
             "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
             "ThumbNail": "https://i.imgur.com/4nc6quZ.png",
             "ID": "222"
         },
 	                        		{
-            "Name": "NEW - Jailbreak",
+            "Name": "Jailbreak",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/jb",
             "Description": "#1 Exclusive GUI - Auto Farm, Arrest All, Troll Server & More!",
             "ThumbNail": "https://i.imgur.com/sjQOMem.png",
             "ID": "3"
         },
 	                                        {
-            "Name": "NEW - Bee Swarm Simulator",
+            "Name": "Bee Swarm Simulator",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/beeswarm",
             "Description": "#1 Exclusive GUI - Auto Farm, Infinite Honey & More!",
             "ThumbNail": "https://i.imgur.com/FiUZ3Aj.png",
             "ID": "38"
         },
 	        {
-            "Name": "NEW - Build A Boat For Treasure",
+            "Name": Build A Boat For Treasure",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/buildaboat",
             "Description": "#1 Exclusive GUI - Auto Farm, Auto Build, No Water Damage & More!",
             "ThumbNail": "https://i.imgur.com/A8bTQv7.png",
