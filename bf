@@ -19,6 +19,18 @@ local Label = TabOther:CreateLabel("Thanks for using Furk Ultra!")
 
 
 local Button = Tab:CreateButton({
+	Name = "(NEW) Void Hub (OP - Requires Key)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "(NEW) BlackTrap GUI (OP - Requires Key)",
+	Callback = function()
+		loadstring(game:HttpGetAsync("https://gitlab.com/Sky2836/test/-/raw/main/Script_All_In-One"))()
+	end,
+})
+local Button = Tab:CreateButton({
 	Name = "Hoho Hub (#1 - Requires Key)",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
@@ -235,12 +247,6 @@ local Button = TabOther:CreateButton({
 	end,
 })
 
-local Button = TabOther:CreateButton({
-	Name = "Black Trap",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
-	end,
-})
 local Button = TabOther:CreateButton({
 	Name = "Foxy Hub",
 	Callback = function()
