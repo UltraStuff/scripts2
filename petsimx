@@ -27,7 +27,7 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
 	Name = "UPDATED - Project WD (New)",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
 	end,
 })
 local Button = Tab:CreateButton({
