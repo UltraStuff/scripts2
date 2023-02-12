@@ -15,6 +15,7 @@ local SectionOther = TabOther:CreateSection("Blox Fruits Side GUI's")
 
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 local Label = TabUtil:CreateLabel("Thanks for using Furk Ultra!")
+local Label = TabUtil:CreateLabel("DON'T JOIN TEAM IF UR USING FRUIT SNIPER!")
 local Label = TabOther:CreateLabel("Thanks for using Furk Ultra!")
 
 
@@ -109,7 +110,7 @@ local Button = Tab:CreateButton({
 local Button = TabUtil:CreateButton({
 	Name = "NEW - Fruit Finder & Hopper",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/FruitFarmOp"))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/AdminusGames/Blox_Fruits_Sniper/main/.lua'))()
 	end,
 })
 local Button = TabUtil:CreateButton({
