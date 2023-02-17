@@ -62,6 +62,6 @@ Item.Parent = game.Players.LocalPlayer.Backpack
 local Button = TabUtil:CreateButton({
 	Name = "Entity Spawner Hub (will close this Hub!)",
 	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySummonerGUI/main/EntityGUI'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySpawner/main/EntitySpawner'))()
 	end,
 })
