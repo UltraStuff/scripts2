@@ -1,0 +1,86 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+	Name = "Arcane Odyssey - Furk Ultra",
+	LoadingTitle = "Arcane Odyssey - Furk Ultra",
+	LoadingSubtitle = "Subscribe to Furky on YouTube!",
+})
+local Tab = Window:CreateTab("Main GUI's")
+local Section = Tab:CreateSection("Arcane Odyssey Main Scripts")
+local TabUtil = Window:CreateTab("Infinite Stats")
+local TabMoney = Window:CreateTab("Infinite Money")
+local UtilSection = TabUtil:CreateSection("Arcane Odyssey Infinite Stats")
+local MoneySection = TabMoney:CreateSection("Arcane Odyssey Infinite Money")
+
+local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
+local Label = TabUtil:CreateLabel("READ BEFORE USING INFINITE STATS")
+local Label = TabUtil:CreateLabel("Select one of the 3 stats below")
+local Label = TabUtil:CreateLabel("This will put that stat at a negative amount")
+local Label = TabUtil:CreateLabel("But will give you infinite stat points!")
+
+local Button = Tab:CreateButton({
+	Name = "Kill Aura + Autofarm GUI",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyouranya/free/main/arcaneodyssey.lua'),true))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Fly, ESP & More GUI",
+	Callback = function()
+		loadstring(game:HttpGet("https://jumblescripts.com/JumbleHub.lua"))()
+	end,
+})
+
+local Button = TabUtil:CreateButton({
+	Name = "Infinite Stat Points (Strength negative)",
+	Callback = function()
+		local Stat = "Strength" -- Any statpoint u want to go into negative (I'll try to find a better vers of this)
+
+game:GetService("ReplicatedStorage").RS.Remotes.UI.SpendSP:InvokeServer(Stat, -10000000)
+
+	end,
+})
+local Button = TabUtil:CreateButton({
+	Name = "Infinite Stat Points (Magic negative)",
+	Callback = function()
+		local Stat = "Magic" -- Any statpoint u want to go into negative (I'll try to find a better vers of this)
+
+game:GetService("ReplicatedStorage").RS.Remotes.UI.SpendSP:InvokeServer(Stat, -10000000)
+
+	end,
+})
+local Button = TabUtil:CreateButton({
+	Name = "Infinite Stat Points (Weapons negative)",
+	Callback = function()
+		local Stat = "Weapons" -- Any statpoint u want to go into negative (I'll try to find a better vers of this)
+
+game:GetService("ReplicatedStorage").RS.Remotes.UI.SpendSP:InvokeServer(Stat, -10000000)
+
+	end,
+})
+
+local Label = TabMoney:CreateLabel("HOW TO USE INFINITE MONEY :")
+local Label = TabMoney:CreateLabel("1. Go to Manni NPC at Redwood")
+local Label = TabMoney:CreateLabel("2. Open up his shop")
+local Label = TabMoney:CreateLabel("3. Make sure it has bananas in stock")
+local Label = TabMoney:CreateLabel("4. Click infinite money button below")
+local Button = TabMoney:CreateButton({
+	Name = "Infinite Money",
+	Callback = function()
+		local Item = "Banana" -- (Must be in the persons store)
+
+local BuyNPC = workspace.NPCs.Manni.Manni -- NPC at Starter Island (Redwood, Redlake what ever its called)
+
+local args = {
+   [1] = BuyNPC,
+   [2] = "{\"Level\":1,\"Name\":\""..Item.."\",\"Amount\":1}",
+   [3] = "",
+   [4] = -1000000
+}
+
+game:GetService("ReplicatedStorage").RS.Remotes.Misc.BuyItem:InvokeServer(unpack(args))
+
+	end,
+})
