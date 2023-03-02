@@ -115,7 +115,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/m
 local Button = Tab:CreateButton({
 	Name = "Ren Hub",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Varomine/SOME-HUB-MY/main/Bloxfruits%20open%20src.txt", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/ren", true))()
 	end,
 })
 local Button = Tab:CreateButton({
