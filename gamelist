@@ -35,8 +35,15 @@
             "ThumbNail": "https://i.imgur.com/0FufAsT.png",
             "ID": "171"
         },
+				        		                        {
+            "Name": "UPDATE - Shindo Life",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
+            "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
+            "ThumbNail": "https://i.imgur.com/jknXGHb.png",
+            "ID": "12"
+        },
                                                {
-            "Name": "NEW - Doors",
+            "Name": "Doors",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors",
             "Description": "#1 Exclusive GUI - WalkSpeed, Fly, Remove Doors & More!",
             "ThumbNail": "https://i.imgur.com/XWgMS3D.png",
@@ -97,13 +104,6 @@
             "Description": "#1  GUI - Auto Farm, Teleports, Devil Fruit TP & More!",
             "ThumbNail": "https://i.imgur.com/er645rL.png",
             "ID": "43"
-        },
-			        		                        {
-            "Name": "Shindo Life",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
-            "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
-            "ThumbNail": "https://i.imgur.com/JJp2sYX.png",
-            "ID": "12"
         },
 	{
             "Name": "Your Bizarre Adventure",
