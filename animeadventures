@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Anime Adventures", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(240, 200),
+		min_size = Vector2.new(240, 250),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
@@ -2048,7 +2048,10 @@ end
 		Tab:AddButton("NEW - Utility GUI by deity", function()
 			loadstring(game:HttpGet("https://pastebin.com/raw/pugQTSWc", true))()	
 		end)
-		Tab:AddButton("#1 - Arpon AG Hub", function()
+		Tab:AddButton("#1 - Arpon AG Hub V2", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures_v2__Beta.lua"))()	
+		end)
+		Tab:AddButton("Arpon AG Hub V1 (old)", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua"))()
 		end)
 		Tab:AddButton("Trap Hub", function()
