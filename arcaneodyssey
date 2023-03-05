@@ -4,106 +4,116 @@ getgenv().SecureMode = true
 local Window = Rayfield:CreateWindow({
 	Name = "Arcane Odyssey - Furk Ultra",
 	LoadingTitle = "Arcane Odyssey - Furk Ultra",
-	LoadingSubtitle = "Subscribe to Furky on YouTube!",
+	LoadingSubtitle = "Brought to you by Furk Ultra",
 })
 local Tab = Window:CreateTab("Main GUI's")
-local Section = Tab:CreateSection("Arcane Odyssey Main Scripts")
-local TabUtil = Window:CreateTab("Infinite Stats")
-local TabMoney = Window:CreateTab("Infinite Money")
-local UtilSection = TabUtil:CreateSection("Arcane Odyssey Infinite Stats")
-local MoneySection = TabMoney:CreateSection("Arcane Odyssey Infinite Money")
-
+local TabB = Window:CreateTab("Utility Tab")
+local Section = Tab:CreateSection("Arcane Odyssey Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
-local Label = TabUtil:CreateLabel("READ BEFORE USING INFINITE STATS")
-local Label = TabUtil:CreateLabel("Select one of the 3 stats below")
-local Label = TabUtil:CreateLabel("This will put that stat at a negative amount")
-local Label = TabUtil:CreateLabel("But will give you infinite stat points!")
+local Label = TabB:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
-	Name = "Kill Aura + Autofarm GUI",
+	Name = "Xtrey Hub (Kill Aura, Farm, Fly, ESP)",
 	Callback = function()
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyouranya/free/main/arcaneodyssey.lua'),true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/Arcane%20Odyssey%20Script"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Kidachi Hub (Auto Farm, Stats, Player Settings)",
+	Callback = function()
+loadstring(game:HttpGet('https://kidachi.xyz/Odyssey', true))()
 	end,
 })
 
+
+
 local Button = Tab:CreateButton({
-	Name = "Fly, ESP & More GUI",
+	Name = "Anya Hub (Key: 'w0wArcaneODDhahaFREE!')",
 	Callback = function()
-		loadstring(game:HttpGet("https://jumblescripts.com/JumbleHub.lua"))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyouranya/free/main/arcaneodyssey.lua'),true))()
 	end,
 })
-
-local Button = Tab:CreateButton({
-	Name = "Kill Aura",
+local Button = TabB:CreateButton({
+	Name = "Chest ESP",
 	Callback = function()
-		getgenv().a = true
+local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+local NotificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMinisterq/Notification-Library/Main/Library.lua"))()
 
-while a do task.wait()
-    for i,v in pairs(workspace.Enemies:GetChildren()) do
-        if v:IsA("Model") and v:FindFirstChildOfClass("Humanoid") and v:FindFirstChildOfClass("Humanoid").Health > 0 and game.Players.LocalPlayer:DistanceFromCharacter(v.PrimaryPart.Position) < 21 then
-            local args = {
-                [1] = 0,
-                [2] = game:GetService("Players").LocalPlayer.Character,
-                [3] = v,
-                [4] = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool"),
-                [5] = "Slash"
-            }
-
-            game:GetService("ReplicatedStorage").RS.Remotes.Combat.DealWeaponDamage:FireServer(unpack(args))
-        end
+-- Chests --
+for i,v in pairs(game:GetDescendants()) do
+   if string.match(v.Name, " Chest") and v:FindFirstChild("Base") then
+       ESP:Add(v:FindFirstChild("Base"), {
+       Name = v.Name,
+       Color = Color3.fromRGB(255,0,0),
+       IsEnabled = "Chests"
+     })
     end
 end
+
+game.DescendantAdded:Connect(function(v)
+   if string.match(v.Name, " Chest") and v:FindFirstChild("Base") then
+       NotificationLibrary:SendNotification("Info", "Chest Added:"..v.Name, 3)
+       ESP:Add(v:FindFirstChild("Base"), {
+       Name = v.Name,
+       Color = Color3.fromRGB(255,0,0),
+       IsEnabled = "Chests"
+     })
+   end
+end)
+
+   ESP.Players = false
+   ESP.Chests = true
+   ESP:Toggle(true)
 	end,
 })
 
-local Button = TabUtil:CreateButton({
-	Name = "Infinite Stat Points (Strength negative)",
+local Button = TabB:CreateButton({
+	Name = "Auto Fish (must have Wooden Rod)",
 	Callback = function()
-		local Stat = "Strength" -- Any statpoint u want to go into negative (I'll try to find a better vers of this)
-
-game:GetService("ReplicatedStorage").RS.Remotes.UI.SpendSP:InvokeServer(Stat, -10000000)
-
-	end,
-})
-local Button = TabUtil:CreateButton({
-	Name = "Infinite Stat Points (Magic negative)",
-	Callback = function()
-		local Stat = "Magic" -- Any statpoint u want to go into negative (I'll try to find a better vers of this)
-
-game:GetService("ReplicatedStorage").RS.Remotes.UI.SpendSP:InvokeServer(Stat, -10000000)
-
-	end,
-})
-local Button = TabUtil:CreateButton({
-	Name = "Infinite Stat Points (Weapons negative)",
-	Callback = function()
-		local Stat = "Weapons" -- Any statpoint u want to go into negative (I'll try to find a better vers of this)
-
-game:GetService("ReplicatedStorage").RS.Remotes.UI.SpendSP:InvokeServer(Stat, -10000000)
-
+getgenv().toggle=true
+getgenv().fixedloc=true-- you can toggle this, turning this off will allow you to move to your own fishing spot.
+getgenv().rod="Wooden Rod"--[[
+Wooden Rod
+Collector's Rod
+Bronze Rod
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Disttt/-Arcane-Odyssey/main/AutoFish.lua"))()
 	end,
 })
 
-local Label = TabMoney:CreateLabel("HOW TO USE INFINITE MONEY :")
-local Label = TabMoney:CreateLabel("1. Go to Manni NPC at Redwood")
-local Label = TabMoney:CreateLabel("2. Open up his shop")
-local Label = TabMoney:CreateLabel("3. Make sure it has bananas in stock")
-local Label = TabMoney:CreateLabel("4. Click infinite money button below")
-local Button = TabMoney:CreateButton({
-	Name = "Infinite Money",
+local Button = TabB:CreateButton({
+	Name = "Auto Fish (Can choose own fishing spot)",
 	Callback = function()
-		local Item = "Banana" -- (Must be in the persons store)
+getgenv().toggle=true
+getgenv().fixedloc=false-- you can toggle this, turning this off will allow you to move to your own fishing spot.
+getgenv().rod="Wooden Rod"--[[
+Wooden Rod
+Collector's Rod
+Bronze Rod
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Disttt/-Arcane-Odyssey/main/AutoFish.lua"))()
+	end,
+})
 
-local BuyNPC = workspace.NPCs.Manni.Manni -- NPC at Starter Island (Redwood, Redlake what ever its called)
+local Button = TabB:CreateButton({
+	Name = "Godmode",
+	Callback = function()
+shared.godMode = true
 
-local args = {
-   [1] = BuyNPC,
-   [2] = "{\"Level\":1,\"Name\":\""..Item.."\",\"Amount\":1}",
-   [3] = "",
-   [4] = -1000000
-}
+local player = game.Players.LocalPlayer
+local namecall; namecall = hookmetamethod(game, '__namecall', function(object, ...)
+local args = {...}
 
-game:GetService("ReplicatedStorage").RS.Remotes.Misc.BuyItem:InvokeServer(unpack(args))
-
+if getnamecallmethod() == "FireServer" then
+   if shared.godMode then
+       if object.Name == 'DealWeaponDamage' and args[3] == player.Character then
+           args[3] = math.random(1,200);
+       elseif object.Name == 'DealBossDamage' and args[2] == player.Character then
+               args[2] = math.random(1,200);
+           end;
+       end;
+   end;
+   return namecall(object, unpack(args));
+end);
 	end,
 })
