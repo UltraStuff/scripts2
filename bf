@@ -41,11 +41,11 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
 	Name = "Zee Hub (NEW)",
 	Callback = function()
-		loadstring(game:HttpGet("https://scriptdee.com/free/ZeeHubNew.lua"))()
+		loadstring(game:HttpGet("https://zKuzy.link/ZeeHub.lua"))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Madoc Hub (NEW)",
+	Name = "Madox Hub (NEW) (KEY!)",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Fiend1sh/FiendMain/main/MadoxHubKey", true))()
 	end,
