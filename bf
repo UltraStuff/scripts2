@@ -8,6 +8,8 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Main GUI's")
 local Section = Tab:CreateSection("Blox Fruits Main GUI's")
+local TabMobile = Window:CreateTab("Mobile GUI's")
+local SectionMobile = TabMobile:CreateSection("Blox Fruits Mobile GUI's")
 local TabUtil = Window:CreateTab("Utility")
 local SectionUtil = TabUtil:CreateSection("Blox Fruits Utility")
 local TabOther = Window:CreateTab("Side GUI's")
@@ -16,42 +18,42 @@ local SectionOther = TabOther:CreateSection("Blox Fruits Side GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 local Label = TabUtil:CreateLabel("Thanks for using Furk Ultra!")
 local Label = TabOther:CreateLabel("Thanks for using Furk Ultra!")
+local Label = TabMobile:CreateLabel("Thanks for using Furk Ultra!")
 
-
 local Button = Tab:CreateButton({
-	Name = "Uranium Hub (NEW)",
+	Name = "Neva Hub (NEW)",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Glord Hub (NEW)",
+	Name = "Makima Hub (NEW)",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/GGhostVN/GhostLord/main/BF"))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Piwwy0909/MakimaRemake/main/Cumback.Makima'))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Blck Hub (NEW)",
+	Name = "Sonic Hub (NEW)",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/Protected-25.lua"))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Loli Hub (NEW)",
+	Name = "Zee Hub (NEW)",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/neon"))()
+		loadstring(game:HttpGet("https://scriptdee.com/free/ZeeHubNew.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Madoc Hub (NEW)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Fiend1sh/FiendMain/main/MadoxHubKey", true))()
 	end,
 })
 local Button = Tab:CreateButton({
 	Name = "Hoho Hub (#1 - Requires Key)",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-	end,
-})
-local Button = Tab:CreateButton({
-	Name = "Zamex Hub (BEST FOR MOBILE)",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Sixnumz/ZamexMobile/main/Zamex_Mobile.lua'))()
 	end,
 })
 local Button = Tab:CreateButton({
@@ -80,17 +82,33 @@ local Button = Tab:CreateButton({
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Alucard Hub",
+	Name = "Uranium Hub",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/JJTChannel/Alucard_hub/main/main.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Winnable Hub",
+	Name = "Glord Hub",
 	Callback = function()
-				_G.Mode = "Normal" -- Aimbot / Normal
-		_G.Key = "" -- if you already have a key you can put it here
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/xlostpexz/tyuiop/Fps/Loading.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GGhostVN/GhostLord/main/BF"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Blck Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Loli Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/neon"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Alucard Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/JJTChannel/Alucard_hub/main/main.lua"))()
 	end,
 })
 local Button = Tab:CreateButton({
@@ -130,6 +148,36 @@ local Button = Tab:CreateButton({
 		loadstring(game:HttpGetAsync("https://gitlab.com/Sky2836/test/-/raw/main/Script_All_In-One"))()
 	end,
 })
+local Button = TabMobile:CreateButton({
+	Name = "Madoc Hub (NEW + MOBILE)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KudoCon/DestinyHub/main/DestinyKey"))()
+	end,
+})
+local Button = TabMobile:CreateButton({
+	Name = "Atomic Hub (NEW + MOBILE)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXHub/atomic-hub/main/atomic-hub.lua"))()
+	end,
+})
+local Button = TabMobile:CreateButton({
+	Name = "Zamex Hub (BEST FOR MOBILE)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Sixnumz/ZamexMobile/main/Zamex_Mobile.lua'))()
+	end,
+})
+local Button = TabMobile:CreateButton({
+	Name = "Saki Hub (NEW + MOBILE) (KEY!)",
+	Callback = function()
+		loadstring(game:HttpGetAsync('https://sharetext.me/raw/u3if6m3hgr'))()
+	end,
+})
+local Button = TabMobile:CreateButton({
+	Name = "Speed Hub X (NEW + MOBILE)",
+	Callback = function()
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
+	end,
+})
 local Button = TabUtil:CreateButton({
 	Name = "NEW - Fruit Finder & Hopper",
 	Callback = function()
@@ -143,7 +191,15 @@ local Button = TabUtil:CreateButton({
 	end,
 })
 local Button = TabOther:CreateButton({
-	Name = "Shadow Hub (NEW)",
+	Name = "Winnable Hub",
+	Callback = function()
+				_G.Mode = "Normal" -- Aimbot / Normal
+		_G.Key = "" -- if you already have a key you can put it here
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/xlostpexz/tyuiop/Fps/Loading.lua"))()
+	end,
+})
+local Button = TabOther:CreateButton({
+	Name = "Shadow Hub",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/xPeachy/ShadowHub/main/BF"))()
 	end,
@@ -171,12 +227,6 @@ local Button = TabOther:CreateButton({
 	Callback = function()
 		getgenv().WaterMark = false
 loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
-	end,
-})
-local Button = TabOther:CreateButton({
-	Name = "Neva Hub",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
 	end,
 })
 local Button = TabOther:CreateButton({
