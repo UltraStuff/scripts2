@@ -149,7 +149,7 @@ local Button = Tab:CreateButton({
 	end,
 })
 local Button = TabMobile:CreateButton({
-	Name = "Destiny Hub (NEW + MOBILE)",
+	Name = "Destiny Hub (NEW + MOBILE) (KEY!)",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/KudoCon/DestinyHub/main/DestinyKey"))()
 	end,
