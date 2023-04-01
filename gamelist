@@ -14,40 +14,47 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
-						                                                                                {
-            "Name": "NEW - Arcane Odyssey",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/arcaneodyssey",
-            "Description": "#1 Exclusive GUI - Infinite Money, Infinite Stats, Auto Farm & More!",
-            "ThumbNail": "https://i.imgur.com/EOYvj9k.png",
-            "ID": "223"
+	        {
+            "Name": "NEW - My Restaurant",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/rest",
+            "Description":  "ALIEN UPDATE - Auto Farm, Money Hack & More!",
+            "ThumbNail": "https://i.imgur.com/vzPDQFr.png",
+            "ID" : "54"
+        },
+	                                               {
+            "Name": "UPDATED - Doors",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors",
+            "Description": "#1 Exclusive GUI - WalkSpeed, Fly, Remove Doors & More!",
+            "ThumbNail": "https://i.imgur.com/xhNJY36.png",
+            "ID": "213"
         },
 					                                                                                {
-            "Name": "UPDATED - Blox Fruits",
+            "Name": "Blox Fruits",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
             "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
             "ThumbNail": "https://i.imgur.com/SuVMJzQ.png",
             "ID": "13"
         },
 						                {
-            "Name": "UPDATED - Pet Simulator X",
+            "Name": "Pet Simulator X",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
             "Description": "#1 Exclusive GUI - Auto Farm, Unlock GamePasses & More!",
             "ThumbNail": "https://i.imgur.com/0FufAsT.png",
             "ID": "171"
         },
 				        		                        {
-            "Name": "UPDATE - Shindo Life",
+            "Name": "Shindo Life",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo",
             "Description": "#1 Exclusive GUI - Infinite Spins, KG Changer, Auto Farm & More!",
             "ThumbNail": "https://i.imgur.com/jknXGHb.png",
             "ID": "12"
         },
-                                               {
-            "Name": "Doors",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors",
-            "Description": "#1 Exclusive GUI - WalkSpeed, Fly, Remove Doors & More!",
-            "ThumbNail": "https://i.imgur.com/XWgMS3D.png",
-            "ID": "213"
+							                                                                                {
+            "Name": "Arcane Odyssey",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/arcaneodyssey",
+            "Description": "#1 Exclusive GUI - Infinite Money, Infinite Stats, Auto Farm & More!",
+            "ThumbNail": "https://i.imgur.com/EOYvj9k.png",
+            "ID": "223"
         },
 				                                                                                {
             "Name": "Pixel Piece",
@@ -804,13 +811,6 @@
             "Description": "#1 Exclusive GUI - Bomb All, Invisible All, Crash & More!",
             "ThumbNail": "https://i.imgur.com/3RSbrTV.png",
             "ID": "71"
-        },
-		{
-            "Name": "My Restaurant",
-            "Url": "https://pastebin.com/raw/VNLApiTy",
-            "Description": "OP GUI for My Restaurant!",
-            "ThumbNail": "https://i.imgur.com/Y4rqLwU.png",
-            "ID": "54"
         },
         		{
             "Name": "Wacky Wizards",
