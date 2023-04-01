@@ -2061,7 +2061,7 @@ do -- Example UI
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/toosiwhip/statue/main/crimsonhub-statue.lua"))()
 		end)
 		TabUtil:AddButton("Entity/Item Spawner Hub", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySpawner/main/EntitySpawner'))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/UtilitiesHub/main/UtilitiesGUI'))()
 		end)
 		
 		
