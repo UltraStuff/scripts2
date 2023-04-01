@@ -2030,7 +2030,7 @@ do -- Example UI
 		can_resize = true,
 	})
 	local Tab = Window:AddTab("Main")
-	local TabUtil = Window:AddTab("Uitlity")
+	local TabUtil = Window:AddTab("Utility")
 
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
