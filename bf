@@ -21,6 +21,12 @@ local Label = TabOther:CreateLabel("Thanks for using Furk Ultra!")
 local Label = TabMobile:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
+	Name = "UraniumX Hub (NEW)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
 	Name = "Neva Hub (NEW)",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
