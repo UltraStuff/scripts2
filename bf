@@ -27,6 +27,12 @@ local Button = Tab:CreateButton({
 	end,
 })
 local Button = Tab:CreateButton({
+	Name = "CFrame Hub (NEW)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CFrame3310/CFrameHub/main/BloxFruitV2.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
 	Name = "Neva Hub (NEW)",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
