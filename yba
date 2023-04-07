@@ -2060,6 +2060,9 @@ do -- Example UI
 		Tab:AddLabel("Thanks For Using Furk Ultra!")
 		Tab:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
+				Tab:AddButton("NEW - Kolgie Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/kolgie/YBA-GUI/main/yba-gui-obfuscated.lua"))()
+		end)
 				Tab:AddButton("#1 - Bitch Boy Hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v3.lua"))()
 		end)
