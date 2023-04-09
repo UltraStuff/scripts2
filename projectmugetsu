@@ -28,4 +28,10 @@ local Button = Tab:CreateButton({
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Alrbuddy/ohmydays/main/Purmom'))()
 	end,
 })
+local Button = Tab:CreateButton({
+	Name = "Jumble Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://jumblescripts.com/ProjectMugetsu.lua"))()
+	end,
+})
 
