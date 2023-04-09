@@ -11,6 +11,12 @@ local Section = Tab:CreateSection("Project Mugetsu Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
+	Name = "FASTEST AUTO FARM GUI",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheyCallMeVox/scripts/main/PM"))()
+	end,
+})
+local Button = Tab:CreateButton({
 	Name = "#1 - Valynium Hub",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/XO-3S-CL-VCK-jf-3HDM/Products/main/Project-Mugetsu.lua"))()
@@ -22,46 +28,4 @@ local Button = Tab:CreateButton({
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Alrbuddy/ohmydays/main/Purmom'))()
 	end,
 })
-local Button = Tab:CreateButton({
-	Name = "Get All OP ITEMS",
-	Callback = function()
-local args = {
-   [1] = "Update_Tools",
-   [2] = {
-       [1] = "Fists",
-       [2] = "Yamamoto's Cane",
-       [3] = "Ichigo's Cape",
-       [4] = "Akatsuki's Cloak",
-       [5] = "Excalibur",
-       [6] = "Head Captains Cape",
-       [7] = "Barragan's Axe",
-       [8] = "The Legendary Orb",
-       [9] = "Golden Blick",
-       [10] = "Shunsui's Cloak"
-   }
-}
 
-game:GetService("ReplicatedStorage").Remotes.Server.Initiate_Server:FireServer(unpack(args))
-	end,
-})
-local Button = Tab:CreateButton({
-	Name = "Infinite EXP/Gold/Mastery Boost (Execute more for more)",
-	Callback = function()
-local plr = game:GetService("Players").LocalPlayer
-local ReplicatedStorage = game.ReplicatedStorage
-local Remotes = ReplicatedStorage.Remotes.Server
-local Initiate_Server = Remotes.Initiate_Server
-
-
-
-
-
-for i = 1,10 do
-    Initiate_Server:FireServer("The Legendary Orb",nil,1262805660,"2x Exp(15m)")
-    Initiate_Server:FireServer("The Legendary Orb",nil,1262805657,"2x Gold(30m)")
-    Initiate_Server:FireServer("The Legendary Orb",nil,1262805658,"2x Mastery(20m)")
-    Initiate_Server:FireServer("The Legendary Orb",nil,1337293187,"Luisenbarn Crown") -- if you got crown just add "--" on it
-    Initiate_Server:FireServer("The Legendary Orb",nil,1262805661,"2x Drop(45m)")
-end
-	end,
-})
