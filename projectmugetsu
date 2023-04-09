@@ -8,8 +8,6 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Main GUI's")
 local Section = Tab:CreateSection("Project Mugetsu Main GUI's")
-local TabUtil = Window:CreateTab("Hollow Force Evolve")
-local SectionUtil = TabUtil:CreateSection("Hollow Force Evolve")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
@@ -65,39 +63,5 @@ for i = 1,10 do
     Initiate_Server:FireServer("The Legendary Orb",nil,1337293187,"Luisenbarn Crown") -- if you got crown just add "--" on it
     Initiate_Server:FireServer("The Legendary Orb",nil,1262805661,"2x Drop(45m)")
 end
-	end,
-})
-local Button = TabUtil:CreateButton({
-	Name = "Instant Evolve",
-	Callback = function()
-		local args = {
-  [1] = "HollowEvolve"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Server"):WaitForChild("Initiate_Server"):FireServer(unpack(args))
-
-local args = {
-  [1] = "MenosEvolve"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Server"):WaitForChild("Initiate_Server"):FireServer(unpack(args))
-
-local args = {
-  [1] = "AdjuchaEvolve"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Server"):WaitForChild("Initiate_Server"):FireServer(unpack(args))
-	end,
-})
-local Button = TabUtil:CreateButton({
-	Name = "Execute (Evolve) and reset after every evolve",
-	Callback = function()
-		print("hi")
-	end,
-})
-local Button = TabUtil:CreateButton({
-	Name = "Do it 3 times until Vasto Lorde",
-	Callback = function()
-		print("hi")
 	end,
 })
