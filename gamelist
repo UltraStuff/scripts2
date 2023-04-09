@@ -15,6 +15,13 @@
             "ID": "2"
         },
 	        {
+            "Name": "NEW - Project Mugetsu",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/projectmugetsu",
+            "Description":  "#1 Exclusive GUI - Auto Farm, Infinite Items & More!",
+            "ThumbNail": "https://i.imgur.com/eQbgMmh.png",
+            "ID" : "224"
+        },
+	        {
             "Name": "NEW - My Restaurant",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/rest",
             "Description":  "ALIEN UPDATE - Auto Farm, Money Hack & More!",
