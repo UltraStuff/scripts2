@@ -2041,7 +2041,10 @@ do -- Example UI
 		TabUtil:AddLabel("~ Press Right Shift To Hide GUI ~")
 		
 
-		Tab:AddButton("Vynixius Hub (#1)", function()
+		Tab:AddButton("MSDOORS Hub (#1)", function()
+			loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSDOORS.lua"),true))()
+		end)
+		Tab:AddButton("Vynixius Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
 		end)
 		Tab:AddButton("NEW - Shadow Hub", function()
