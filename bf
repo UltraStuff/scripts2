@@ -193,13 +193,13 @@ local Button = TabMobile:CreateButton({
 local Button = TabUtil:CreateButton({
 	Name = "NEW - Fruit Finder & Hopper",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/FruitFarmOp"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/BetaFruitFinder"))()
 	end,
 })
 local Button = TabUtil:CreateButton({
 	Name = "NEW - Chest Hopper (Infinite Money)",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Chest_onoff"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/ChestFarmOp"))()
 	end,
 })
 local Button = TabOther:CreateButton({
