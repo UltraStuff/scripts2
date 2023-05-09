@@ -2,13 +2,13 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 getgenv().SecureMode = true
 
 local Window = Rayfield:CreateWindow({
-	Name = "My Restaurant - Zeus",
-	LoadingTitle = "My Restaurant - Zeus",
-	LoadingSubtitle = "Brought to you by Zeus",
+	Name = "My Restaurant - Furk Ultra",
+	LoadingTitle = "My Restaurant - Furk Ultra",
+	LoadingSubtitle = "Brought to you by Furk Ultra",
 })
 local Tab = Window:CreateTab("Main GUI's")
 local Section = Tab:CreateSection("My Restaurant Main GUI's")
-local Label = Tab:CreateLabel("Thanks for using Zeus!")
+local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 local Label = Tab:CreateLabel("Make sure you have staff before using!")
 
 
