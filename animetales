@@ -18,7 +18,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts
 })
 
 local Button = Tab:CreateButton({
-	Name = "#1 - Bebo Hub",
+	Name = "Punchy Hub",
 	Callback = function()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Punchy315/Anime-Tales/main/Exploit",true))()
 	end,
