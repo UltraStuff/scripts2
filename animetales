@@ -1,0 +1,18 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+	Name = "Anime Tales - Furk Ultra",
+	LoadingTitle = "Anime Tales - Furk Ultra",
+	LoadingSubtitle = "Brought to you by Furk Ultra",
+})
+local Tab = Window:CreateTab("Main GUI's")
+local Section = Tab:CreateSection("Anime Tales Main GUI's")
+local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
+
+local Button = Tab:CreateButton({
+	Name = "#1 - Bebo Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/AnimeTales.lua"))()
+	end,
+})
