@@ -2025,7 +2025,7 @@ end
 do -- Example UI
 	local Window = library:AddWindow("Furk - Project Slayers", {
 		main_color = Color3.fromRGB(0, 0, 0),
-		min_size = Vector2.new(320, 220),
+		min_size = Vector2.new(290, 250),
 		toggle_key = Enum.KeyCode.RightShift,
 		can_resize = true,
 	})
