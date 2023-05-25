@@ -2054,6 +2054,9 @@ do -- Example UI
 	do -- Elements
 		Tab:AddLabel("Thanks For Using Furk Ultra")
 
+				Tab:AddButton("WORKING - Sylveon Hub", function()
+			loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Blackout4781/Sin.xyzz/main/Project%20Slayers%20Test"))()
+		end)
 				Tab:AddButton("#1 Auto Farm GUI", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Novaz5792/X/main/Q"))()
 		end)
