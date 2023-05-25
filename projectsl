@@ -2055,7 +2055,9 @@ do -- Example UI
 		Tab:AddLabel("Thanks For Using Furk Ultra")
 
 				Tab:AddButton("WORKING - Sylveon Hub", function()
-			loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Blackout4781/Sin.xyzz/main/Project%20Slayers%20Test"))()
+			local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
+repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet(LoaderUrl))()
 		end)
 				Tab:AddButton("#1 Auto Farm GUI", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Novaz5792/X/main/Q"))()
