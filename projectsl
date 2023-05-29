@@ -13,6 +13,15 @@ local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 local Button = Tab:CreateButton({
 	Name = "#1 - Sylveon Hub",
 	Callback = function()
+local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/NewLoader.lua"
+repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet(LoaderUrl))(
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Sylveon Hub - Mobile Version",
+	Callback = function()
 local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
 repeat wait() until game:IsLoaded()
 loadstring(game:HttpGet(LoaderUrl))()
