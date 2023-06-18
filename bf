@@ -23,7 +23,8 @@ local Label = TabMobile:CreateLabel("Thanks for using Furk Ultra!")
 local Button = Tab:CreateButton({
 	Name = "Hoho Hub V3 (NEW)",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+		_G.HohoVersion = "v3"
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
 	end,
 })
 
