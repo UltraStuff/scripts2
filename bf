@@ -21,6 +21,20 @@ local Label = TabOther:CreateLabel("Thanks for using Furk Ultra!")
 local Label = TabMobile:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
+	Name = "Hoho Hub V3 (NEW)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Hoho Hub (#1 - Requires Key)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+	end,
+})
+
+local Button = Tab:CreateButton({
 	Name = "UraniumX Hub (NEW)",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
@@ -62,12 +76,7 @@ local Button = Tab:CreateButton({
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Fiend1sh/FiendMain/main/MadoxHubKey", true))()
 	end,
 })
-local Button = Tab:CreateButton({
-	Name = "Hoho Hub (#1 - Requires Key)",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-	end,
-})
+
 local Button = Tab:CreateButton({
 	Name = "2x Hub",
 	Callback = function()
