@@ -27,7 +27,7 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-	Name = "NEW - Skreered Hub Key is FinallyChanged",
+	Name = "NEW - Skreered Hub Key is TypeTheKey",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Skeereddo/name/main/krnl"))()
 	end,
