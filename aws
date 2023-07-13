@@ -1,0 +1,37 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+	Name = "Arm Wrestle Simulator - Furk Ultra",
+	LoadingTitle = "Arm Wrestle Simulator - Furk Ultra",
+	LoadingSubtitle = "Brought to you by Furk Ultra",
+})
+local Tab = Window:CreateTab("Main GUI's")
+
+local Section = Tab:CreateSection("Arm Wrestle Simulator Main GUI's")
+local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
+
+local Button = Tab:CreateButton({
+	Name = "Screech Hub - #1",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1Toxin/screech/main/AWS"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "keniel Hub - (Key System)",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/Arm-Wrestle-Simulator-Script/main/Arm-Wrestle-Simulator-Script",true))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Muimi Hub - (Key System) - Patched/Updating",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bunnynwy/games/main/main.lua"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "More Coming Soon!"
+})
