@@ -15,11 +15,11 @@
             "ID": "2"
         },
 		                                               {
-            "Name": "NEW - Anime Tales",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/animetales",
-            "Description": "#1 Exclusive GUI - Auto Farm, Infinite Gems & More!",
-            "ThumbNail": "https://i.imgur.com/y2sswYY.png",
-            "ID": "225"
+            "Name": "NEW - Arm Wrestle Simulator",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/aws",
+            "Description": "#1 Exclusive GUI - Auto Farm, Infinite Rebirth & More!",
+            "ThumbNail": "https://i.imgur.com/7WqPMNT.png",
+            "ID": "226"
         },
 			                                        		{
             "Name": "NEW - BedWars",
@@ -69,6 +69,13 @@
             "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
             "ThumbNail": "https://i.imgur.com/4nc6quZ.png",
             "ID": "222"
+        },
+		                                               {
+            "Name": "Anime Tales",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/animetales",
+            "Description": "#1 Exclusive GUI - Auto Farm, Infinite Gems & More!",
+            "ThumbNail": "https://i.imgur.com/y2sswYY.png",
+            "ID": "225"
         },
 		        {
             "Name": "Project Mugetsu",
