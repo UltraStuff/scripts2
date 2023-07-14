@@ -12,9 +12,9 @@ local Section = Tab:CreateSection("Arm Wrestle Simulator Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
-	Name = "Screech Hub - #1",
+	Name = "Spirit Hub - Key SpiritHub3500",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1Toxin/screech/main/AWS"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zicus-scripts/gay-scripts/main/Loader.lua"), true)()
 	end,
 })
 
