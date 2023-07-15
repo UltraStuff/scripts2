@@ -12,9 +12,9 @@ local Section = Tab:CreateSection("Anime Fighters Simulator Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
-	Name = "#1 - Codexus Hub",
+	Name = "#1 - Platinium Hub",
 	Callback = function()
-loadstring(game:HttpGet(("https://api.sussy.dev/v1/KeySystem/Assets/GetPublicFile?fileName=Codexus_Hub_loader.lua"), true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Loader/main/PlatiniumLoader"))()
 	end,
 })
 
