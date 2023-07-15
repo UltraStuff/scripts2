@@ -26,7 +26,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/Arm-Wrestl
 })
 
 local Button = Tab:CreateButton({
-	Name = "Muimi Hub - (Key System) - Patched/Updating",
+	Name = "Muimi Hub - (Key System)",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/bunnynwy/games/main/main.lua"))()
 	end,
