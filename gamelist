@@ -14,6 +14,13 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+        {
+            "Name": "NEW - Anime Fighters Simulator",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/afs",
+            "Description": "#1 EXCLUSIVE GUI - Auto Farm, Auto Chakra, Teleports & More!",
+            "ThumbNail": "https://i.imgur.com/yHByRmR.png",
+            "ID": "18"
+        },
 		                                               {
             "Name": "NEW - Arm Wrestle Simulator",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/aws",
@@ -356,13 +363,6 @@
             "Description": "#1 Exclusive GUI - Auto Farm, Item ESP, No Fall Damage & More!",
             "ThumbNail": "https://i.imgur.com/YnP5lYM.png",
             "ID" : "201"
-        },
-        {
-            "Name": "Anime Fighters Simulator",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/afs",
-            "Description": "#1 EXCLUSIVE GUI - Auto Farm, Auto Chakra, Teleports & More!",
-            "ThumbNail": "https://cdn.discordapp.com/icons/852143372353142785/2220cae18fc8b48362f2e67782482f77.webp?size=96",
-            "ID": "18"
         },
         	{
             "Name": "Anime Punching Simulator",
