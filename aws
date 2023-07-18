@@ -33,12 +33,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/bunnynwy/games/main/m
 })
 
 local Button = Tab:CreateButton({
-	Name = "Spirit Hub - (Key System)",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/zicus-scripts/gay-scripts/main/Loader.lua"), true)()
-	end,
-})
-
-local Button = Tab:CreateButton({
 	Name = "More Coming Soon!"
 })
