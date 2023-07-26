@@ -19,9 +19,28 @@ local Label = TabOther:CreateLabel("Thanks for using Furk Ultra!")
 
 
 local Button = Tab:CreateButton({
+	Name = "NEW - Cat Hub V2 (Key!)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Senpaigmx/CatHubV2/main/CatHubV2.lua'))()
+	end,
+})
+
+local Button = Tab:CreateButton({
 	Name = "UPDATED - Milk Up (#1)",
 	Callback = function()
 		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc715fb43902af268c335a5c7269be5e.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "NEW - Nuke Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "NEW - Blacktrap Hub (Key!)",
+	Callback = function()
+		loadstring(game:HttpGetAsync("https://blacktrap.org/blacktrap/users/checkpoint/Auth.txt"))()
 	end,
 })
 local Button = Tab:CreateButton({
