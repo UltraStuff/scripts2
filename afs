@@ -7,9 +7,10 @@ local Window = Rayfield:CreateWindow({
 	LoadingSubtitle = "Brought to you by Furk Ultra",
 })
 local Tab = Window:CreateTab("Main GUI's")
-
 local Section = Tab:CreateSection("Anime Fighters Simulator Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
+local TabMobile = Window:CreateTab("Dupe Script")
+local SectionMobile = TabMobile:CreateSection("Dupe Script")
 
 local Button = Tab:CreateButton({
 	Name = "#1 - Platinium Hub",
@@ -55,4 +56,18 @@ loadstring(game:HttpGet("https://paste.ee/r/W7jY4/0", true))()
 
 local Button = Tab:CreateButton({
 	Name = "More Coming Soon!"
+})
+
+
+local Label = TabMobile:CreateLabel("How to Dupe")
+local Label = TabMobile:CreateLabel("1. Execute Dataloss")
+local Label = TabMobile:CreateLabel("2. Open Unit Inventory Once")
+local Label = TabMobile:CreateLabel("3. Trade items away (to an alt or whatever)")
+local Label = TabMobile:CreateLabel("4. Rejoin")
+
+local Button = TabMobile:CreateButton({
+	Name = "Dataloss Script",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/AFS-Dataloss-GUI.lua"))()
+	end,
 })
