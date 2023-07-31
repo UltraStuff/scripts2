@@ -1,0 +1,43 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+	Name = "Anime Fighting Simulator X - Furk Ultra",
+	LoadingTitle = "Anime Fighting Simulator X - Furk Ultra",
+	LoadingSubtitle = "Brought to you by Furk Ultra",
+})
+local Tab = Window:CreateTab("Main GUI's")
+local Section = Tab:CreateSection("Anime Fighting Simulator X Main GUI's")
+local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
+
+local Button = Tab:CreateButton({
+	Name = "#1 - Muimi Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bunnynwy/games/main/AnimeFightingX"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Blox Hub",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/malicious-dev/RobloxScripting/main/AFSX.lua'),true))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Kidachi Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/AFX", true))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Xtrey Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/Anime%20Fighting%20Simulator%20X"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "More Coming Soon!"
+})
