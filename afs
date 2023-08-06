@@ -68,6 +68,6 @@ local Label = TabMobile:CreateLabel("4. Rejoin")
 local Button = TabMobile:CreateButton({
 	Name = "Dataloss Script",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/AFS-Dataloss-GUI.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/afsdupe"))()
 	end,
 })
