@@ -9,21 +9,21 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Main GUI's")
 local Section = Tab:CreateSection("Jailbreak Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
-local Button = Tab:CreateButton({
-	Name = "JailMonkey Hub",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
 
-	end,
-})
 local Button = Tab:CreateButton({
-	Name = "Subs Hub",
+	Name = "#1 - Project Auto (Auto Rob)",
 	Callback = function()
-pcall(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Kw6m/Subbers-scripts/main/jailbreak", true))()
-end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/free"))()
 	end,
 })
+
+local Button = Tab:CreateButton({
+	Name = "Sensation Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/99606f43e2dac85f6afc1d93d0a02d2d.lua"))()
+	end,
+})
+
 local Button = Tab:CreateButton({
 	Name = "RedWire Hub",
 	Callback = function()
@@ -41,4 +41,8 @@ local Button = Tab:CreateButton({
 	Callback = function()
 loadstring(Game:HttpGet("https://gist.githubusercontent.com/TonyX03/9f79d98a23caf0cc9ed8a596c9ec4809/raw/7778fe09cdeb651beddc8c642b58ef795bbe7283/gistfile1.txt"))()
 	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "More Coming Soon!"
 })
