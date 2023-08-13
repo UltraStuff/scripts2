@@ -60,13 +60,19 @@ local Button = Tab:CreateButton({
 
 
 local Label = TabMobile:CreateLabel("How to Dupe")
-local Label = TabMobile:CreateLabel("1. Execute Dataloss")
-local Label = TabMobile:CreateLabel("2. Open Unit Inventory Once")
-local Label = TabMobile:CreateLabel("3. Trade items away (to an alt or whatever)")
-local Label = TabMobile:CreateLabel("4. Rejoin")
+local Label = TabMobile:CreateLabel("1. Activate Dataloss from any method below")
+local Label = TabMobile:CreateLabel("2. Trade items away (to an alt or whatever)")
+local Label = TabMobile:CreateLabel("3. Rejoin")
 
 local Button = TabMobile:CreateButton({
-	Name = "Dataloss Script",
+	Name = "BEST - Tobias Dupe",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/AFS-Dataloss-GUI.lua"))()
+	end,
+})
+
+local Button = TabMobile:CreateButton({
+	Name = "BadWare Dupe",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()
 	end,
