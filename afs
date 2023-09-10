@@ -60,6 +60,7 @@ local Button = Tab:CreateButton({
 
 
 local Label = TabMobile:CreateLabel("How to Dupe")
+local Label = TabMobile:CreateLabel("Requirement : Pet Vaults Unlocked")
 local Label = TabMobile:CreateLabel("1. Activate Dataloss from any method below")
 local Label = TabMobile:CreateLabel("2. Trade items away (to an alt or whatever)")
 local Label = TabMobile:CreateLabel("3. Rejoin")
