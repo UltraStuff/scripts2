@@ -28,6 +28,14 @@
             "ThumbNail": "https://i.imgur.com/eBf9huN.png",
             "ID": "227"
         },
+
+		                                               {
+            "Name": "NEW - Blade Ball",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bladeball",
+            "Description": "#1 Exclusive GUI - Auto Parry, Unlock All Skills & More!",
+            "ThumbNail": "https://i.imgur.com/cjzMKUM.png",
+            "ID": "229"
+        },
 		                                               {
             "Name": "NEW - Arm Wrestle Simulator",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/aws",
