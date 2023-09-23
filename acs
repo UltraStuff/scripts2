@@ -1,0 +1,44 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+	Name = "Anime Champions Simulator - Furk Ultra",
+	LoadingTitle = "Anime Champions Simulator - Furk Ultra",
+	LoadingSubtitle = "Brought to you by Furk Ultra",
+})
+local Tab = Window:CreateTab("Main GUI's")
+local Section = Tab:CreateSection("Anime Champions Simulator Main GUI's")
+local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
+
+local Button = Tab:CreateButton({
+	Name = "#1 - Fazium Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Fazium-files/main/Loader"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "(KEY) - Muimi Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bunny42312/script/main/acs"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "(KEY) - Yuto Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/ACS"))()
+	end,
+})
+
+
+local Button = Tab:CreateButton({
+	Name = "(KEY) - River Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "More Coming Soon!"
+})
