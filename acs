@@ -33,8 +33,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/ma
 
 
 local Button = Tab:CreateButton({
-	Name = "(KEY) - River Hub",
+	Name = "(KEY) - Sky Hub",
 	Callback = function()
+getgenv().fluxus = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua"))()
 	end,
 })
