@@ -19,7 +19,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/tem
 })
 
 local Button = Tab:CreateButton({
-	Name = "Sky Hub (KEY)",
+	Name = "Sky Hub Key : skylo.land/getkey",
 	Callback = function()
 getgenv().fluxus = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua"))()
@@ -27,7 +27,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYH
 })
 
 local Button = Tab:CreateButton({
-	Name = "NEW - Fazium Hub",
+	Name = "NEW - Fazium Hub Key : KeySystemFixed",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Fazium-files/main/Loader"))()
 	end,
