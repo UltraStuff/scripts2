@@ -13,7 +13,7 @@ local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 local Button = Tab:CreateButton({
 	Name = "#1 - Inferno Hub",
 	Callback = function()
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/UltraStuff/scripts2/main/blademain")))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SadlekAski/Scripts/main/Blade%20Ball/MainThing.lua", true))()
 	end,
 })
 
