@@ -13,7 +13,7 @@ local TabMobile = Window:CreateTab("Dupe Script")
 local SectionMobile = TabMobile:CreateSection("Dupe Script")
 
 local Button = Tab:CreateButton({
-	Name = "#1 - Banana Hub",
+	Name = "#1 - Banana Hub Key : newWLsoon",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
 	end,
