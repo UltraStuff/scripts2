@@ -1,0 +1,45 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+	Name = "Haze Piece - Furk Ultra",
+	LoadingTitle = "Haze Piece - Furk Ultra",
+	LoadingSubtitle = "Brought to you by Furk Ultra",
+})
+local Tab = Window:CreateTab("Main GUI's")
+local Section = Tab:CreateSection("Haze Piece Main GUI's")
+local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
+
+local Button = Tab:CreateButton({
+	Name = "#1 - Beli Hunter",
+	Callback = function()
+getgenv().fluxus = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/belihunter"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Mystic Hub",
+	Callback = function()
+getgenv().fluxus = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mo061/MysticHub/main/README.md"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "LHYT Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Haze/main/Piece"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Xtrey Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/Haze%20Piece"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "More Coming Soon!"
+})
