@@ -13,12 +13,73 @@ local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 local Button = Tab:CreateButton({
 	Name = "#1 - Inferno Hub",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SadlekAski/Scripts/main/Blade%20Ball/MainThing.lua", true))()
+loadstring(game:HttpGet("https://github.com/SadlekAski/Scripts/raw/main/Blade%20Ball/Equip%20any%20ability.lua"))()
 	end,
 })
 
 local Button = Tab:CreateButton({
-	Name = "(OP) - Alienware Hub",
+	Name = "OP - W-azure Hub",
+	Callback = function()
+getgenv().Mode = "AI" -- "AimOnly","Rage", "AI"
+getgenv().ForceWin = false --100% Win Need Telekenis
+getgenv().AutoUseSkill = true
+getgenv().BaseVelocity = 0 --Base On The Server, IDK Where To Get it It Should Be 4-6 Or 0 (Old Server)
+getgenv().BasePredictVelocity = 3.4 -- Should be From 3-3.5 Work Good With 3 If Old Server
+getgenv().VisualizePath = true -- false //
+getgenv().AutoSpamClickDetect = true -- Spam Click If Near Other Player
+getgenv().CloseRangeAttack = true -- Just Move Forward To The Last Character
+getgenv().AutoGetVelocity = false -- Need The Ball To Be Stopped
+getgenv().AutoClickKeyBind = "X" -- Need The Ball To Be Stopped
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fd07660d92cb26891e9acfab9f0c6ba4.lua"))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Yon V3 Hub",
+	Callback = function()
+local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/StepBroFurious/Script/main/HydraHubUi.lua'))()
+local Window = UILib.new("Blade Ball", game.Players.LocalPlayer.UserId, "NXT. Member")
+local Category1 = Window:Category("Main", "http://www.roblox.com/asset/?id=8395621517")
+local SubButton1 = Category1:Button("Combat", "http://www.roblox.com/asset/?id=8395747586")
+local Section1 = SubButton1:Section("Section", "Left")
+Section1:Button({
+Title = "Circle Parry",
+ButtonName = "Start",
+Description = "X to stop",
+}, function(value)
+getgenv().visualizer = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
+end)
+Section1:Button({
+Title = "AI Parry",
+ButtonName = "Start",
+Description = "AI",
+}, function(value)
+getgenv().Mode = "AI" -- "AimOnly","Rage", "AI"
+getgenv().ForceWin = false --100% Win Need Telekenis
+getgenv().AutoUseSkill = true
+getgenv().BaseVelocity = 0 --Base On The Server, IDK Where To Get it It Should Be 4-6 Or 0 (Old Server)
+getgenv().BasePredictVelocity = 3.4 -- Should be From 3-3.5 Work Good With 3 If Old Server
+getgenv().VisualizePath = true -- false //
+getgenv().AutoSpamClickDetect = true -- Spam Click If Near Other Player
+getgenv().CloseRangeAttack = true -- Just Move Forward To The Last Character
+getgenv().AutoGetVelocity = false -- Need The Ball To Be Stopped
+getgenv().AutoClickKeyBind = "X" -- Need The Ball To Be Stopped
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fd07660d92cb26891e9acfab9f0c6ba4.lua"))()
+end)
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Nova Hub",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/ProjectNova/loader.lua",true))()
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Alienware Hub",
 	Callback = function()
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/romkich09/Ball/main/Balde")))()
 	end,
