@@ -11,7 +11,7 @@ local Section = Tab:CreateSection("Anime Champions Simulator Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
-	Name = "#1 - Banana Hub Key : rogeKey",
+	Name = "#1 - Banana Hub Key : ezKey",
 	Callback = function()
 getgenv().fluxus = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
@@ -27,14 +27,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYH
 })
 
 local Button = Tab:CreateButton({
-	Name = "NEW - Magenta Hub",
+	Name = "Magenta Hub Key : discord.gg/pQSuFV3rUW",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Odrexyo/Script/main/Loader.lua"))()
 	end,
 })
 
 local Button = Tab:CreateButton({
-	Name = "NEW - Fazium Hub Key : UpdateACSFazium",
+	Name = "Fazium Hub Key : UpdateACSFazium",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Fazium-files/main/Loader"))()
 	end,
