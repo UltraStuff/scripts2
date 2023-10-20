@@ -29,9 +29,9 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/L
 })
 
 local Button = Tab:CreateButton({
-	Name = "Hoho Hub (#1 - Requires Key)",
+	Name = "Hoho Hub V2",
 	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/main/OldScriptLoad'))()
 	end,
 })
 
