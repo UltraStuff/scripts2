@@ -14,6 +14,15 @@
             "ThumbNail": "https://i.imgur.com/3wfoKAr.png",
             "ID": "2"
         },
+
+					                                                                                {
+            "Name": "Blox Fruits UPD 20",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
+            "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
+            "ThumbNail": "https://i.imgur.com/tdrIL00.png",
+            "ID": "13"
+        },
+
         {
             "Name": "Anime Fighters",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/afs",
@@ -21,13 +30,7 @@
             "ThumbNail": "https://media.discordapp.net/attachments/989114036337659934/1136801875744804914/Summer_Rengoku.png?width=605&height=605",
             "ID": "18"
         },
-		                                               {
-            "Name": "Anime Fighting Sim X",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/afsx",
-            "Description": "#1 Exclusive GUI - Auto Farm, Infinite Training & More!",
-            "ThumbNail": "https://i.imgur.com/eBf9huN.png",
-            "ID": "227"
-        },
+
 
 		                                               {
             "Name": "NEW - Anime Champions Simulator",
@@ -80,13 +83,7 @@
             "ThumbNail": "https://i.imgur.com/xhNJY36.png",
             "ID": "213"
         },
-					                                                                                {
-            "Name": "Blox Fruits",
-            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf",
-            "Description": "#1 Exclusive GUI - AutoFarm, Devil Fruit Farm, Chest Farm & More!",
-            "ThumbNail": "https://i.imgur.com/SuVMJzQ.png",
-            "ID": "13"
-        },
+
 						                {
             "Name": "Pet Simulator X",
             "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/petsimx",
@@ -121,6 +118,14 @@
             "Description": "#1 Exclusive GUI - Auto Farm, Infinite Gems & More!",
             "ThumbNail": "https://i.imgur.com/y2sswYY.png",
             "ID": "225"
+        },
+
+		                                               {
+            "Name": "Anime Fighting Sim X",
+            "Url": "https://raw.githubusercontent.com/UltraStuff/scripts2/main/afsx",
+            "Description": "#1 Exclusive GUI - Auto Farm, Infinite Training & More!",
+            "ThumbNail": "https://i.imgur.com/eBf9huN.png",
+            "ID": "227"
         },
 		        {
             "Name": "Project Mugetsu",
