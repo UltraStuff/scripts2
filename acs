@@ -11,7 +11,7 @@ local Section = Tab:CreateSection("Anime Champions Simulator Main GUI's")
 local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
 
 local Button = Tab:CreateButton({
-	Name = "#1 - Banana Hub Key : ahaKey",
+	Name = "#1 - Banana Hub Key : bobaKey",
 	Callback = function()
 getgenv().fluxus = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
