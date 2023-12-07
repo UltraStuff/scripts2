@@ -1,5 +1,5 @@
 getgenv().Config = {
-    ["Team"] = "Pirates", --// Marines, Pirates
+    ["Team"] = "Marines", --// Marines, Pirates
     ["Webhook"] = {
         ["Enable"] = false, --// Enable if you have Webhook Url
         ["Url"] = "" --// Your webhook url
