@@ -21,10 +21,10 @@ getgenv().Config = {
         ["Hide If Low Health"] = true, --// Run
         ["Hide Health"] = {4000,5000}, --// Health for run
         ["Lock Camera"] = true, --// Lock Cam to target
-        ["FPS Boost"] = true, --// Booster FPS
+        ["FPS Boost"] = false, --// Booster FPS
         ["White Screen"] = false, --// White Screen
         ["Bypass TP"] = true, --// Bypass TP 1 -> 2 hit
-        ["Spam All Skill On V4"] = true, --// If you have v4, warn: change your weapon setting
+        ["Spam All Skill On V4"] = false, --// If you have v4, warn: change your weapon setting
         ["Gun Method"] = false --// Enable if you use gun
     },
     --// Copy Next
@@ -40,27 +40,27 @@ getgenv().Config = {
             }
         },
         ["Blox Fruit"] = {
-            ["Enable"] = true,
+            ["Enable"] = false,
             ["Delay"] = 3,
             ["Skills"] = {
                 ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
                 ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
                 ["C"] = {["Enable"] = true, ["HoldTime"] = 0},
-                ["V"] = {["Enable"] = false, ["HoldTime"] = 0},
+                ["V"] = {["Enable"] = true, ["HoldTime"] = 0},
                 ["F"] = {["Enable"] = false, ["HoldTime"] = 0}
             }
         },
         --// Copy Next
         ["Sword"] = {
-            ["Enable"] = true,
+            ["Enable"] = false,
             ["Delay"] = 1.5,
             ["Skills"] = {
                 ["Z"] = {["Enable"] = true, ["HoldTime"] = 1},
-                ["X"] = {["Enable"] = false, ["HoldTime"] = 0}
+                ["X"] = {["Enable"] = true, ["HoldTime"] = 0}
             } 
         },      
         ["Gun"] = {
-            ["Enable"] = true,
+            ["Enable"] = false,
             ["Delay"] = 1.2,
             ["Skills"] = {
                 ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
