@@ -1,5 +1,5 @@
 getgenv().Config = {
-    ["Team"] = "Marines", --// Marines, Pirates
+    ["Team"] = "Pirates", --// Marines, Pirates
     ["Webhook"] = {
         ["Enable"] = false, --// Enable if you have Webhook Url
         ["Url"] = "" --// Your webhook url
@@ -21,7 +21,7 @@ getgenv().Config = {
         ["Hide If Low Health"] = true, --// Run
         ["Hide Health"] = {4000,5000}, --// Health for run
         ["Lock Camera"] = true, --// Lock Cam to target
-        ["FPS Boost"] = false, --// Booster FPS
+        ["FPS Boost"] = true, --// Booster FPS
         ["White Screen"] = false, --// White Screen
         ["Bypass TP"] = true, --// Bypass TP 1 -> 2 hit
         ["Spam All Skill On V4"] = true, --// If you have v4, warn: change your weapon setting
@@ -40,13 +40,13 @@ getgenv().Config = {
             }
         },
         ["Blox Fruit"] = {
-            ["Enable"] = false,
+            ["Enable"] = true,
             ["Delay"] = 3,
             ["Skills"] = {
                 ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
                 ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
                 ["C"] = {["Enable"] = true, ["HoldTime"] = 0},
-                ["V"] = {["Enable"] = true, ["HoldTime"] = 0},
+                ["V"] = {["Enable"] = false, ["HoldTime"] = 0},
                 ["F"] = {["Enable"] = false, ["HoldTime"] = 0}
             }
         },
@@ -56,7 +56,7 @@ getgenv().Config = {
             ["Delay"] = 1.5,
             ["Skills"] = {
                 ["Z"] = {["Enable"] = true, ["HoldTime"] = 1},
-                ["X"] = {["Enable"] = true, ["HoldTime"] = 0}
+                ["X"] = {["Enable"] = false, ["HoldTime"] = 0}
             } 
         },      
         ["Gun"] = {
