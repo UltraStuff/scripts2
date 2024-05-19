@@ -737,7 +737,13 @@ do
 			description = "Reaper Hub is a free Roblox script hub developed by Reaper. It currently supports 35+ games using a single loadstring.",
 			icon = "rbxassetid://17219371471",
 			content = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua\"))();"
-		}
+		},
+		{
+            title = "Thunder Client",
+            description = "Thunder Client is a free Roblox Arsenal Script developed by Bolts & Andrew. It currently supports arsenal but its not like another arsenal script. Frontlines support soon.",
+            icon = "rbxassetid://117514630154",
+            content = "loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/dca3e69649ed196af0ac6577f743a0ae.lua"))()"
+       	 	}
 	};
 end
 
