@@ -3,24 +3,20 @@
 local arceus = arceus or nil
 local unavailable = function(fake)
 	return function(...)
-		internalUtils:Notify("This feature cannot be used on the current apk version")
+		--internalUtils:Notify("This feature cannot be used on the current apk version")
 		return fake
 	end
 end
 
 local getgenv = getgenv or function()
-	if rconsolwarn then
-		rconsolewarn("Fake getgenv called")
-	end
-
 	return {}
 end
 
 local cloneref = cloneref or function(...)
-	if rconsolwarn then
-		rconsolewarn("Fake cloneref called")
-	end
+	return ...
+end
 
+local protectfunction = protectfunction or function(...)
 	return ...
 end
 
@@ -55,6 +51,27 @@ local isarceusfile = arceus and clonefunction(arceus.isarceusfile);
 local isiosdevice = (arceus and clonefunction(arceus.is_ios)) or function()
 	return false 
 end
+
+protectfunction(log)
+protectfunction(openurl)
+protectfunction(getversion)
+protectfunction(getfilesize)
+protectfunction(doarceusfile)
+protectfunction(isarceusfile)
+protectfunction(iscustomasset)
+protectfunction(readarceusfile)
+protectfunction(isarceusfolder)
+protectfunction(getkeycompleted)
+protectfunction(setkeycompleted)
+protectfunction(writearceusfile)
+protectfunction(listarceusfiles)
+protectfunction(writecustomasset)
+protectfunction(deletearceusfile)
+protectfunction(makearceusfolder)
+protectfunction(deletecustomasset)
+protectfunction(deletearceusfolder)
+protectfunction(retrievecustomasset)
+protectfunction(ispermissiongranted)
 
 getgenv().arceus = nil
 
@@ -161,6 +178,12 @@ arceus_libs = {
 				local delta = (lastMousePos - USER_INPUT_SERVICE:GetMouseLocation())
 				local xGoal = startPos.X.Offset - delta.X
 				local yGoal = startPos.Y.Offset - delta.Y
+				if object.Size ~= UDim2.new(0,70,0,70) then
+					local GuiService = cloneref(game:GetService("GuiService"))
+					local inset = GuiService.TopbarInset
+					yGoal = startPos.Y.Offset
+					xGoal = math.clamp(xGoal, inset.Min.X+10, inset.Max.X-inset.Height)
+				end
 				local anchor = object.AnchorPoint
 				local size = object.AbsoluteSize
 				local pos = object.Position
@@ -182,7 +205,7 @@ arceus_libs = {
 				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 					local pos = object.Position
 					dragging = true
-
+					
 					startPos = UDim2.fromOffset(pos.X.Scale * viewportSize.X + pos.X.Offset, pos.Y.Scale * viewportSize.Y + pos.Y.Offset) --object.Position
 					object.Position = startPos
 
@@ -288,7 +311,9 @@ local framework = setmetatable({
 	dependencies = {
 		utils = {}
 	},
-	data = {},
+	data = {
+		currentAPI = 1 -- First Enum
+	},
 	components = {
 		base = {}
 	},
@@ -303,7 +328,8 @@ local framework = setmetatable({
 		navbar = {},
 		globalScripts = {},
 		editor = {}
-	}
+	},
+	frames = {}
 }, {
 	__index = function(t, k)
 		local res, split = t, string.split(k, ".");
@@ -343,7 +369,8 @@ do
 	--[[ Module ]]--
 
 	framework.dependencies.codexEnum = {
-		NavbarState = codexEnum.new({ "Hidden", "Partial", "Full" })
+		NavbarState = codexEnum.new({ "Hidden", "Partial", "Full" }),
+		ScriptsAPI = codexEnum.new({ "ScriptBlox", "RScripts" })
 	};
 end
 
@@ -701,7 +728,10 @@ do
 end
 
 do
-	framework.data.builtInScripts = {
+	local internalUtils = framework.dependencies.utils.internal;
+	local httpService = cloneref(game:GetService("HttpService"));
+	
+	local builtin = {
 		{
 			title = "Dark Dex V4",
 			description = "A powerful game explorer GUI. Shows every instance of the game and all their properties. Useful for developers.",
@@ -735,10 +765,20 @@ do
 		{
 			title = "Reaper Hub",
 			description = "Reaper Hub is a free Roblox script hub developed by Reaper. It currently supports 35+ games using a single loadstring.",
-			icon = "rbxassetid://17219371471",
+			icon = "rbxassetid://16359517197",
 			content = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua\"))();"
 		}
 	};
+	
+	local succ, data = pcall(function()
+		return httpService:JSONDecode(internalUtils:Request("https://rblxexploits.com/codexJSON.json"))
+	end)
+		
+	if succ and typeof(data) == "table" then
+		builtin = data
+	end
+	
+	framework.data.builtInScripts = builtin
 end
 
 do
@@ -1672,21 +1712,25 @@ do
 			})
 		});
 
+		local rscriptsBase = "https://rscripts.net/raw/" --"https://s3.rscripts.net/scripts/"
+		local sourceHandler = [[local load = executecode or loadstring
+load(game:HttpGet("%s"))]]
+		
 		base.buttons.execute.MouseButton1Click:Connect(function()
 			globalScriptSelection:Hide();
-			internalUtils:Execute(globalScriptSelection.selectedScript.script);
+			internalUtils:Execute(globalScriptSelection.selectedScript.script or string.format(sourceHandler, rscriptsBase .. globalScriptSelection.selectedScript.download));
 		end);
 
 		base.buttons.loadToEditor.MouseButton1Click:Connect(function()
 			if tabSystem == nil then
 				tabSystem = framework.data.tabSystem;
 			end
-			tabSystem:Add(globalScriptSelection.selectedScript.title, globalScriptSelection.selectedScript.script);
+			tabSystem:Add(globalScriptSelection.selectedScript.title, globalScriptSelection.selectedScript.script or string.format(sourceHandler, rscriptsBase .. globalScriptSelection.selectedScript.download));
 			globalScriptSelection:Hide();
 		end);
 
 		base.buttons.saveScript.MouseButton1Click:Connect(function()
-			savedScripts:Add(globalScriptSelection.selectedScript.title, "", globalScriptSelection.selectedScript.script);
+			savedScripts:Add(globalScriptSelection.selectedScript.title, "", globalScriptSelection.selectedScript.script or string.format(sourceHandler, rscriptsBase .. globalScriptSelection.selectedScript.download));
 			globalScriptSelection:Hide();
 		end);
 
@@ -1706,11 +1750,13 @@ do
 	end
 
 	function globalScriptSelection:Show(scriptResult: {any})
+		local isBloxScripts = scriptResult.game and true or false
+		
 		self.selectedScript = scriptResult;
-		self.frame.icon.Image = string.format("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=%d&fmt=png&wd=1920&ht=1080", scriptResult.isUniversal and 4483381587 or scriptResult.game.gameId);
+		self.frame.icon.Image = string.format("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=%d&fmt=png&wd=1920&ht=1080", scriptResult.isUniversal and 4483381587 or tonumber(isBloxScripts and scriptResult.game.gameId or scriptResult.placeId or 4483381587));
 		self.frame.text.Text = scriptResult.title;
 		self.frame.views.Text = "<font weight=\"bold\">Views:</font> " .. mathsUtils:FormatAsLiteralCount(scriptResult.views);
-		self.frame.updatedAt.Text = "<font weight=\"bold\">Updated:</font> " .. DateTime.fromIsoDate(scriptResult.updatedAt or scriptResult.createdAt):FormatLocalTime("ll", "en-us");
+		self.frame.updatedAt.Text = "<font weight=\"bold\">Updated:</font> " .. (isBloxScripts and DateTime.fromIsoDate(scriptResult.updatedAt or scriptResult.createdAt):FormatLocalTime("ll", "en-us") or scriptResult.date or scriptResult.creation);
 		self.frame.Visible = true;
 	end
 
@@ -2884,7 +2930,7 @@ do
 					title = "Opening Mode",
 					linkedSetting = "executor.openingMode",
 					optionType = "dropdown",
-					items = { "Floating Icon", "Edge Swipe", "Invisible Edge Swipe" },
+					items = { "Floating Icon", "Edge Swipe", "Invisible Edge Swipe", "Small Icon" },
 					value = "Floating Icon"
 				},
 				{ -- SPDM Team | Show Particles Setting
@@ -2892,6 +2938,20 @@ do
 					linkedSetting = "executor.showParticles",
 					optionType = "toggle",
 					state = true
+				},
+				{
+					optionType = "separator"
+				},
+				{ -- SPDM Team | RScripts/ScriptBlox Setting
+					title = "Scripts browser",
+					linkedSetting = "executor.scriptsBrowser",
+					optionType = "dropdown",
+					items = { "ScriptBlox", "RScripts" },
+					value = "ScriptBlox",
+					callback = function(value)
+						local codexEnum = framework.dependencies.codexEnum;
+						framework.data.currentAPI = value == "ScriptBlox" and codexEnum.ScriptsAPI.ScriptBlox or codexEnum.ScriptsAPI.RScripts
+					end
 				},
 				{
 					optionType = "separator"
@@ -3801,7 +3861,8 @@ do
 
 	local function createFrame(title: string, directory: Instance)
 		return instanceUtils:Create("ScrollingFrame", { 
-			AnchorPoint = Vector2.new(0.5, 1), 
+			AnchorPoint = Vector2.new(0.5, 1),
+			AutomaticCanvasSize = Enum.AutomaticSize.Y,
 			BackgroundTransparency = 1, 
 			BorderSizePixel = 0, 
 			CanvasSize = UDim2.new(0, 0, 0, 130), 
@@ -3897,62 +3958,134 @@ do
 	--[[ Variables ]]--
 
 	local textLabel = framework.components.base.textLabel;
+	local textButton = framework.components.base.textButton;
 	local internalSettings = framework.data.internalSettings;
 	local instanceUtils = framework.dependencies.utils.instance;
+	local internalUtils = framework.dependencies.utils.internal;
+	local httpService = cloneref(game:GetService("HttpService"));
 
 	--[[ Functions ]]--
 
-	local function formatChangelog()
-		local str = "";
-		for i, v in internalSettings.data.changelog do
-			str ..= string.format("%s<font color=\"#eb4545\">[%s]</font>\n\n", str == "" and "" or "\n\n", DateTime.fromIsoDate(v.stamp):FormatLocalTime("ll", "en-us"));
-			for i2, v2 in v.data do
-				str ..= "- " .. v2; -- "â€¢ " ..
-				if i2 < #v.data then
-					str ..= "\n";
-				end
-			end
-		end
-		return str;
-	end
+	--local function formatChangelog()
+	--	local str = "";
+	--	for i, v in internalSettings.data.changelog do
+	--		str ..= string.format("%s<font color=\"#eb4545\">[%s]</font>\n\n", str == "" and "" or "\n\n", DateTime.fromIsoDate(v.stamp):FormatLocalTime("ll", "en-us"));
+	--		for i2, v2 in v.data do
+	--			str ..= "- " .. v2; -- "â€¢ " ..
+	--			if i2 < #v.data then
+	--				str ..= "\n";
+	--			end
+	--		end
+	--	end
+	--	return str;
+	--end
+	
+	local function fetchData()
+		local data = {
+			expiry = 0,
+			streak = 0
+		}
 
+		local response = internalUtils:Request("https://api.codex.lol/v1/auth/authenticate", "POST")
+		if response then
+			local success, err = pcall(function()
+				data = httpService:JSONDecode(response)
+			end)
+		elseif cloneref(game:GetService("RunService")):IsStudio() then
+			data = {
+				expiry = os.time()*1000+1200000,
+				streak = 24
+			}
+		end
+
+		return data.expiry / 1000, data.streak;
+	end
+	
 	--[[ Module ]]--
 
-	framework.pages.startup.changelog = (function()
-		return instanceUtils:Create("Frame", {
+	framework.pages.startup.changelog = (function(streak)
+		return instanceUtils:Create("Frame", {  -- SPDM Team | Streaks and Premium Sections
 			BackgroundTransparency = 1,
-			Name = "changelog",
+			Name = "streaks-premium",
 			Position = UDim2.new(0.5, 12, 0.2, 46),
 			Size = UDim2.new(0.2, 120, 0.5, 0)
 		}, {
 			textLabel({
-				Text = "Changelog",
+				RichText = true,
+				Text = "🔥 Streaks <font size='15'><i>("..streak..")</i></font>",
 				TextColor3 = Color3.fromRGB(159, 164, 186),
 				TextSize = 20
 			}),
-			instanceUtils:Create("ScrollingFrame", {
-				AnchorPoint = Vector2.new(0.5, 1),
-				AutomaticCanvasSize = Enum.AutomaticSize.XY,
+			instanceUtils:Create("Frame", {
+				AnchorPoint = Vector2.new(0.5, 0),
 				BackgroundTransparency = 1,
 				BorderSizePixel = 0,
-				CanvasSize = UDim2.new(),
-				HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar,
 				Name = "container",
-				Position = UDim2.new(0.5, 0, 1, 0),
-				ScrollBarImageColor3 = Color3.fromRGB(15, 15, 21),
-				ScrollBarThickness = 4,
-				Size = UDim2.new(1, -16, 1, -36),
-				VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+				Position = UDim2.new(0.5, 25, 0, 20),
+				Size = UDim2.new(1, 0, 1, 0)
 			}, {
 				textLabel({
 					FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
 					LineHeight = 1.1,
 					RichText = true,
-					Text = formatChangelog(),
+					Text = "Begin a streak by whitelisting. The more you whitelist, the longer your streak. Within 24 hours of expiry, re-whitelist to keep your streak from resetting.",
 					TextColor3 = Color3.fromRGB(159, 164, 186),
 					TextTruncate = Enum.TextTruncate.None,
 					TextXAlignment = Enum.TextXAlignment.Left,
 					TextYAlignment = Enum.TextYAlignment.Top
+				})
+			}),
+			textLabel({
+				Name = "streakResult",
+				Text = "🎁 1 Streak → 1 Additional Hour",
+				TextColor3 = Color3.fromRGB(159, 164, 186),
+				TextSize = 15,
+				TextXAlignment = Enum.TextXAlignment.Left,
+				Position = UDim2.new(0, 25,0.42, 0),
+				Size = UDim2.new(1, 0, 0, 0)
+			}),
+			textLabel({
+				Name = "premiumText",
+				Text = "✨ Premium",
+				TextColor3 = Color3.fromRGB(159, 164, 186),
+				TextSize = 20,
+				Position = UDim2.new(0, 0,0.57, 0),
+			}),
+			instanceUtils:Create("Frame", {
+				AnchorPoint = Vector2.new(0.5, 0),
+				BackgroundTransparency = 1,
+				BorderSizePixel = 0,
+				Name = "premium container",
+				Position = UDim2.new(0.5, 25,0.67, 0),
+				Size = UDim2.new(1, 0, 0.3, 0)
+			}, {
+				textLabel({
+					FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
+					LineHeight = 1.1,
+					RichText = true,
+					Text = "Want to skip the key system? Click the button below to get a premium plan and enjoy seamless access to Codex!",
+					TextColor3 = Color3.fromRGB(159, 164, 186),
+					TextTruncate = Enum.TextTruncate.None,
+					TextXAlignment = Enum.TextXAlignment.Left,
+					TextYAlignment = Enum.TextYAlignment.Top
+				}),
+				textButton({ -- SPDM Team | Buy Premium Button
+					AnchorPoint = Vector2.new(0.5, 1), 
+					AutomaticSize = Enum.AutomaticSize.None,
+					MouseButton1Click = function()
+						if setclipboard then
+							setclipboard("https://codexseller.mysellix.io/");
+						end
+						internalUtils:Notify("Premium License purchase link has been set to your clipboard.")
+					end,
+					BackgroundTransparency = 0, 
+					FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal), 
+					Name = "premiumUser", 
+					Position = UDim2.new(0.5, 0, 1, 28), 
+					RichText = true, 
+					Size = UDim2.new(1, 0, 0, 35), 
+					Text = "Buy Premium!", 
+					TextColor3 = Color3.fromHex("ffffff")
 				})
 			})
 		});
@@ -4245,24 +4378,6 @@ do
 					Size = UDim2.new(1, 0, 0, 20), 
 					Text = "Premium User?  <font color=\"#eb4545\">Click Here!</font>", 
 					TextColor3 = Color3.fromHex("9fa4ba")
-				}),
-				textButton({ -- SPDM Team | Buy Premium Button
-					AnchorPoint = Vector2.new(0.5, 1), 
-					AutomaticSize = Enum.AutomaticSize.None,
-					MouseButton1Click = function()
-						if setclipboard then
-							setclipboard("https://codexseller.mysellix.io/");
-						end
-						internalUtils:Notify("Premium License purchase link has been set to your clipboard.")
-					end,
-					BackgroundTransparency = 1, 
-					FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal), 
-					Name = "premiumUser", 
-					Position = UDim2.new(0.5, 0, 1, 28), 
-					RichText = true, 
-					Size = UDim2.new(1, 0, 0, 20), 
-					Text = "Or <font color=\"#eb4545\">Buy Premium!</font>", 
-					TextColor3 = Color3.fromHex("9fa4ba")
 				})
 			}),
 			instanceUtils:Create("Frame", { 
@@ -4323,8 +4438,28 @@ do
 		task.spawn(function()
 			local dataStep = startupStep.new("Fetching Codex Data...", "Data Fetched!", ui.whitelist.process):Start();
 			internalSettings:Initialize();
+			local function fetchData()
+				local data = {
+					expiry = 0,
+					streak = 0
+				}
 
-			changelog().Parent = ui;
+				local response = internalUtils:Request("https://api.codex.lol/v1/auth/authenticate", "POST")
+				if response then
+					local success, err = pcall(function()
+						data = httpService:JSONDecode(response)
+					end)
+				elseif cloneref(game:GetService("RunService")):IsStudio() then
+					data = {
+						expiry = os.time()*1000+1200000,
+						streak = 24
+					}
+				end
+
+				return data.expiry / 1000, data.streak;
+			end
+			local x, streak = fetchData();
+			changelog(streak).Parent = ui;
 			local currentVersion = identifyexecutor and select(2, identifyexecutor()) or "Invalid Version";
 			if not (cloneref(game:GetService("RunService")):IsStudio() or internalUtils:AreVersionsAlike(currentVersion, isiosdevice() and internalSettings.data.iosVersion or internalSettings.data.androidVersion)) then
 				dataStep:Complete("Please update Codex.");
@@ -4343,6 +4478,7 @@ do
 				
 				checked = true
 			until checkWhitelist() or closed or isStudio
+			
 			if closed then
 				return
 			end
@@ -4392,7 +4528,7 @@ do
 	local httpService = cloneref(game:GetService("HttpService"));
 
 	local navbar = {
-		state = "hidden"
+		state = "Hidden"
 	};
 
 	local map = {};
@@ -4405,6 +4541,7 @@ do
 		local startPosition, startOffset;
 
 		userInputService.InputBegan:Connect(function(input)
+			if navbar.state == "Hidden" and userSettings.cache.executor.openingMode:find("Icon") then return end
 			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and mathsUtils:IsWithin2DBounds(input.Position, dragBar.AbsolutePosition, dragBar.AbsolutePosition + dragBar.AbsoluteSize) then
 				isDragging = true;
 				startPosition, startOffset = input.Position.X, input.Position.X - dragBar.AbsolutePosition.X;
@@ -4455,7 +4592,7 @@ do
 				Draggable = true,
 				Name = "floatingIcon",
 				Position =  UDim2.new(0, game.Workspace.CurrentCamera.ViewportSize.X*0.8, 0.7, 0),
-				Size = UDim2.new(0, 50, 0, 50),
+				Size = UDim2.new(0, 70, 0, 70),
 				Text = "",
 				Visible = false,
 				ZIndex = 2
@@ -4475,8 +4612,9 @@ do
 				instanceUtils:Create("ImageLabel", { 
 					AnchorPoint = Vector2.new(0.5, 0.5),
 					BackgroundTransparency = 1, 
-					BorderSizePixel = 0, 
-					Image = "rbxassetid://11558559086", 
+					BorderSizePixel = 0,
+					Image = (userSettings.cache.executor.openingMode == "Small Icon" and "rbxassetid://17844524453"  or "rbxassetid://11558559086"),
+					ScaleType = "Fit",
 					Name = "codexIcon2", 
 					Position = UDim2.new(0.5, 0 ,0.5, 0), 
 					Size = UDim2.new(1,0,1,0),
@@ -4548,7 +4686,7 @@ do
 					FontSize = Enum.FontSize.Size12, 
 					Name = "poweredBy", 
 					Position = UDim2.new(0, 78, 0, 59), 
-					Text = "discord.gg/robloxexploits", 
+					Text = "Powered By SPDM Team", 
 					TextColor3 = Color3.fromHex("717176"), 
 					TextSize = 12, 
 					TextTransparency = 1, 
@@ -4674,7 +4812,7 @@ do
 
 				fadeOut:Play()
 				fadeOut.Completed:Wait()
-				textLabel.Text = "discord.gg/robloxexploits"
+				textLabel.Text = "Powered By SPDM Team"
 				fadeIn:Play()
 				fadeIn.Completed:Wait()
 
@@ -4717,6 +4855,7 @@ do
 		
 
 		-- SPDM Team | Floating Icon
+		local currentY = bar.floatingIcon.Position.Y
 		arceus_libs.input.handleCustomDrag(bar.floatingIcon)
 		arceus_libs.buttons.holdable(bar.floatingIcon).ShortClick.Event:Connect(function()
 			if userSettings.cache.executor.showParticles then
@@ -4839,6 +4978,7 @@ do
 	function navbar:Add(text: string, icon: string, designatedFrame: Frame, overwritePosition: UDim2?)
 		local button = navbarButton.new(text, icon);
 		map[button] = designatedFrame;
+		framework.frames[designatedFrame.Name] = designatedFrame
 
 		button.instance.MouseButton1Click:Connect(function()
 			self:Select(button);
@@ -4858,7 +4998,7 @@ do
 	end
 
 	function navbar:SetState(navbarState: number, ignoreTimeouts: boolean?)
-		local indent, state = 0, "hidden";
+		local indent, state = 0, "Hidden";
 		if navbarState == codexEnum.NavbarState.Partial or (navbarState == codexEnum.NavbarState.Hidden and selected) then
 			indent, state = 76, "partial";
 		elseif navbarState == codexEnum.NavbarState.Full then
@@ -4886,7 +5026,7 @@ do
 			});
 		end
 
-		if state ~= "hidden" and not ignoreTimeouts then
+		if state ~= "Hidden" and not ignoreTimeouts then
 			self.timeoutDelay = task.delay(10, function()
 				if self.state == state then
 					self:SetState(codexEnum.NavbarState.Hidden);
@@ -4895,7 +5035,7 @@ do
 
 			self.nextInputCheck = userInputService.InputBegan:Connect(function(input)
 				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-					if self.state ~= "hidden" and input.Position.X > self.bar.indent.Value then
+					if self.state ~= "Hidden" and input.Position.X > self.bar.indent.Value then
 						self:SetState(codexEnum.NavbarState.Hidden);
 					end
 				end
@@ -4904,7 +5044,7 @@ do
 
 		-- SPDM Team | Opening modes handler
 		local function createTween(target, properties)
-			return game:GetService("TweenService"):Create(target, TweenInfo.new(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), properties)
+			return cloneref(game:GetService("TweenService")):Create(target, TweenInfo.new(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), properties)
 		end
 
 		local openingModes = {
@@ -4916,7 +5056,28 @@ do
 				end,
 			["Floating Icon"] = 
 				function() 
-					if self.state == "hidden" then
+					local isSmallIcon = userSettings.cache.executor.openingMode == "Small Icon"
+					local GuiService = cloneref(game:GetService("GuiService"))
+					local icon = self.bar.floatingIcon
+					local inset = GuiService.TopbarInset
+					local padding = 10
+					icon.codexIcon2.Image = (userSettings.cache.executor.openingMode == "Small Icon" and "rbxassetid://17844524453"  or "rbxassetid://11558559086")
+					GuiService:GetPropertyChangedSignal("TopbarInset"):Connect(function()
+						if isSmallIcon then
+							local inset = GuiService.TopbarInset
+							icon.AnchorPoint = Vector2.new(0,0);
+							icon.Position = UDim2.new(0, inset.Min.X+padding, 0, inset.Min.Y+6)
+						end
+					end)
+					if isSmallIcon and icon.Position.Y.Offset ~= inset.Min.Y+6 then
+						icon.AnchorPoint = Vector2.new(0,0);
+						icon.Position = UDim2.new(0, inset.Min.X+padding, 0, inset.Min.Y+6)
+					else if not isSmallIcon and icon.Position.Y.Offset == inset.Min.Y+6 then
+						icon.AnchorPoint = Vector2.new(.5,.5);
+						icon.Position =  UDim2.new(0, game.Workspace.CurrentCamera.ViewportSize.X*0.8, 0.7, 0)
+					end 
+					end
+					if self.state == "Hidden" then
 						if self.bar.dragBar.indicator.BackgroundTransparency ~= 1 then
 							createTween(self.bar.dragBar.indicator, {BackgroundTransparency = 1}):Play()
 						end 
@@ -4957,7 +5118,7 @@ do
 								local endPositionX = iconCenter.X - (particle.Size.X.Offset / 2) - ScreenGui.AbsolutePosition.X
 								local endPositionY = iconCenter.Y - (particle.Size.Y.Offset / 2) - ScreenGui.AbsolutePosition.Y
 
-								local tweenService = game:GetService("TweenService")
+								local tweenService = cloneref(game:GetService("TweenService"))
 								local moveTween = tweenService:Create(particle, TweenInfo.new(.6, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(0, endPositionX, 0, endPositionY)})
 								moveTween:Play()
 
@@ -4977,16 +5138,21 @@ do
 					end
 
 
-					local targetTransparency = self.state == "hidden" and 0.5 or 1
+					local targetTransparency = self.state == "Hidden" and 0.5 or 1
+					if isSmallIcon then targetTransparency = targetTransparency == 0.5 and 0.2 or targetTransparency end
 					if self.bar.floatingIcon.BackgroundTransparency ~= targetTransparency then
-					local targetSize = self.state == "hidden" and UDim2.new(0, 70, 0, 70) or UDim2.new(0, 0, 0, 0)
-					local delayTime = self.bar.floatingIcon.BackgroundTransparency == 0.5 and 0.25 or 0
+						local targetSize = self.state == "Hidden" and UDim2.new(0, 70, 0, 70) or UDim2.new(0, 0, 0, 0)
+						if isSmallIcon then
+						-- UDim2.new(0, 43, 0, 43)
+						targetSize = self.state == "Hidden" and UDim2.new(0, inset.Height-8, 0, inset.Height-8) or UDim2.new(0, 0, 0, 0)
+						end
+						local delayTime = self.bar.floatingIcon.BackgroundTransparency <= 0.5 and 0.25 or 0
 
-					task.delay(delayTime, function() self.bar.floatingIcon.Visible = self.state == "hidden" end)
+						task.delay(delayTime, function() self.bar.floatingIcon.Visible = self.state == "Hidden" end)
 
-					createTween(self.bar.floatingIcon, {BackgroundTransparency = targetTransparency, Size = targetSize}):Play()
-					createTween(self.bar.floatingIcon.codexIcon2, {ImageTransparency = targetTransparency == 0.5 and 0 or 1}):Play()
-				end
+						createTween(self.bar.floatingIcon, {BackgroundTransparency = targetTransparency, Size = targetSize}):Play()
+						createTween(self.bar.floatingIcon.codexIcon2, {ImageTransparency = targetTransparency <= 0.5 and 0 or 1}):Play()
+					end
 				end,
 			["Invisible Edge Swipe"] = 
 				function() 
@@ -4996,7 +5162,12 @@ do
 				end
 		}
 
-		openingModes[userSettings.cache.executor.openingMode]()
+		local openingMode = userSettings.cache.executor.openingMode
+		if openingModes[openingMode] then
+			openingModes[openingMode]()
+		else
+			openingModes["Floating Icon"]() -- Fallback to "Floating Icon" if mode is not found
+		end
 
 
 	end
@@ -5040,7 +5211,7 @@ do
 
 	local textService = cloneref(game:GetService("TextService"));
 
-	local tagOrder = { "verified", "isPatched", "isUniversal", "key" };
+	local tagOrder = { "verified", "isPatched", "patched", "isUniversal", "key", "keySystem" };
 	local tags = {
 		key = {
 			title = "Key",
@@ -5059,6 +5230,9 @@ do
 			colour = "#15151d"
 		}
 	};
+	
+	tags["keySystem"] = tags.key
+	tags["patched"] = tags.isPatched
 
 	--[[ Functions ]]--
 
@@ -5088,7 +5262,8 @@ do
 
 	--[[ Module ]]--
 
-	framework.pages.globalScripts.scriptResult = (function(scriptResult: {any}): Instance
+	framework.pages.globalScripts.scriptResult = (function(scriptResult: {any}, api: codexEnum): Instance
+		local codexEnum = framework.dependencies.codexEnum;
 		local viewCount = mathsUtils:FormatAsCount(scriptResult.views, 0.1);
 
 		local base = instanceUtils:Create("ImageButton", { 
@@ -5096,7 +5271,7 @@ do
 			AutoButtonColor = false, 
 			BackgroundTransparency = 1, 
 			BorderSizePixel = 0, 
-			Image = string.format("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=%d&fmt=png&wd=1920&ht=1080", scriptResult.isUniversal and 4483381587 or scriptResult.game.gameId), 
+			Image = string.format("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=%d&fmt=png&wd=1920&ht=1080", scriptResult.isUniversal and 4483381587 or tonumber(api == codexEnum.ScriptsAPI.ScriptBlox and scriptResult.game.gameId or scriptResult.placeId or 4483381587)), 
 			ImageTransparency = 0.5, 
 			Name = scriptResult.title, 
 			Selectable = false, 
@@ -5137,7 +5312,8 @@ do
 				TextWrap = true, 
 				TextWrapped = true, 
 				TextXAlignment = Enum.TextXAlignment.Left, 
-				TextYAlignment = Enum.TextYAlignment.Top
+				TextYAlignment = Enum.TextYAlignment.Top,
+				RichText = true
 			}),
 			instanceUtils:Create("TextLabel", { 
 				AnchorPoint = Vector2.new(1, 0), 
@@ -5196,6 +5372,10 @@ do
 				generateTag(tags[v]).Parent = base.tags;
 			end
 		end
+		
+		if scriptResult.user and scriptResult.user.verified then
+			generateTag(tags["verified"]).Parent = base.tags;
+		end
 
 		base.MouseButton1Click:Connect(function()
 			popups:Show("globalScriptSelection", scriptResult);
@@ -5208,6 +5388,8 @@ end
 do
 	--[[ Variables ]]--
 
+	local userSettings = framework.data.userSettings;
+	local codexEnum = framework.dependencies.codexEnum;
 	local instanceUtils = framework.dependencies.utils.instance;
 	local internalUtils = framework.dependencies.utils.internal;
 	local scriptResult = framework.pages.globalScripts.scriptResult;
@@ -5215,6 +5397,8 @@ do
 	local httpService = cloneref(game:GetService("HttpService"));
 
 	local basis;
+	--framework.data.currentAPI = codexEnum.ScriptsAPI.ScriptBlox
+	
 
 	--[[ Module ]]--
 
@@ -5265,7 +5449,9 @@ do
 				Name = "searchBox",
 				Position = UDim2.new(0, 14, 0, 14),
 				Size = UDim2.new(1, -74, 0, 36),
-				Text = ""
+				Text = "Powered by " .. (framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and "scriptblox.com" or "rscripts.net"),
+				TextXAlignment = Enum.TextXAlignment.Right,
+				TextColor3 = Color3.fromRGB(100, 100, 100)
 			}, {
 				instanceUtils:Create("TextBox", { 
 					AnchorPoint = Vector2.new(0.5, 0.5), 
@@ -5274,7 +5460,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "input", 
 					PlaceholderColor3 = Color3.fromHex("b2b2b2"), 
-					PlaceholderText = "Search...", 
+					PlaceholderText = "Search..", 
 					Position = UDim2.new(0.5, 0, 0.5, 0), 
 					Size = UDim2.new(1, 0, 1, 0), 
 					Text = "", 
@@ -5293,7 +5479,7 @@ do
 					PaddingRight = UDim.new(0, 12)
 				})
 			}),
-			instanceUtils:Create("TextLabel", { 
+			--[[instanceUtils:Create("TextLabel", { 
 				AnchorPoint = Vector2.new(0.5, 0), 
 				AutomaticSize = Enum.AutomaticSize.X, 
 				BackgroundColor3 = Color3.fromHex("15151d"), 
@@ -5304,7 +5490,7 @@ do
 				Name = "credit",
 				Position = UDim2.new(0.5, 0, 0, -28), 
 				Size = UDim2.new(0, 0, 0, 34), 
-				Text = "Powered by scriptblox.com", 
+				Text = "Powered by " .. (framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and "scriptblox.com" or "rscripts.net"),
 				TextColor3 = Color3.fromHex("b2b2b2"), 
 				TextSize = 14
 			}, {
@@ -5317,7 +5503,7 @@ do
 					PaddingLeft = UDim.new(0, 12), 
 					PaddingRight = UDim.new(0, 12)
 				})
-			}),
+			}),]]
 			instanceUtils:Create("TextButton", { 
 				AnchorPoint = Vector2.new(1, 0), 
 				AutoButtonColor = false, 
@@ -5342,20 +5528,27 @@ do
 
 		basis.searchBox.input.FocusLost:Connect(function()
 			local contents = basis.searchBox.input.Text;
-			if #contents > 0 then
+			--if #contents > 0 then
 				self:Search(contents);
-			end
+			--end
 		end);
 
-		do
-			local res = internalUtils:Request("https://scriptblox.com/api/script/search?filters=free&q=Hub", "GET", {
+		task.spawn(function()
+			-- OLD https://scriptblox.com/api/script/search?filters=free&q=Hub
+			local url = "https://scriptblox.com/api/script/fetch?filters=free"
+			if framework.data.currentAPI == codexEnum.ScriptsAPI.RScripts then
+				url = "https://rscripts.net/api/trending?notPaid=true&page=1"
+			end
+			
+			local res = internalUtils:Request(url, "GET", {
 				["Content-Type"] = "application/json"
 			});
 
 			if res then
-				self:ParseResults(httpService:JSONDecode(res).result.scripts);
+				local parsed = httpService:JSONDecode(res)
+				self:ParseResults(framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and parsed.result.scripts or parsed.success);
 			end
-		end
+		end)
 
 		return basis;
 	end
@@ -5365,23 +5558,41 @@ do
 			return;
 		end
 		self.isSearching = true;
-		local res = internalUtils:Request("https://scriptblox.com/api/script/search?filters=free&q=" .. httpService:UrlEncode(query), "GET", {
+		
+		local isEmpty, url = query:gsub("%s+", "") == "", ""
+		if framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox then
+			url = "https://scriptblox.com/api/script/" .. (isEmpty and "fetch" or "search") .. "?filters=free"
+		else
+			url = "https://rscripts.net/api/" .. (isEmpty and "trending" or "scripts") .. "?notPaid=true&page=1"
+		end
+		
+		if not isEmpty then
+			url ..= "&q=" .. httpService:UrlEncode(query)
+		end
+		
+		local res = internalUtils:Request(url, "GET", {
 			["Content-Type"] = "application/json"
 		});
+		
 		if res then
-			self:ParseResults(httpService:JSONDecode(res).result.scripts);
+			local parsed = httpService:JSONDecode(res)
+			self:ParseResults(framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and parsed.result.scripts or (isEmpty and parsed.success or parsed.scripts) );
 		end
+		
 		self.isSearching = false;
 	end
 
 	function globalScripts:ParseResults(res: {any})
+		framework.frames.globalScripts.searchBox.Text = "Powered by " .. (framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and "scriptblox.com" or "rscripts.net")
+		
 		for i, v in basis.container:GetChildren() do
 			if v:IsA("ImageButton") then
 				v:Destroy();
 			end
 		end
+		
 		for i, v in res do
-			scriptResult(v).Parent = basis.container;
+			scriptResult(framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and v or (v.script or v), framework.data.currentAPI).Parent = basis.container;
 		end
 	end
 
