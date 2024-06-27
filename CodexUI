@@ -178,12 +178,6 @@ arceus_libs = {
 				local delta = (lastMousePos - USER_INPUT_SERVICE:GetMouseLocation())
 				local xGoal = startPos.X.Offset - delta.X
 				local yGoal = startPos.Y.Offset - delta.Y
-				if object.Size ~= UDim2.new(0,70,0,70) then
-					local GuiService = cloneref(game:GetService("GuiService"))
-					local inset = GuiService.TopbarInset
-					yGoal = startPos.Y.Offset
-					xGoal = math.clamp(xGoal, inset.Min.X+10, inset.Max.X-inset.Height)
-				end
 				local anchor = object.AnchorPoint
 				local size = object.AbsoluteSize
 				local pos = object.Position
@@ -191,9 +185,16 @@ arceus_libs = {
 				-- Clamp the position within the screen boundaries
 				local xOffsize = size.X - (size.X * anchor.X) - viewportSize.Y * 0.1
 				local yOffsize = size.Y - (size.Y * anchor.Y) - viewportSize.Y * 0.1
-
+				
 				xGoal = math.clamp(xGoal, -xOffsize, viewportSize.X + xOffsize)
 				yGoal = math.clamp(yGoal, -yOffsize, viewportSize.Y + yOffsize)
+
+				if object.Size ~= UDim2.new(0,70,0,70) then
+					local GuiService = cloneref(game:GetService("GuiService"))
+					local inset = GuiService.TopbarInset
+					yGoal = startPos.Y.Offset
+					xGoal = math.clamp(xGoal, inset.Min.X+10, inset.Max.X-inset.Height)
+				end
 
 				lastMousePos = USER_INPUT_SERVICE:GetMouseLocation()
 				startPos = UDim2.new(pos.X.Scale, xGoal, pos.Y.Scale, yGoal)
