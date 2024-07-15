@@ -4075,7 +4075,7 @@ do
 					AutomaticSize = Enum.AutomaticSize.None,
 					MouseButton1Click = function()
 						if setclipboard then
-							setclipboard("https://codexseller.mysellix.io/");
+							setclipboard("https://roxploits.com/");
 						end
 						internalUtils:Notify("Premium License purchase link has been set to your clipboard.")
 					end,
