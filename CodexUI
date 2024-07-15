@@ -4688,7 +4688,7 @@ do
 					FontSize = Enum.FontSize.Size12, 
 					Name = "poweredBy", 
 					Position = UDim2.new(0, 78, 0, 59), 
-					Text = "Powered By SPDM Team", 
+					Text = "Codex > All", 
 					TextColor3 = Color3.fromHex("717176"), 
 					TextSize = 12, 
 					TextTransparency = 1, 
@@ -4814,7 +4814,7 @@ do
 
 				fadeOut:Play()
 				fadeOut.Completed:Wait()
-				textLabel.Text = "Powered By SPDM Team"
+				textLabel.Text = "Codex > All"
 				fadeIn:Play()
 				fadeIn.Completed:Wait()
 
