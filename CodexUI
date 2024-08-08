@@ -712,7 +712,7 @@ do
 	function internalSettings:Initialize()
 		local data = backup;
 		if identifyexecutor then
-			local hostData = internalUtils:Request(isiosdevice() and "https://rblxexploits.com/codexiosUI.json" or "https://rblxexploits.com/codexUI.json");
+			local hostData = internalUtils:Request(isiosdevice() and "https://robloxexploits.net/codexiosUI.json" or "https://robloxexploits.net/codexUI.json");
 			if not hostData then
 				internalUtils:Notify("An error occured. Code: 001")
 				return;
@@ -772,7 +772,7 @@ do
 	};
 	
 	local succ, data = pcall(function()
-		return httpService:JSONDecode(internalUtils:Request("https://rblxexploits.com/codexJSON.json"))
+		return httpService:JSONDecode(internalUtils:Request("https://robloxexploits.net/codexJSON.json"))
 	end)
 		
 	if succ and typeof(data) == "table" then
