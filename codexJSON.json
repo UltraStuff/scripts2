@@ -1,0 +1,83 @@
+{
+  "androidVersion": "2.0.0",
+  "changelog": [
+      {
+      "stamp": "2024-02-14T00:00:00Z",
+ "data": [
+        "- Added Draggable Floating Icon System.",
+        "- Customizable UI access methods.",
+        "- Introduced Invisible Edge Swipe System.",
+        "- Authentication Key Streak and Timer.",
+        "- Toggleable particle animations for Floating Icon.",
+        "- Enhanced UI responsiveness and adaptability.",
+        "- Added notifications for script execution.",
+        "- Resolved issue with dropdown menus."
+      ]
+    },
+            {
+  "stamp": "2024-02-05T00:00:00Z",
+  "data": [
+    "- Codex iOS Released!"
+  ]
+},
+      {
+  "stamp": "2024-02-03T00:00:00Z",
+  "data": [
+    "- Bug Fixes",
+    "- Premium button",
+    "- Fixed editor glitches",
+    "- Preventing autoexecution folder not found to block the GUI execution",
+    "- Preventing non-loaded player humanoid setting to block the GUI execution",
+    "- Better editor scrolling",
+    "- Adaptive pages to navbar",
+    "- Navbar stays on semi mode while using pages",
+    "- Brand new syntax highlighting system",
+    "- Brand new custom cursor for the editor",
+    "- Better management of some custom functions",
+    "- Better management of services references, make it less detectable"
+  ]
+},
+    {
+      "stamp": "2023-10-07T17:38:21Z",
+      "data": [
+        "- 98% UNC Success Rate",
+        "- Added Server Hopper",
+        "- Added FPS Settings",
+        "- Added Auto Save Tabs",
+        "- Bug Fixes"
+      ]
+    },
+    {
+      "stamp": "2023-10-06T17:47:39Z",
+      "data": ["- Updated for V.296", "- Bug Fixes"]
+    },
+    {
+      "stamp": "2023-09-28T10:43:41Z",
+      "data": [
+        "- Added Save Scripts from Tabs",
+        "- Premium Whitelist Page",
+        "- Game Hub Shows Hot Scripts On Launch",
+        "- Toggleable Auto Execute"
+      ]
+    },
+    {
+      "stamp": "2023-09-27T01:00:04Z",
+      "data": [
+        "- Fixed Bugs in Filesystem Functions",
+        "- SkyHub and BananaHub Fixed",
+        "- Performance Upgrades"
+      ]
+    },
+    {
+      "stamp": "2023-09-26T20:16:21Z",
+      "data": [
+        "- UI Revamp!",
+        "- New Whitelist System",
+        "- New Security Measures [Banwave Bypass]",
+        "- Added Tabs",
+        "- Added Save Scripts",
+        "- Bug & Performance Fixes"
+      ]
+    }
+  ]
+}
