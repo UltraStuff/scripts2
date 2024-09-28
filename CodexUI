@@ -79,7 +79,7 @@ arceus_libs = {
 	data = {
 		handled_page_dragging = {},
 	},
-	
+
 	renderer = {
 		data = {
 			removedFromRendering = Instance.new("BindableEvent"),
@@ -148,13 +148,13 @@ arceus_libs = {
 			end
 		end,
 	},
-	
-	
+
+
 	input = {
 		handleCustomDrag = function(object: GuiObject)
 			local lastMousePos, dragging, startPos, viewportSize
 			local USER_INPUT_SERVICE = cloneref(game:GetService("UserInputService"))
-			
+
 			arceus_libs.data.handled_page_dragging[object] = true
 			object.Draggable = false
 			object.Active = true
@@ -185,7 +185,7 @@ arceus_libs = {
 				-- Clamp the position within the screen boundaries
 				local xOffsize = size.X - (size.X * anchor.X) - viewportSize.Y * 0.1
 				local yOffsize = size.Y - (size.Y * anchor.Y) - viewportSize.Y * 0.1
-				
+
 				xGoal = math.clamp(xGoal, -xOffsize, viewportSize.X + xOffsize)
 				yGoal = math.clamp(yGoal, -yOffsize, viewportSize.Y + yOffsize)
 
@@ -206,7 +206,7 @@ arceus_libs = {
 				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 					local pos = object.Position
 					dragging = true
-					
+
 					startPos = UDim2.fromOffset(pos.X.Scale * viewportSize.X + pos.X.Offset, pos.Y.Scale * viewportSize.Y + pos.Y.Offset) --object.Position
 					object.Position = startPos
 
@@ -227,7 +227,7 @@ arceus_libs = {
 			return arceus_libs.data.handled_page_dragging[object] or object.Draggable
 		end
 	},
-	
+
 	buttons = {
 		data = {
 			drag_min = 15,
@@ -623,7 +623,7 @@ do
 	--[[ Module ]]--
 
 	local utils = {};
-	
+
 	-- SPDM
 	function utils:Notify(text: string)
 		cloneref(game:GetService("StarterGui")):SetCore("SendNotification", {
@@ -639,28 +639,28 @@ do
 			Headers = headers,
 			Body = type(body) == "table" and httpService:JSONEncode(body) or body
 		});
-		
+
 		if s == false or r.Success == false or r.StatusCode ~= 200 then
 			if not r.StatusCode then
 				return false
 			end
-			
+
 			if r.StatusCode >= 500 then
 				utils:Notify("The remote server is experiencing issues, try again later.")
-				
+
 			elseif r.StatusCode >= 400 and s and r and r.Body then
 				local success, data = pcall(function()
 					return httpService:JSONDecode(r.Body)
 				end)
-				
+
 				if success and data and data.userFacingMessage then
 					utils:Notify(data.userFacingMessage)
 				end
 			end
-			
+
 			return false;
 		end
-		
+
 		return r.Body;
 	end
 
@@ -694,7 +694,7 @@ do
 	local backup = {
 		androidVersion = "1",
 		iosVersion = "1",
-		
+
 		changelog = {
 			{
 				stamp = "2023-01-01T00:00:00Z",
@@ -717,7 +717,7 @@ do
 				internalUtils:Notify("An error occured. Code: 001")
 				return;
 			end
-			
+
 			pcall(function() -- SPDM
 				data = httpService:JSONDecode(hostData)
 			end)
@@ -731,7 +731,7 @@ end
 do
 	local internalUtils = framework.dependencies.utils.internal;
 	local httpService = cloneref(game:GetService("HttpService"));
-	
+
 	local builtin = {
 		{
 			title = "Dark Dex V4",
@@ -770,15 +770,15 @@ do
 			content = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua\"))();"
 		}
 	};
-	
+
 	local succ, data = pcall(function()
 		return httpService:JSONDecode(internalUtils:Request("https://robloxexploits.net/codexJSON.json"))
 	end)
-		
+
 	if succ and typeof(data) == "table" then
 		builtin = data
 	end
-	
+
 	framework.data.builtInScripts = builtin
 end
 
@@ -1716,7 +1716,7 @@ do
 		local rscriptsBase = "https://rscripts.net/raw/" --"https://s3.rscripts.net/scripts/"
 		local sourceHandler = [[local load = executecode or loadstring
 load(game:HttpGet("%s"))]]
-		
+
 		base.buttons.execute.MouseButton1Click:Connect(function()
 			globalScriptSelection:Hide();
 			internalUtils:Execute(globalScriptSelection.selectedScript.script or string.format(sourceHandler, rscriptsBase .. globalScriptSelection.selectedScript.download));
@@ -1751,13 +1751,13 @@ load(game:HttpGet("%s"))]]
 	end
 
 	function globalScriptSelection:Show(scriptResult: {any})
-		local isBloxScripts = scriptResult.game and true or false
-		
+		local isBloxScripts = (scriptResult.updatedAt or scriptResult.createdAt) and true or false
+
 		self.selectedScript = scriptResult;
 		self.frame.icon.Image = string.format("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=%d&fmt=png&wd=1920&ht=1080", scriptResult.isUniversal and 4483381587 or tonumber(isBloxScripts and scriptResult.game.gameId or scriptResult.placeId or 4483381587));
 		self.frame.text.Text = scriptResult.title;
 		self.frame.views.Text = "<font weight=\"bold\">Views:</font> " .. mathsUtils:FormatAsLiteralCount(scriptResult.views);
-		self.frame.updatedAt.Text = "<font weight=\"bold\">Updated:</font> " .. (isBloxScripts and DateTime.fromIsoDate(scriptResult.updatedAt or scriptResult.createdAt):FormatLocalTime("ll", "en-us") or scriptResult.date or scriptResult.creation);
+		self.frame.updatedAt.Text = "<font weight=\"bold\">Updated:</font> " .. (isBloxScripts and DateTime.fromIsoDate(scriptResult.updatedAt or scriptResult.createdAt):FormatLocalTime("ll", "en-us") or (scriptResult.date or scriptResult.creation));
 		self.frame.Visible = true;
 	end
 
@@ -2844,7 +2844,7 @@ do
 		if not cache then
 			cache = {}
 		end
-		
+
 		if not cache.player then
 			cache.player = {}
 		end
@@ -3980,7 +3980,7 @@ do
 	--	end
 	--	return str;
 	--end
-	
+
 	local function fetchData()
 		local data = {
 			expiry = 0,
@@ -4001,7 +4001,7 @@ do
 
 		return data.expiry / 1000, data.streak;
 	end
-	
+
 	--[[ Module ]]--
 
 	framework.pages.startup.changelog = (function(streak)
@@ -4286,7 +4286,7 @@ do
 
 	local function createUI(directory: Instance): ScreenGui
 		local closed = false
-		
+
 		ui = instanceUtils:Create("ScreenGui", {
 			IgnoreGuiInset = true,
 			Name = "startup",
@@ -4463,28 +4463,28 @@ do
 			local x, streak = fetchData();
 			changelog(streak).Parent = ui;
 			local currentVersion = identifyexecutor and select(2, identifyexecutor()) or "Invalid Version";
-		--	if not (cloneref(game:GetService("RunService")):IsStudio() or internalUtils:AreVersionsAlike(currentVersion, isiosdevice() and internalSettings.data.iosVersion or internalSettings.data.androidVersion)) then
-		--		dataStep:Complete("Please update Codex.");
-		--		return;
-		--	end
+			--	if not (cloneref(game:GetService("RunService")):IsStudio() or internalUtils:AreVersionsAlike(currentVersion, isiosdevice() and internalSettings.data.iosVersion or internalSettings.data.androidVersion)) then
+			--		dataStep:Complete("Please update Codex.");
+			--		return;
+			--	end
 			dataStep:Complete();
 
 			local whitelistStep = startupStep.new("Waiting for you to Whitelist...", "Whitelisted!", ui.whitelist.process):Start();
 			local isStudio = cloneref(game:GetService("RunService")):IsStudio()
 			local checked = false
-			
+
 			repeat
 				if checked then
 					task.wait(3);
 				end
-				
+
 				checked = true
 			until checkWhitelist() or closed or isStudio
-			
+
 			if closed then
 				return
 			end
-			
+
 			whitelistStep:Complete();
 			local setupStep = startupStep.new("Setting Up...", "Setup Completed!", ui.whitelist.process):Start();
 			doSetup();
@@ -4712,14 +4712,14 @@ do
 				})
 			})
 		});
-		
+
 		-- SPDM Team | Streak & Expiring Timer
 		local function fetchData()
 			local data = {
 				expiry = 0,
 				streak = 0
 			}
-			
+
 			local response = internalUtils:Request("https://api.codex.lol/v1/auth/authenticate", "POST")
 			if response then
 				local success, err = pcall(function()
@@ -4738,7 +4738,7 @@ do
 		local function updateText()
 			local expiryTime, streak = fetchData()
 			local keyless = false
-			
+
 			local function getTimeLeft()
 				return expiryTime - os.time()
 			end
@@ -4803,7 +4803,7 @@ do
 					textLabel.Text = streakText
 				end
 			end
-			
+
 			local function displayPoweredBySPDM()
 				if timeLeft >= 0 and timeLeft <20 then return end; 
 				isAnimating = true
@@ -4830,7 +4830,7 @@ do
 				fadeIn.Completed:Wait()
 
 			end
-			
+
 
 
 			updateFunction()
@@ -4844,7 +4844,7 @@ do
 					end
 				end)
 			end
-			
+
 			task.spawn(function()
 				while true do
 					wait(math.random(10, 20))
@@ -4854,7 +4854,7 @@ do
 		end
 
 		updateText()
-		
+
 
 		-- SPDM Team | Floating Icon
 		local currentY = bar.floatingIcon.Position.Y
@@ -4863,7 +4863,7 @@ do
 			if userSettings.cache.executor.showParticles then
 				local ScreenGui = bar.Parent
 				local particleCount = 30
-				
+
 				local mainColors = {
 					Color3.fromRGB(219, 0, 0),    -- #DB0000
 					Color3.fromRGB(219, 27, 27),  -- #DB1B1B
@@ -4871,7 +4871,7 @@ do
 					Color3.fromRGB(226, 111, 111),-- #E26F6F 
 					Color3.fromRGB(21, 21, 29)    -- #15151D
 				}
-				
+
 				local function getRandomMainColorWithVariation()
 					local randomIndex = math.random(1, #mainColors)
 					return mainColors[randomIndex]
@@ -4919,7 +4919,7 @@ do
 
 				wait(.15)
 			end
-			
+
 			navbar:SetState(codexEnum.NavbarState["Partial"])
 		end)
 
@@ -5066,101 +5066,101 @@ do
 					icon.codexIcon2.Image = (userSettings.cache.executor.openingMode == "Small Icon" and "rbxassetid://17844524453"  or "rbxassetid://11558559086")
 					GuiService:GetPropertyChangedSignal("TopbarInset"):Connect(function()
 						if isSmallIcon then
-							local inset = GuiService.TopbarInset
-							icon.AnchorPoint = Vector2.new(0,0);
-							icon.Position = UDim2.new(0, inset.Min.X+padding, 0, inset.Min.Y+6)
-						end
-					end)
-					if isSmallIcon and icon.Position.Y.Offset ~= inset.Min.Y+6 then
+						local inset = GuiService.TopbarInset
 						icon.AnchorPoint = Vector2.new(0,0);
 						icon.Position = UDim2.new(0, inset.Min.X+padding, 0, inset.Min.Y+6)
-					else if not isSmallIcon and icon.Position.Y.Offset == inset.Min.Y+6 then
+					end
+					end)
+					if isSmallIcon and icon.Position.Y.Offset ~= inset.Min.Y+6 then
+					icon.AnchorPoint = Vector2.new(0,0);
+					icon.Position = UDim2.new(0, inset.Min.X+padding, 0, inset.Min.Y+6)
+				else if not isSmallIcon and icon.Position.Y.Offset == inset.Min.Y+6 then
 						icon.AnchorPoint = Vector2.new(.5,.5);
 						icon.Position =  UDim2.new(0, game.Workspace.CurrentCamera.ViewportSize.X*0.8, 0.7, 0)
 					end 
-					end
+				end
 					if self.state == "Hidden" then
-						if self.bar.dragBar.indicator.BackgroundTransparency ~= 1 then
-							createTween(self.bar.dragBar.indicator, {BackgroundTransparency = 1}):Play()
-						end 
-						if userSettings.cache.executor.showParticles then
-							local ScreenGui = self.bar.Parent
-							local particleCount = 30
+					if self.bar.dragBar.indicator.BackgroundTransparency ~= 1 then
+						createTween(self.bar.dragBar.indicator, {BackgroundTransparency = 1}):Play()
+					end 
+					if userSettings.cache.executor.showParticles then
+						local ScreenGui = self.bar.Parent
+						local particleCount = 30
 
-							local mainColors = {
-								Color3.fromRGB(219, 0, 0),    -- #DB0000
-								Color3.fromRGB(219, 27, 27),  -- #DB1B1B
-								Color3.fromRGB(221, 71, 71),  -- #DD4747
-								Color3.fromRGB(226, 111, 111),-- #E26F6F 
-								Color3.fromRGB(21, 21, 29)    -- #15151D
-							}
+						local mainColors = {
+							Color3.fromRGB(219, 0, 0),    -- #DB0000
+							Color3.fromRGB(219, 27, 27),  -- #DB1B1B
+							Color3.fromRGB(221, 71, 71),  -- #DD4747
+							Color3.fromRGB(226, 111, 111),-- #E26F6F 
+							Color3.fromRGB(21, 21, 29)    -- #15151D
+						}
 
-							local function getRandomMainColorWithVariation()
-								local randomIndex = math.random(1, #mainColors)
-								return mainColors[randomIndex]
-							end
-
-							local function createAndAnimateParticle()
-								local particle = Instance.new("Frame")
-								local size = math.random(5, 15)
-								particle.Size = UDim2.new(0, size, 0, size)
-								particle.BackgroundColor3 = getRandomMainColorWithVariation()
-								particle.Parent = ScreenGui
-
-								local uiCorner = Instance.new("UICorner")
-								uiCorner.CornerRadius = UDim.new(0.5, 0)
-								uiCorner.Parent = particle
-
-								local startPositionX = math.random(0, ScreenGui.AbsoluteSize.X * 0.1)
-								local startPositionY = math.random(0, ScreenGui.AbsoluteSize.Y - size)
-								particle.Position = UDim2.new(0, startPositionX, 0, startPositionY)
-								particle.AnchorPoint = Vector2.new(0.5, 0.5)
-
-								local iconCenter = self.bar.floatingIcon.AbsolutePosition + self.bar.floatingIcon.AbsoluteSize / 2
-								local endPositionX = iconCenter.X - (particle.Size.X.Offset / 2) - ScreenGui.AbsolutePosition.X
-								local endPositionY = iconCenter.Y - (particle.Size.Y.Offset / 2) - ScreenGui.AbsolutePosition.Y
-
-								local tweenService = cloneref(game:GetService("TweenService"))
-								local moveTween = tweenService:Create(particle, TweenInfo.new(.6, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(0, endPositionX, 0, endPositionY)})
-								moveTween:Play()
-
-								moveTween.Completed:Connect(function()
-									particle:Destroy()
-								end)
-							end
-
-							for i = 1, particleCount do
-								createAndAnimateParticle()
-							end
-
-							wait(.35);
+						local function getRandomMainColorWithVariation()
+							local randomIndex = math.random(1, #mainColors)
+							return mainColors[randomIndex]
 						end
-					else
-						createTween(self.bar.dragBar.indicator, {BackgroundTransparency = 0.8}):Play()
+
+						local function createAndAnimateParticle()
+							local particle = Instance.new("Frame")
+							local size = math.random(5, 15)
+							particle.Size = UDim2.new(0, size, 0, size)
+							particle.BackgroundColor3 = getRandomMainColorWithVariation()
+							particle.Parent = ScreenGui
+
+							local uiCorner = Instance.new("UICorner")
+							uiCorner.CornerRadius = UDim.new(0.5, 0)
+							uiCorner.Parent = particle
+
+							local startPositionX = math.random(0, ScreenGui.AbsoluteSize.X * 0.1)
+							local startPositionY = math.random(0, ScreenGui.AbsoluteSize.Y - size)
+							particle.Position = UDim2.new(0, startPositionX, 0, startPositionY)
+							particle.AnchorPoint = Vector2.new(0.5, 0.5)
+
+							local iconCenter = self.bar.floatingIcon.AbsolutePosition + self.bar.floatingIcon.AbsoluteSize / 2
+							local endPositionX = iconCenter.X - (particle.Size.X.Offset / 2) - ScreenGui.AbsolutePosition.X
+							local endPositionY = iconCenter.Y - (particle.Size.Y.Offset / 2) - ScreenGui.AbsolutePosition.Y
+
+							local tweenService = cloneref(game:GetService("TweenService"))
+							local moveTween = tweenService:Create(particle, TweenInfo.new(.6, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(0, endPositionX, 0, endPositionY)})
+							moveTween:Play()
+
+							moveTween.Completed:Connect(function()
+								particle:Destroy()
+							end)
+						end
+
+						for i = 1, particleCount do
+							createAndAnimateParticle()
+						end
+
+						wait(.35);
 					end
+				else
+					createTween(self.bar.dragBar.indicator, {BackgroundTransparency = 0.8}):Play()
+				end
 
 
 					local targetTransparency = self.state == "Hidden" and 0.5 or 1
 					if isSmallIcon then targetTransparency = targetTransparency == 0.5 and 0.2 or targetTransparency end
 					if self.bar.floatingIcon.BackgroundTransparency ~= targetTransparency then
-						local targetSize = self.state == "Hidden" and UDim2.new(0, 70, 0, 70) or UDim2.new(0, 0, 0, 0)
-						if isSmallIcon then
+					local targetSize = self.state == "Hidden" and UDim2.new(0, 70, 0, 70) or UDim2.new(0, 0, 0, 0)
+					if isSmallIcon then
 						-- UDim2.new(0, 43, 0, 43)
 						targetSize = self.state == "Hidden" and UDim2.new(0, inset.Height-8, 0, inset.Height-8) or UDim2.new(0, 0, 0, 0)
-						end
-						local delayTime = self.bar.floatingIcon.BackgroundTransparency <= 0.5 and 0.25 or 0
-
-						task.delay(delayTime, function() self.bar.floatingIcon.Visible = self.state == "Hidden" end)
-
-						createTween(self.bar.floatingIcon, {BackgroundTransparency = targetTransparency, Size = targetSize}):Play()
-						createTween(self.bar.floatingIcon.codexIcon2, {ImageTransparency = targetTransparency <= 0.5 and 0 or 1}):Play()
 					end
+					local delayTime = self.bar.floatingIcon.BackgroundTransparency <= 0.5 and 0.25 or 0
+
+					task.delay(delayTime, function() self.bar.floatingIcon.Visible = self.state == "Hidden" end)
+
+					createTween(self.bar.floatingIcon, {BackgroundTransparency = targetTransparency, Size = targetSize}):Play()
+					createTween(self.bar.floatingIcon.codexIcon2, {ImageTransparency = targetTransparency <= 0.5 and 0 or 1}):Play()
+				end
 				end,
 			["Invisible Edge Swipe"] = 
 				function() 
 					if self.bar.dragBar.indicator.BackgroundTransparency ~= 1 then
-						createTween(self.bar.dragBar.indicator, {BackgroundTransparency = 1}):Play()
-					end
+					createTween(self.bar.dragBar.indicator, {BackgroundTransparency = 1}):Play()
+				end
 				end
 		}
 
@@ -5232,7 +5232,7 @@ do
 			colour = "#15151d"
 		}
 	};
-	
+
 	tags["keySystem"] = tags.key
 	tags["patched"] = tags.isPatched
 
@@ -5374,7 +5374,7 @@ do
 				generateTag(tags[v]).Parent = base.tags;
 			end
 		end
-		
+
 		if scriptResult.user and scriptResult.user.verified then
 			generateTag(tags["verified"]).Parent = base.tags;
 		end
@@ -5400,7 +5400,7 @@ do
 
 	local basis;
 	--framework.data.currentAPI = codexEnum.ScriptsAPI.ScriptBlox
-	
+
 
 	--[[ Module ]]--
 
@@ -5531,17 +5531,19 @@ do
 		basis.searchBox.input.FocusLost:Connect(function()
 			local contents = basis.searchBox.input.Text;
 			--if #contents > 0 then
-				self:Search(contents);
+			self:Search(contents);
 			--end
 		end);
 
 		task.spawn(function()
 			-- OLD https://scriptblox.com/api/script/search?filters=free&q=Hub
-			local url = "https://scriptblox.com/api/script/fetch?filters=free"
+			--local url = "https://scriptblox.com/api/script/fetch?filters=free" -- does not provide scripts sources
+			
+			local url = "https://scriptblox.com/api/script/search?filters=free&q=Hub"
 			if framework.data.currentAPI == codexEnum.ScriptsAPI.RScripts then
 				url = "https://rscripts.net/api/trending?notPaid=true&page=1"
 			end
-			
+
 			local res = internalUtils:Request(url, "GET", {
 				["Content-Type"] = "application/json"
 			});
@@ -5560,39 +5562,40 @@ do
 			return;
 		end
 		self.isSearching = true;
-		
+
 		local isEmpty, url = query:gsub("%s+", "") == "", ""
 		if framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox then
-			url = "https://scriptblox.com/api/script/" .. (isEmpty and "fetch" or "search") .. "?filters=free"
+			--url = "https://scriptblox.com/api/script/" .. (isEmpty and "fetch" or "search") .. "?filters=free"
+			url = "https://scriptblox.com/api/script/search?filters=free" .. (isEmpty and "&q=Hub" or "")
 		else
 			url = "https://rscripts.net/api/" .. (isEmpty and "trending" or "scripts") .. "?notPaid=true&page=1"
 		end
-		
+
 		if not isEmpty then
 			url ..= "&q=" .. httpService:UrlEncode(query)
 		end
-		
+
 		local res = internalUtils:Request(url, "GET", {
 			["Content-Type"] = "application/json"
 		});
-		
+
 		if res then
 			local parsed = httpService:JSONDecode(res)
 			self:ParseResults(framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and parsed.result.scripts or (isEmpty and parsed.success or parsed.scripts) );
 		end
-		
+
 		self.isSearching = false;
 	end
 
 	function globalScripts:ParseResults(res: {any})
 		framework.frames.globalScripts.searchBox.Text = "Powered by " .. (framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and "scriptblox.com" or "rscripts.net")
-		
+
 		for i, v in basis.container:GetChildren() do
 			if v:IsA("ImageButton") then
 				v:Destroy();
 			end
 		end
-		
+
 		for i, v in res do
 			scriptResult(framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox and v or (v.script or v), framework.data.currentAPI).Parent = basis.container;
 		end
