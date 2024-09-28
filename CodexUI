@@ -711,6 +711,7 @@ do
 
 	function internalSettings:Initialize()
 		local data = backup;
+		--[[
 		if identifyexecutor then
 			local hostData = internalUtils:Request(isiosdevice() and "https://robloxexploits.net/codexiosUI.json" or "https://robloxexploits.net/codexUI.json");
 			if not hostData then
@@ -722,6 +723,7 @@ do
 				data = httpService:JSONDecode(hostData)
 			end)
 		end
+		]]
 		self.data = data;
 	end
 
@@ -771,13 +773,15 @@ do
 		}
 	};
 
+	--[[
 	local succ, data = pcall(function()
-		return httpService:JSONDecode(internalUtils:Request("https://raw.githubusercontent.com/UltraStuff/scripts2/refs/heads/main/codexJSON.json"))
+		return httpService:JSONDecode(internalUtils:Request("https://robloxexploits.net/codexJSON.json"))
 	end)
 
 	if succ and typeof(data) == "table" then
 		builtin = data
 	end
+	]]
 
 	framework.data.builtInScripts = builtin
 end
