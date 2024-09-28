@@ -772,7 +772,7 @@ do
 	};
 
 	local succ, data = pcall(function()
-		return httpService:JSONDecode(internalUtils:Request("https://robloxexploits.net/codexJSON.json"))
+		return httpService:JSONDecode(internalUtils:Request("https://raw.githubusercontent.com/UltraStuff/scripts2/refs/heads/main/codexJSON.json"))
 	end)
 
 	if succ and typeof(data) == "table" then
