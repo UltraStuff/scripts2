@@ -812,11 +812,8 @@ do
 	end
 
 	local function loadScriptCache()
-		if true --[[isarceusfile and isarceusfile("data/codexScriptCache.json")]] then
-			local s, r = true, {
-					{title = "Sigma Hub", description = "Skibidi", content = "print(\"sigma\")", index = 1, autoExecute = false}	
-				}
-			--pcall(httpService.JSONDecode, httpService, readarceusfile("data/codexScriptCache.json"));
+		if isarceusfile and isarceusfile("data/codexScriptCache.json") then
+			local s, r = pcall(httpService.JSONDecode, httpService, readarceusfile("data/codexScriptCache.json"));
 			if s and type(r) == "table" then
 				local accumulation = 0;
 				local cache = {};
@@ -853,7 +850,6 @@ do
 			for i, v in cache do
 				v.onAutoExecuteToggled = nil;
 			end
-			
 			writearceusfile("data/codexScriptCache.json", httpService:JSONEncode(cache));
 		end
 	end
@@ -4733,7 +4729,6 @@ do
 				local success, err = pcall(function()
 					data = httpService:JSONDecode(response)
 				end)
-				
 			elseif cloneref(game:GetService("RunService")):IsStudio() then
 				data = {
 					expiry = os.time()*1000+1200000,
@@ -5548,7 +5543,7 @@ do
 			-- OLD https://scriptblox.com/api/script/search?filters=free&q=Hub
 			--local url = "https://scriptblox.com/api/script/fetch?filters=free" -- does not provide scripts sources
 
-			local url = "https://scriptblox.com/api/script/search?q=Hub"
+			local url = "https://scriptblox.com/api/script/search?&q=Hub"
 			if framework.data.currentAPI == codexEnum.ScriptsAPI.RScripts then
 				url = "https://rscripts.net/api/trending?notPaid=true&page=1"
 			end
@@ -5575,13 +5570,9 @@ do
 		local isEmpty, url = query:gsub("%s+", "") == "", ""
 		if framework.data.currentAPI == codexEnum.ScriptsAPI.ScriptBlox then
 			--url = "https://scriptblox.com/api/script/" .. (isEmpty and "fetch" or "search") .. "?filters=free"
-			url = "https://scriptblox.com/api/script/search?" .. (isEmpty and "&q=Hub" or "")
+			url = "https://scriptblox.com/api/script/search?q=" .. (isEmpty and "Hub" or httpService:UrlEncode(query))
 		else
 			url = "https://rscripts.net/api/" .. (isEmpty and "trending" or "scripts") .. "?notPaid=true&page=1"
-		end
-
-		if not isEmpty then
-			url ..= "&q=" .. httpService:UrlEncode(query)
 		end
 
 		local res = internalUtils:Request(url, "GET", {
