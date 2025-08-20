@@ -43,6 +43,7 @@ local getfpscap = getfpscap or unavailable(60)
 local getfpsmax = getfpsmax or unavailable(60)
 
 local makearceusfolder = arceus and clonefunction(arceus.makearceusfolder);
+local deletearceusfile = arceus and clonefunction(arceus.deletearceusfile);
 local writearceusfile = arceus and clonefunction(arceus.writearceusfile);
 local listarceusfiles = arceus and clonefunction(arceus.listarceusfiles);
 local isarceusfolder = arceus and clonefunction(arceus.isarceusfolder);
@@ -52,26 +53,13 @@ local isiosdevice = (arceus and clonefunction(arceus.is_ios)) or function()
 	return false 
 end
 
-protectfunction(log)
-protectfunction(openurl)
-protectfunction(getversion)
-protectfunction(getfilesize)
-protectfunction(doarceusfile)
 protectfunction(isarceusfile)
-protectfunction(iscustomasset)
 protectfunction(readarceusfile)
 protectfunction(isarceusfolder)
-protectfunction(getkeycompleted)
-protectfunction(setkeycompleted)
 protectfunction(writearceusfile)
 protectfunction(listarceusfiles)
-protectfunction(writecustomasset)
 protectfunction(deletearceusfile)
 protectfunction(makearceusfolder)
-protectfunction(deletecustomasset)
-protectfunction(deletearceusfolder)
-protectfunction(retrievecustomasset)
-protectfunction(ispermissiongranted)
 
 getgenv().arceus = nil
 
@@ -933,6 +921,9 @@ do
 				unlocked = false,
 				vSync = false,
 				value = 60
+			},
+			ui = {
+				latest = false
 			}
 		},
 		player = {
@@ -2835,7 +2826,7 @@ do
 
 	--[[ Functions ]]--
 
-	local function getFlagFromLink(link: string)
+	local function getFlagFromLink(link: string?)
 		local value = cache;
 		for i, v in string.split(link, ".") do
 			value = value[v];
@@ -3011,6 +3002,21 @@ do
 					callback = function(value)
 						if cache.executor.fps.unlocked and not cache.executor.fps.vSync then
 							setfpscap(value);
+						end
+					end
+				},
+				{
+					optionType = "separator"
+				},
+				{
+					title = "Latest UI",
+					linkedSetting = "executor.ui.latest",
+					optionType = "toggle",
+					state = false,
+					callback = function(state)
+						local succ = pcall(deletearceusfile, "data/OldUI")
+						if succ then
+							cloneref(game:GetService("Players")).LocalPlayer:Kick("Rejoin the game to apply the changes.")
 						end
 					end
 				}
