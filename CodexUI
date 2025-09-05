@@ -4224,7 +4224,7 @@ do
 
 	local function checkWhitelist()
 		if getgenv then
-			return internalUtils:Request("https://api.codex.lol/v1/auth/authenticate", "POST") ~= false;
+			return true --internalUtils:Request("https://api.codex.lol/v1/auth/authenticate", "POST") ~= false;
 		end
 		return false;
 	end
@@ -4483,13 +4483,13 @@ do
 			local isStudio = cloneref(game:GetService("RunService")):IsStudio()
 			local checked = false
 
-			--repeat
+			repeat
 				if checked then
 					task.wait(3);
 				end
 
 				checked = true
-			--until checkWhitelist() or closed or isStudio
+			until checkWhitelist() or closed or isStudio
 
 			if closed then
 				return
@@ -4515,11 +4515,11 @@ do
 	framework.pages.startup.startup = (function(directory: Instance, signal: {any}): ScreenGui
 		completionSignal = signal;
 
-		--if checkWhitelist() then
+		if checkWhitelist() then
 			doSetup();
 			signal:Fire(true, createBasis(directory));
 			return;
-		--end
+		end
 
 		return createUI(directory);
 	end);
