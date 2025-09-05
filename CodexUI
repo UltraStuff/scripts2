@@ -3010,9 +3010,8 @@ do
 				},
 				{
 					title = "Latest UI",
-					linkedSetting = "executor.ui.latest",
-					optionType = "toggle",
-					state = false,
+					optionType = "button",
+
 					callback = function(state)
 						local succ = pcall(deletearceusfile, "data/OldUI")
 						if succ then
